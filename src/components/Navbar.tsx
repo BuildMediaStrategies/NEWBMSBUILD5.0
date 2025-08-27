@@ -36,7 +36,7 @@ export default function Navbar() {
             >
               <img
                 src="https://github.com/BuildMediaStrategies/BMSAIASSETS/raw/fadb565686c0fbad489ba0c4c4dba29a5eea4d09/ChatGPT%20Image%20Aug%2026%2C%202025%2C%2012_14_26%20AM.png"
-                alt="BuildMedia.AI Strategies"
+                alt="BuildMediaStrategies"
                 className="w-40 md:w-48 object-contain -translate-y-[2px]"
               />
             </Link>

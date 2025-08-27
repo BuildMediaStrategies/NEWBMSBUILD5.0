@@ -63,7 +63,7 @@ export default function About() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="h1-resp mb-8 heading-safe"
           >
-            We're <span className="gradient-text gradient-safe">BuildMedia.AI</span>
+            We're <span className="gradient-text gradient-safe">BuildMediaStrategies</span>
           </motion.h1>
           
           <motion.div
