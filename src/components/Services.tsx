@@ -117,74 +117,12 @@ export default function Services() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="relative"
           >
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-purple-600/20 to-pink-600/20 relative overflow-hidden">
-              {/* Animated workflow visualization */}
-              <div className="absolute inset-0 p-8">
-                {/* Step indicators */}
-                {[...Array(4)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    className="absolute w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center"
-                    style={{
-                      left: `${20 + (i % 2) * 60}%`,
-                      top: `${20 + Math.floor(i / 2) * 60}%`,
-                    }}
-                    animate={{
-                      scale: [1, 1.1, 1],
-                      opacity: [0.6, 1, 0.6],
-                    }}
-                    transition={{
-                      duration: 3,
-                      delay: i * 0.5,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                    }}
-                  >
-                    <span className="text-white font-bold">{i + 1}</span>
-                  </motion.div>
-                ))}
-                
-                {/* Connecting lines */}
-                <svg className="absolute inset-0 w-full h-full">
-                  <motion.path
-                    d="M 25% 35% L 75% 35% L 75% 85% L 25% 85%"
-                    stroke="rgba(255,255,255,0.3)"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeDasharray="5,5"
-                    initial={{ pathLength: 0 }}
-                    animate={{ pathLength: 1 }}
-                    transition={{ 
-                      duration: 4, 
-                      repeat: Infinity, 
-                      repeatType: 'reverse',
-                      ease: 'linear'
-                    }}
-                  />
-                </svg>
-                
-                {/* Floating data points */}
-                {[...Array(8)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    className="absolute w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"
-                    style={{
-                      left: `${Math.random() * 80 + 10}%`,
-                      top: `${Math.random() * 80 + 10}%`,
-                    }}
-                    animate={{
-                      scale: [0, 1, 0],
-                      opacity: [0, 0.8, 0],
-                    }}
-                    transition={{
-                      duration: 2,
-                      delay: i * 0.3,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                    }}
-                  />
-                ))}
-              </div>
+            <div className="aspect-square rounded-2xl overflow-hidden">
+              <img
+                src="https://github.com/BuildMediaStrategies/BMSAIASSETS/blob/d077c835d2ec6ca6a99b63cfbd1c7951fd5fe6d7/0f29ff3b-8c8d-475e-b2d8-d48e5a9a776b.png?raw=true"
+                alt="BuildMedia.AI Process Visualization"
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
         </div>
