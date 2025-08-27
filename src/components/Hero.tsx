@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Bot, Zap, GitBranch, Cpu, Database, Network, Workflow, Target } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import ResponsiveText from '../components/ResponsiveText';
 
 const textVariants = {
@@ -175,18 +176,20 @@ export default function Hero() {
             animate="visible"
             variants={textVariants}
           >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="group bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 p-[2px] rounded-full"
-            >
-              <div className="bg-black rounded-full px-8 py-4 transition group-hover:bg-transparent">
-                <span className="flex items-center space-x-2 text-white">
-                  <span>Stop The Revenue Leak</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </div>
-            </motion.button>
+            <Link to="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="group bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 p-[2px] rounded-full"
+              >
+                <div className="bg-black rounded-full px-8 py-4 transition group-hover:bg-transparent">
+                  <span className="flex items-center space-x-2 text-white">
+                    <span>Stop The Revenue Leak</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div>
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </div>
