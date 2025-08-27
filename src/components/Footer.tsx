@@ -4,6 +4,18 @@ export default function Footer() {
   return (
     <footer className="relative w-full bg-black border-t border-white/10 py-12">
       <div className="max-w-7xl mx-auto section-pad-resp text-center">
+        <div className="mb-8">
+          <h3 className="text-white font-semibold mb-4">Our Services</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 text-sm">
+            <Link to="/web-design-dover" className="text-gray-400 hover:text-white transition-colors">Web Design Dover</Link>
+            <Link to="/ai-automation-dover" className="text-gray-400 hover:text-white transition-colors">AI Automation Dover</Link>
+            <Link to="/full-stack-development-dover" className="text-gray-400 hover:text-white transition-colors">Full-Stack Development Dover</Link>
+            <Link to="/web-design-kent" className="text-gray-400 hover:text-white transition-colors">Web Design Kent</Link>
+            <Link to="/app-development-kent" className="text-gray-400 hover:text-white transition-colors">App Development Kent</Link>
+            <Link to="/full-stack-development-kent" className="text-gray-400 hover:text-white transition-colors">Full-Stack Development Kent</Link>
+          </div>
+        </div>
+        
         <p className="text-gray-400 mb-4">
           © 2025 BuildMediaStrategies.com. All rights reserved.
         </p>

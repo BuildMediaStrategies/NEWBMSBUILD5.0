@@ -10,7 +10,18 @@ export default function Navbar() {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Systems', path: '/systems' },
+    { 
+      name: 'Systems', 
+      path: '/systems',
+      submenu: [
+        { name: 'Web Design Dover', path: '/web-design-dover' },
+        { name: 'AI Automation Dover', path: '/ai-automation-dover' },
+        { name: 'Full-Stack Development Dover', path: '/full-stack-development-dover' },
+        { name: 'Web Design Kent', path: '/web-design-kent' },
+        { name: 'App Development Kent', path: '/app-development-kent' },
+        { name: 'Full-Stack Development Kent', path: '/full-stack-development-kent' }
+      ]
+    },
     { name: 'Sectors', path: '/sectors' },
     { name: 'Contact', path: '/contact' }
   ];
@@ -49,31 +60,74 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
+                className="relative group"
               >
-                <Link
-                  to={item.path}
-                  className={`transition-colors relative ${
-                    isActive(item.path)
-                      ? 'text-white'
-                      : 'text-white/80 hover:text-white'
-                  }`}
-                >
-                  <motion.span
-                    whileHover={{ y: -2 }}
-                    whileTap={{ y: 0 }}
-                    className="block"
+                {item.submenu ? (
+                  <>
+                    <Link
+                      to={item.path}
+                      className={`transition-colors relative ${
+                        isActive(item.path)
+                          ? 'text-white'
+                          : 'text-white/80 hover:text-white'
+                      }`}
+                    >
+                      <motion.span
+                        whileHover={{ y: -2 }}
+                        whileTap={{ y: 0 }}
+                        className="block"
+                      >
+                        {item.name}
+                      </motion.span>
+                      {isActive(item.path) && (
+                        <motion.div
+                          layoutId="activeTab"
+                          className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-600"
+                          initial={false}
+                          transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                        />
+                      )}
+                    </Link>
+                    <div className="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-lg border border-white/10 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                      <div className="p-2">
+                        {item.submenu.map((subItem) => (
+                          <Link
+                            key={subItem.path}
+                            to={subItem.path}
+                            className="block px-4 py-2 text-sm text-white/80 hover:text-white hover:bg-white/5 rounded transition-colors"
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <Link
+                    to={item.path}
+                    className={`transition-colors relative ${
+                      isActive(item.path)
+                        ? 'text-white'
+                        : 'text-white/80 hover:text-white'
+                    }`}
                   >
-                    {item.name}
-                  </motion.span>
-                  {isActive(item.path) && (
-                    <motion.div
-                      layoutId="activeTab"
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-600"
-                      initial={false}
-                      transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                    />
-                  )}
-                </Link>
+                    <motion.span
+                      whileHover={{ y: -2 }}
+                      whileTap={{ y: 0 }}
+                      className="block"
+                    >
+                      {item.name}
+                    </motion.span>
+                    {isActive(item.path) && (
+                      <motion.div
+                        layoutId="activeTab"
+                        className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-600"
+                        initial={false}
+                        transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                      />
+                    )}
+                  </Link>
+                )}
               </motion.div>
             ))}
           </div>
@@ -98,18 +152,33 @@ export default function Navbar() {
         >
           <div className="px-4 py-6 space-y-4">
             {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                onClick={() => setIsOpen(false)}
-                className={`block transition-colors ${
-                  isActive(item.path)
-                    ? 'text-white'
-                    : 'text-white/80 hover:text-white'
-                }`}
-              >
-                {item.name}
-              </Link>
+              <div key={item.name}>
+                <Link
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`block transition-colors ${
+                    isActive(item.path)
+                      ? 'text-white'
+                      : 'text-white/80 hover:text-white'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+                {item.submenu && (
+                  <div className="ml-4 mt-2 space-y-2">
+                    {item.submenu.map((subItem) => (
+                      <Link
+                        key={subItem.path}
+                        to={subItem.path}
+                        onClick={() => setIsOpen(false)}
+                        className="block text-sm text-white/60 hover:text-white transition-colors"
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </motion.div>

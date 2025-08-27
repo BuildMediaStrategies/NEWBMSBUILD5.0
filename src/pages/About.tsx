@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
@@ -53,7 +54,29 @@ export default function About() {
   });
 
   return (
-    <div className="bg-black text-white min-h-screen pt-20">
+    <>
+      <Helmet>
+        <title>About BuildMediaStrategies – Web Design & AI Automation in Dover</title>
+        <meta name="description" content="Remote-first team based in Dover & Kent, collaborating with ifucantfindit.com to deliver design and automation systems." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "BuildMediaStrategies",
+            "url": "https://buildmediastrategies.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Dover",
+              "addressRegion": "Kent",
+              "addressCountry": "UK"
+            },
+            "areaServed": ["Dover","Kent"],
+            "serviceProvided": ["Web Design","AI Automation","App Development","Full-Stack Development"],
+            "sameAs": ["https://ifucantfindit.com"]
+          })}
+        </script>
+      </Helmet>
+      <div className="bg-black text-white min-h-screen pt-20">
       {/* Hero Section */}
       <section ref={heroRef} className="py-32">
         <div className="max-w-7xl mx-auto section-pad-resp text-center">
@@ -130,6 +153,16 @@ export default function About() {
                   short="Digital strategy, web development, and creative solutions that complement our automation expertise."
                   long="Our strategic partner brings digital strategy, web development, and creative solutions that perfectly complement our automation expertise, delivering complete business transformation."
                 />
+                <p className="p-resp text-gray-300 mb-6">
+                  <a 
+                    href="https://ifucantfindit.com" 
+                    target="_blank" 
+                    rel="noopener"
+                    className="text-purple-400 hover:text-purple-300 transition-colors"
+                  >
+                    Website design in Dover by ifucantfindit.com
+                  </a>
+                </p>
               </motion.div>
 
               <motion.div
@@ -276,5 +309,6 @@ export default function About() {
         </div>
       </section>
     </div>
+    </>
   );
 }

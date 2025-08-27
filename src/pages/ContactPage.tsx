@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Send, Mail, MapPin } from 'lucide-react';
@@ -10,7 +11,29 @@ export default function ContactPage() {
   });
 
   return (
-    <div className="bg-black text-white min-h-screen pt-20">
+    <>
+      <Helmet>
+        <title>Contact BuildMediaStrategies – Dover & Kent Web Design Experts</title>
+        <meta name="description" content="Get in touch with BuildMediaStrategies for Web Design, AI Automation, App Development, and Full-Stack systems in Dover and Kent." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "BuildMediaStrategies",
+            "url": "https://buildmediastrategies.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Dover",
+              "addressRegion": "Kent",
+              "addressCountry": "UK"
+            },
+            "areaServed": ["Dover","Kent"],
+            "serviceProvided": ["Web Design","AI Automation","App Development","Full-Stack Development"],
+            "sameAs": ["https://ifucantfindit.com"]
+          })}
+        </script>
+      </Helmet>
+      <div className="bg-black text-white min-h-screen pt-20">
       <section ref={ref} className="py-32">
         <div className="max-w-7xl mx-auto section-pad-resp">
           <motion.div
@@ -174,5 +197,6 @@ export default function ContactPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

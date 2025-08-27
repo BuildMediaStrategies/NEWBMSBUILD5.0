@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
@@ -153,7 +154,29 @@ export default function Sectors() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   return (
-    <div className="bg-black text-white min-h-screen pt-20">
+    <>
+      <Helmet>
+        <title>Sectors – Web Design & AI Automation Solutions Dover & Kent</title>
+        <meta name="description" content="See how BuildMediaStrategies supports multiple sectors in Dover & Kent with modern web design, AI automation, and development services." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "BuildMediaStrategies",
+            "url": "https://buildmediastrategies.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Dover",
+              "addressRegion": "Kent",
+              "addressCountry": "UK"
+            },
+            "areaServed": ["Dover","Kent"],
+            "serviceProvided": ["Web Design","AI Automation","App Development","Full-Stack Development"],
+            "sameAs": ["https://ifucantfindit.com"]
+          })}
+        </script>
+      </Helmet>
+      <div className="bg-black text-white min-h-screen pt-20">
       {/* Hero Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto section-pad-resp text-center">
@@ -350,5 +373,6 @@ export default function Sectors() {
         </div>
       </section>
     </div>
+    </>
   );
 }
