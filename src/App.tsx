@@ -32,8 +32,8 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
           <Route path="/systems" element={<Systems />} />
+          <Route path="/about" element={<About />} />
           <Route path="/sectors" element={<Sectors />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/web-design-dover" element={<WebDesignDover />} />
