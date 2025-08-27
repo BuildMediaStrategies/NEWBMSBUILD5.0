@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  body {
+    @apply antialiased text-gray-900;
+    overflow-x: hidden;
+  }
+  
+  html, body, #root { min-height: 100%; }
+  body { background-color: #0B0F1A; } /* match site bg */
+  /* keep our earlier horizontal clamp but allow vertical scroll */
+  html, body, #root { overflow-x: clip; overflow-y: auto; }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500;
+  }
+
+  .h1-resp { @apply text-3xl sm:text-5xl md:text-6xl font-bold leading-normal tracking-tight pb-3; }
+  .h2-resp { @apply text-2xl sm:text-4xl md:text-5xl font-semibold leading-normal pb-3; }
+  .h3-resp { @apply text-xl sm:text-2xl md:text-3xl font-semibold leading-normal pb-3; }
+
+  .p-resp  { @apply text-sm sm:text-base opacity-80 leading-relaxed; }
+  .p-narrow { @apply max-w-md sm:max-w-2xl mx-auto; } /* keeps paragraphs tidy on mobile */
+  .section-pad-resp { @apply px-4 sm:px-6 lg:px-8; }   /* keeps spacing consistent */
+}
+
+@layer utilities {
+  .masonry {
+    column-count: 3;
+    column-gap: 1.5rem;
+  }
+  
+  .masonry > div {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (max-width: 1024px) {
+    .masonry {
+      column-count: 2;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .masonry {
+      column-count: 1;
+    }
+  }
+
+  .heading-safe { @apply leading-[1.15] pb-[0.15em]; }     /* for h1/h2/h3 */
+  .gradient-safe { @apply inline-block pb-[0.15em]; }      /* for gradient highlight <span> */
+}
