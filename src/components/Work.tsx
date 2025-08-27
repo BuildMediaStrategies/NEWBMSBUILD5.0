@@ -447,7 +447,6 @@ export default function Work() {
           className="text-center mb-20"
         >
           <h2 className="h2-resp mb-6">Revenue Recovery Systems</h2>
-          <h2 className="h2-resp mb-6 heading-safe">Revenue Recovery Systems</h2>
           <ResponsiveText
             as="p"
             className="p-resp p-narrow text-gray-400 line-clamp-3 sm:line-clamp-none"

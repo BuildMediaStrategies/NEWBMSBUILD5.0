@@ -46,7 +46,6 @@ export default function Services() {
           className="text-center mb-20"
         >
           <h2 className="h2-resp mb-6">Why Businesses Choose Us</h2>
-          <h2 className="h2-resp mb-6 heading-safe">Why Businesses Choose Us</h2>
           <ResponsiveText
             as="p"
             className="p-resp p-narrow text-gray-400 mb-12 line-clamp-3 sm:line-clamp-none"

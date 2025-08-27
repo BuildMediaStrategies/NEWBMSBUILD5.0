@@ -66,7 +66,6 @@ export default function Industries() {
           className="text-center mb-20"
         >
           <h2 className="h2-resp mb-6">Industries Losing Money Daily</h2>
-          <h2 className="h2-resp mb-6 heading-safe">Industries Losing Money Daily</h2>
           <ResponsiveText
             as="p"
             className="p-resp p-narrow text-gray-400 line-clamp-3 sm:line-clamp-none"

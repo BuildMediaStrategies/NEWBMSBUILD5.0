@@ -19,7 +19,6 @@ export default function Contact() {
           className="text-center mb-20"
         >
           <h2 className="h2-resp mb-6">Stop Losing Money Today</h2>
-          <h2 className="h2-resp mb-6 heading-safe">Stop Losing Money Today</h2>
           <ResponsiveText
             as="p"
             className="p-resp p-narrow text-gray-400 line-clamp-3 sm:line-clamp-none"
