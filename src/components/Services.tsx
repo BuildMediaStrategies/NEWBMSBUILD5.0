@@ -133,7 +133,7 @@ export default function Services() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mb-16"
         >
-          <h3 className="h3-resp mb-6 heading-safe">Why Choose BuildMedia.AI</h3>
+          <h3 className="h3-resp mb-6 heading-safe">Why Choose BuildMediaStrategies</h3>
           <ResponsiveText
             as="p"
             className="p-resp p-narrow text-gray-400 line-clamp-2 sm:line-clamp-none"
