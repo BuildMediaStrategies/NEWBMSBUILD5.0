@@ -37,7 +37,7 @@ export default function Services() {
   });
 
   return (
-    <section ref={ref} id="about" className="py-32 bg-gray-900 text-white">
+    <section ref={ref} id="about" className="py-32 bg-black text-white">
       <div className="max-w-7xl mx-auto section-pad-resp">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -45,12 +45,12 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="h2-resp mb-6">Why Businesses Choose Us</h2>
+          <h2 className="h2-resp mb-6 heading-safe">We're <span className="gradient-text gradient-safe">BuildMedia.AI</span></h2>
           <ResponsiveText
             as="p"
             className="p-resp p-narrow text-gray-400 mb-12 line-clamp-3 sm:line-clamp-none"
-            short="Most agencies deliver generic solutions. We identify your revenue leaks and plug them permanently."
-            long="Most agencies promise the world but deliver generic solutions. We're different. We identify your specific revenue leaks and build custom systems that plug them permanently. No fluff, no empty promises, just measurable results that show up in your bank account."
+            short="Remote-first automation specialists based in Deal & Dover, UK."
+            long="A remote-first automation agency based between Deal and Dover on the Kent coast. We help businesses stop revenue leaks through intelligent automation systems."
           />
         </motion.div>
 
@@ -60,20 +60,55 @@ export default function Services() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="h3-resp mb-6">The Revenue Problem</h3>
+            <h3 className="h3-resp mb-6 heading-safe">Our Process</h3>
             <ResponsiveText
               as="p"
               className="p-resp p-narrow text-gray-400 mb-6 line-clamp-3 sm:line-clamp-none"
-              short="Businesses hemorrhage money through inefficient processes. Leads go cold, carts abandon, prospects slip away."
-              long="We started BuildMedia.AI after watching countless businesses hemorrhage money through inefficient processes. Leads going cold, customers abandoning carts, support tickets piling up, qualified prospects slipping through cracks."
+              short="Four steps to stop your revenue leaks."
+              long="Our proven four-step process to identify and eliminate revenue leaks in your business."
             />
-            <h3 className="h3-resp mb-6">How We Stop Revenue Leaks</h3>
-            <ResponsiveText
-              as="p"
-              className="p-resp p-narrow text-gray-400 mb-6 line-clamp-3 sm:line-clamp-none"
-              short="Every manual task leaks revenue. We build systems that plug profit drains automatically."
-              long="Every manual task in your business is a potential revenue leak. We've built systems with our proven approach to plugging profit drains."
-            />
+            
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center">
+                  <span className="text-white text-sm font-bold">1</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white">Discover</h4>
+                  <p className="text-sm text-gray-400">Analyze your business to identify revenue leaks</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 flex items-center justify-center">
+                  <span className="text-white text-sm font-bold">2</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white">Design</h4>
+                  <p className="text-sm text-gray-400">Custom automation systems for your workflows</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-cyan-600 to-teal-600 flex items-center justify-center">
+                  <span className="text-white text-sm font-bold">3</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white">Automate</h4>
+                  <p className="text-sm text-gray-400">Implementation and integration</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-teal-600 to-green-600 flex items-center justify-center">
+                  <span className="text-white text-sm font-bold">4</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white">Launch</h4>
+                  <p className="text-sm text-gray-400">Go live with ongoing support</p>
+                </div>
+              </div>
+            </div>
           </motion.div>
           
           <motion.div
@@ -82,13 +117,74 @@ export default function Services() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="relative"
           >
-            <div className="aspect-square rounded-2xl overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80"
-                alt="Team collaboration"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20" />
+            <div className="aspect-square rounded-2xl bg-gradient-to-br from-purple-600/20 to-pink-600/20 relative overflow-hidden">
+              {/* Animated workflow visualization */}
+              <div className="absolute inset-0 p-8">
+                {/* Step indicators */}
+                {[...Array(4)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center"
+                    style={{
+                      left: `${20 + (i % 2) * 60}%`,
+                      top: `${20 + Math.floor(i / 2) * 60}%`,
+                    }}
+                    animate={{
+                      scale: [1, 1.1, 1],
+                      opacity: [0.6, 1, 0.6],
+                    }}
+                    transition={{
+                      duration: 3,
+                      delay: i * 0.5,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    }}
+                  >
+                    <span className="text-white font-bold">{i + 1}</span>
+                  </motion.div>
+                ))}
+                
+                {/* Connecting lines */}
+                <svg className="absolute inset-0 w-full h-full">
+                  <motion.path
+                    d="M 25% 35% L 75% 35% L 75% 85% L 25% 85%"
+                    stroke="rgba(255,255,255,0.3)"
+                    strokeWidth="2"
+                    fill="none"
+                    strokeDasharray="5,5"
+                    initial={{ pathLength: 0 }}
+                    animate={{ pathLength: 1 }}
+                    transition={{ 
+                      duration: 4, 
+                      repeat: Infinity, 
+                      repeatType: 'reverse',
+                      ease: 'linear'
+                    }}
+                  />
+                </svg>
+                
+                {/* Floating data points */}
+                {[...Array(8)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"
+                    style={{
+                      left: `${Math.random() * 80 + 10}%`,
+                      top: `${Math.random() * 80 + 10}%`,
+                    }}
+                    animate={{
+                      scale: [0, 1, 0],
+                      opacity: [0, 0.8, 0],
+                    }}
+                    transition={{
+                      duration: 2,
+                      delay: i * 0.3,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    }}
+                  />
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
@@ -99,12 +195,12 @@ export default function Services() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mb-16"
         >
-          <h3 className="h3-resp mb-6">Our Values</h3>
+          <h3 className="h3-resp mb-6 heading-safe">Why Choose BuildMedia.AI</h3>
           <ResponsiveText
             as="p"
             className="p-resp p-narrow text-gray-400 line-clamp-2 sm:line-clamp-none"
-            short="The principles guiding our work"
-            long="The principles that guide everything we do"
+            short="What sets us apart from other agencies"
+            long="What sets us apart from other automation agencies"
           />
         </motion.div>
 
@@ -121,7 +217,7 @@ export default function Services() {
                 transform group-hover:scale-110 transition-transform duration-300`}>
                 <value.icon className="w-full h-full text-white" />
               </div>
-              <h4 className="text-xl font-bold mb-4">{value.title}</h4>
+              <h4 className="text-xl font-bold mb-4 heading-safe">{value.title}</h4>
               <p className="p-resp text-gray-400 group-hover:text-gray-300 transition-colors">
                 {value.description}
               </p>
