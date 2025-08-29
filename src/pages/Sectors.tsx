@@ -32,7 +32,7 @@ const sectors = [
       'Intelligent scheduling system coordinates site visits with availability'
     ],
     outcomes: ['+40% qualified leads', '-12 hrs admin/week', '+25% quote accuracy'],
-    gradient: 'from-orange-600 to-red-600'
+    gradient: 'from-gray-700 to-gray-600'
   },
   {
     id: 'retail',
@@ -49,7 +49,7 @@ const sectors = [
       'Dynamic offer personalization based on browsing and purchase history'
     ],
     outcomes: ['+35% cart recovery', '+50% chat resolution', '+20% repeat sales'],
-    gradient: 'from-purple-600 to-pink-600'
+    gradient: 'from-gray-600 to-gray-500'
   },
   {
     id: 'healthcare',
@@ -66,7 +66,7 @@ const sectors = [
       'Follow-up care sequences that improve treatment compliance'
     ],
     outcomes: ['+60% enquiry resolution', '-30% missed appointments', '+45% follow-up compliance'],
-    gradient: 'from-blue-600 to-cyan-600'
+    gradient: 'from-gray-500 to-gray-400'
   },
   {
     id: 'hospitality',
@@ -83,7 +83,7 @@ const sectors = [
       'Guest preference tracking for personalized future experiences'
     ],
     outcomes: ['+50% booking efficiency', '+80% review collection', '+25% repeat bookings'],
-    gradient: 'from-cyan-600 to-teal-600'
+    gradient: 'from-gray-600 to-gray-500'
   },
   {
     id: 'professional',
@@ -100,7 +100,7 @@ const sectors = [
       'Regular client update sequences that maintain engagement and transparency'
     ],
     outcomes: ['+45% intake efficiency', '-20 hrs proposal time', '+35% client satisfaction'],
-    gradient: 'from-green-600 to-yellow-600'
+    gradient: 'from-gray-500 to-gray-400'
   },
   {
     id: 'education',
@@ -117,7 +117,7 @@ const sectors = [
       'Personalized reminder sequences that improve attendance and engagement'
     ],
     outcomes: ['+55% enrollment completion', '+40% attendance rates', '-15 hrs admin/week'],
-    gradient: 'from-yellow-600 to-orange-600'
+    gradient: 'from-gray-400 to-gray-300'
   }
 ];
 
@@ -224,7 +224,7 @@ export default function Sectors() {
                 
                 <button
                   onClick={() => setExpandedSector(expandedSector === sector.id ? null : sector.id)}
-                  className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors text-sm font-medium"
+                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors text-sm font-medium"
                 >
                   <span>Learn more</span>
                   {expandedSector === sector.id ? (
@@ -248,7 +248,7 @@ export default function Sectors() {
                       <ul className="space-y-2">
                         {sector.challenges.map((challenge, idx) => (
                           <li key={idx} className="text-gray-400 text-sm flex items-start space-x-2">
-                            <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-2 flex-shrink-0" />
+                            <div className="w-1.5 h-1.5 bg-gray-500 rounded-full mt-2 flex-shrink-0" />
                             <span>{challenge}</span>
                           </li>
                         ))}
@@ -261,7 +261,7 @@ export default function Sectors() {
                       <ul className="space-y-2">
                         {sector.solutions.map((solution, idx) => (
                           <li key={idx} className="text-gray-400 text-sm flex items-start space-x-2">
-                            <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                            <Check className="w-4 h-4 text-gray-300 mt-0.5 flex-shrink-0" />
                             <span>{solution}</span>
                           </li>
                         ))}
@@ -275,8 +275,8 @@ export default function Sectors() {
                         {sector.outcomes.map((outcome, idx) => (
                           <span
                             key={idx}
-                            className="px-3 py-1 bg-gradient-to-r from-green-600/20 to-blue-600/20 
-                              border border-green-500/30 rounded-full text-xs font-medium text-green-400"
+                            className="px-3 py-1 bg-white/10 
+                              border border-white/30 rounded-full text-xs font-medium text-white"
                           >
                             {outcome}
                           </span>
@@ -286,8 +286,8 @@ export default function Sectors() {
 
                     {/* CTA buttons */}
                     <div className="flex space-x-3 pt-2">
-                      <button className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white 
-                        px-4 py-2 rounded-lg text-sm font-medium hover:from-purple-700 hover:to-pink-700 
+                      <button className="flex-1 bg-white text-black 
+                        px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 
                         transition-all duration-300 flex items-center justify-center space-x-2">
                         <Calendar className="w-4 h-4" />
                         <span>Book a call</span>
@@ -363,8 +363,8 @@ export default function Sectors() {
           >
             <h3 className="h3-resp mb-4">Don't See Your Industry?</h3>
             <p className="p-resp text-gray-400 mb-6">Every business has revenue leaks. Let's find yours and fix them.</p>
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 
-              rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300 
+            <button className="bg-white text-black px-8 py-3 
+              rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 
               flex items-center space-x-2 mx-auto">
               <Calendar className="w-5 h-5" />
               <span>Get Free Revenue Audit</span>

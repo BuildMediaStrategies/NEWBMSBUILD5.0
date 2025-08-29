@@ -8,25 +8,25 @@ const values = [
     icon: Target,
     title: 'Mission-Driven',
     description: 'We believe in creating digital solutions that drive real business results and meaningful impact.',
-    gradient: 'from-gray-700 to-gray-600'
+    gradient: 'from-gray-800 to-gray-700'
   },
   {
     icon: Users,
     title: 'Client-Focused',
     description: 'Your success is our success. We work as an extension of your team to achieve your goals.',
-    gradient: 'from-gray-600 to-gray-500'
+    gradient: 'from-gray-700 to-gray-600'
   },
   {
     icon: Lightbulb,
     title: 'Innovation First',
     description: 'We stay ahead of the curve, leveraging cutting-edge technology to solve complex challenges.',
-    gradient: 'from-gray-500 to-gray-400'
+    gradient: 'from-gray-600 to-gray-500'
   },
   {
     icon: Award,
     title: 'Excellence Always',
     description: 'Quality is non-negotiable. We deliver exceptional work that exceeds expectations.',
-    gradient: 'from-gray-400 to-gray-300'
+    gradient: 'from-gray-500 to-gray-400'
   }
 ];
 
@@ -70,7 +70,7 @@ export default function Services() {
             
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 rounded-lg bg-gray-700 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg bg-gray-600 flex items-center justify-center">
                   <span className="text-white text-sm font-bold">1</span>
                 </div>
                 <div>
@@ -80,7 +80,7 @@ export default function Services() {
               </div>
               
               <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 rounded-lg bg-gray-600 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg bg-gray-500 flex items-center justify-center">
                   <span className="text-white text-sm font-bold">2</span>
                 </div>
                 <div>
@@ -90,7 +90,7 @@ export default function Services() {
               </div>
               
               <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 rounded-lg bg-gray-500 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg bg-gray-400 flex items-center justify-center">
                   <span className="text-white text-sm font-bold">3</span>
                 </div>
                 <div>
@@ -100,7 +100,7 @@ export default function Services() {
               </div>
               
               <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 rounded-lg bg-gray-400 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg bg-gray-300 flex items-center justify-center">
                   <span className="text-white text-sm font-bold">4</span>
                 </div>
                 <div>
@@ -156,7 +156,7 @@ export default function Services() {
                 <value.icon className="w-full h-full text-white" />
               </div>
               <h4 className="text-xl font-bold mb-4 heading-safe">{value.title}</h4>
-              <p className="p-resp text-gray-300 group-hover:text-white transition-colors">
+              <p className="p-resp text-gray-400 group-hover:text-white transition-colors">
                 {value.description}
               </p>
             </motion.div>

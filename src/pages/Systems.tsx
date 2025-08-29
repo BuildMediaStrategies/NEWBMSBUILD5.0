@@ -38,7 +38,7 @@ const systems = [
       'Real-time lead quality analytics dashboard'
     ],
     outcomes: ['+40% lead quality', '-15 hrs/week manual work'],
-    gradient: 'from-purple-600 to-blue-600'
+    gradient: 'from-gray-700 to-gray-600'
   },
   {
     id: 'conversion',
@@ -57,7 +57,7 @@ const systems = [
       'Intelligent timing adjustments for maximum impact'
     ],
     outcomes: ['+25% conversion rate', '+30% revenue per visitor'],
-    gradient: 'from-blue-600 to-cyan-600'
+    gradient: 'from-gray-600 to-gray-500'
   },
   {
     id: 'call-automation',
@@ -76,7 +76,7 @@ const systems = [
       'Follow-up reminder system with personalized messaging'
     ],
     outcomes: ['+50% call connection rate', '-8 hrs/week admin'],
-    gradient: 'from-cyan-600 to-teal-600'
+    gradient: 'from-gray-500 to-gray-400'
   },
   {
     id: 'ai-sales',
@@ -95,7 +95,7 @@ const systems = [
       'Sales performance analytics and coaching insights'
     ],
     outcomes: ['+35% response rate', '+20% deal velocity'],
-    gradient: 'from-teal-600 to-green-600'
+    gradient: 'from-gray-600 to-gray-500'
   },
   {
     id: 'support',
@@ -114,7 +114,7 @@ const systems = [
       'Knowledge base that learns from every interaction'
     ],
     outcomes: ['+60% faster response', '+40% satisfaction'],
-    gradient: 'from-green-600 to-yellow-600'
+    gradient: 'from-gray-500 to-gray-400'
   },
   {
     id: 'recruitment',
@@ -133,7 +133,7 @@ const systems = [
       'Hiring pipeline analytics and bottleneck identification'
     ],
     outcomes: ['-50% time to hire', '+30% candidate quality'],
-    gradient: 'from-yellow-600 to-orange-600'
+    gradient: 'from-gray-400 to-gray-300'
   },
   {
     id: 'project-management',
@@ -152,7 +152,7 @@ const systems = [
       'Project performance analytics and predictive insights'
     ],
     outcomes: ['+25% on-time delivery', '-12 hrs/week reporting'],
-    gradient: 'from-orange-600 to-red-600'
+    gradient: 'from-gray-600 to-gray-500'
   },
   {
     id: 'social-media',
@@ -171,7 +171,7 @@ const systems = [
       'Social media performance analytics and growth insights'
     ],
     outcomes: ['+80% posting consistency', '+45% engagement'],
-    gradient: 'from-red-600 to-pink-600'
+    gradient: 'from-gray-500 to-gray-400'
   },
   {
     id: 'lead-capture',
@@ -190,7 +190,7 @@ const systems = [
       'Lead capture analytics with conversion optimization insights'
     ],
     outcomes: ['+55% form conversion', '+30% lead volume'],
-    gradient: 'from-pink-600 to-purple-600'
+    gradient: 'from-gray-400 to-gray-300'
   }
 ];
 
@@ -323,8 +323,8 @@ export default function Systems() {
                 onClick={() => setActiveFilter(category)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeFilter === category
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
-                    : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'
+                    ? 'bg-white text-black'
+                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
                 }`}
               >
                 {category}
@@ -349,16 +349,16 @@ export default function Systems() {
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 
                     hover:bg-white/10 hover:border-white/20 transition-all duration-300"
                 >
-                  <div className={`w-12 h-12 mb-4 rounded-lg bg-gradient-to-r ${system.gradient} p-3`}>
+                  <div className={`w-12 h-12 mb-4 rounded-lg bg-gray-700 p-3`}>
                     <system.icon className="w-full h-full text-white" />
                   </div>
                   
                   <h3 className="h3-resp mb-3">{system.title}</h3>
-                  <p className="p-resp text-gray-400 mb-4">{system.tldr}</p>
+                  <p className="p-resp text-gray-300 mb-4">{system.tldr}</p>
                   
                   <button
                     onClick={() => setExpandedSystem(expandedSystem === system.id ? null : system.id)}
-                    className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors text-sm font-medium"
+                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors text-sm font-medium"
                   >
                     <span>View details</span>
                     {expandedSystem === system.id ? (
@@ -381,8 +381,8 @@ export default function Systems() {
                         <h4 className="font-semibold mb-3 text-white">What it solves</h4>
                         <ul className="space-y-2">
                           {system.whatItSolves.map((point, idx) => (
-                            <li key={idx} className="text-gray-400 text-sm flex items-start space-x-2">
-                              <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-2 flex-shrink-0" />
+                            <li key={idx} className="text-gray-300 text-sm flex items-start space-x-2">
+                              <div className="w-1.5 h-1.5 bg-gray-500 rounded-full mt-2 flex-shrink-0" />
                               <span>{point}</span>
                             </li>
                           ))}
@@ -394,8 +394,8 @@ export default function Systems() {
                         <h4 className="font-semibold mb-3 text-white">What you get</h4>
                         <ul className="space-y-2">
                           {system.whatYouGet.map((item, idx) => (
-                            <li key={idx} className="text-gray-400 text-sm flex items-start space-x-2">
-                              <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                            <li key={idx} className="text-gray-300 text-sm flex items-start space-x-2">
+                              <Check className="w-4 h-4 text-gray-300 mt-0.5 flex-shrink-0" />
                               <span>{item}</span>
                             </li>
                           ))}
@@ -409,8 +409,8 @@ export default function Systems() {
                           {system.outcomes.map((outcome, idx) => (
                             <span
                               key={idx}
-                              className="px-3 py-1 bg-gradient-to-r from-green-600/20 to-blue-600/20 
-                                border border-green-500/30 rounded-full text-xs font-medium text-green-400"
+                              className="px-3 py-1 bg-white/10 
+                                border border-white/30 rounded-full text-xs font-medium text-white"
                             >
                               {outcome}
                             </span>
@@ -420,14 +420,14 @@ export default function Systems() {
 
                       {/* CTA buttons */}
                       <div className="flex space-x-3 pt-2">
-                        <button className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white 
-                          px-4 py-2 rounded-lg text-sm font-medium hover:from-purple-700 hover:to-pink-700 
+                        <button className="flex-1 bg-white text-black 
+                          px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 
                           transition-all duration-300 flex items-center justify-center space-x-2">
                           <Calendar className="w-4 h-4" />
                           <span>Book a call</span>
                         </button>
-                        <button className="flex-1 bg-white/5 border border-white/20 text-white px-4 py-2 
-                          rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-300 
+                        <button className="flex-1 bg-gray-800 border border-gray-600 text-white px-4 py-2 
+                          rounded-lg text-sm font-medium hover:bg-gray-700 transition-all duration-300 
                           flex items-center justify-center space-x-2">
                           <ExternalLink className="w-4 h-4" />
                           <span>See examples</span>
@@ -443,7 +443,7 @@ export default function Systems() {
 
         {/* Table of Contents - Desktop */}
         <div className="hidden lg:block w-64 sticky top-24 h-fit">
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4">
+          <div className="bg-gray-900 backdrop-blur-sm border border-gray-600 rounded-xl p-4">
             <h4 className="font-semibold mb-4 text-white">Systems</h4>
             <nav className="space-y-2">
               {systems.map((system) => (
@@ -452,8 +452,8 @@ export default function Systems() {
                   href={`#${system.id}`}
                   className={`block text-sm transition-colors ${
                     activeSection === system.id
-                      ? 'text-purple-400 font-medium'
-                      : 'text-gray-400 hover:text-white'
+                      ? 'text-white font-medium'
+                      : 'text-gray-300 hover:text-white'
                   }`}
                 >
                   {system.title}
@@ -465,7 +465,7 @@ export default function Systems() {
       </div>
 
       {/* FAQ Section */}
-      <section className="py-20 border-t border-white/10">
+      <section className="py-20 border-t border-gray-600">
         <div className="max-w-4xl mx-auto section-pad-resp">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -473,7 +473,7 @@ export default function Systems() {
             className="text-center mb-12"
           >
             <h2 className="h2-resp mb-4">Common Concerns About Automation</h2>
-            <p className="p-resp text-gray-400">Everything you need to know about our automation systems</p>
+            <p className="p-resp text-gray-300">Everything you need to know about our automation systems</p>
           </motion.div>
 
           <div className="space-y-4">
@@ -483,17 +483,17 @@ export default function Systems() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden"
+                className="bg-gray-900 backdrop-blur-sm border border-gray-600 rounded-xl overflow-hidden"
               >
                 <button
                   onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-800 transition-colors"
                 >
                   <span className="font-medium text-white">{faq.question}</span>
                   {expandedFaq === index ? (
-                    <ChevronUp className="w-5 h-5 text-gray-400" />
+                    <ChevronUp className="w-5 h-5 text-gray-300" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-gray-400" />
+                    <ChevronDown className="w-5 h-5 text-gray-300" />
                   )}
                 </button>
                 {expandedFaq === index && (
@@ -504,7 +504,7 @@ export default function Systems() {
                     transition={{ duration: 0.3 }}
                     className="px-6 pb-4"
                   >
-                    <p className="p-resp text-gray-400">{faq.answer}</p>
+                    <p className="p-resp text-gray-300">{faq.answer}</p>
                   </motion.div>
                 )}
               </motion.div>
@@ -514,16 +514,16 @@ export default function Systems() {
       </section>
 
       {/* Final CTA Strip */}
-      <section className="py-12 bg-gradient-to-r from-purple-600/10 to-pink-600/10 border-t border-white/10">
+      <section className="py-12 bg-gray-800 border-t border-gray-600">
         <div className="max-w-4xl mx-auto section-pad-resp text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
           >
             <h3 className="h3-resp mb-4">Stop The Money Drain</h3>
-            <p className="p-resp text-gray-400 mb-6">Get a free audit of your biggest revenue leaks</p>
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 
-              rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300 
+            <p className="p-resp text-gray-300 mb-6">Get a free audit of your biggest revenue leaks</p>
+            <button className="bg-white text-black px-8 py-3 
+              rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 
               flex items-center space-x-2 mx-auto">
               <Calendar className="w-5 h-5" />
               <span>Get Free Revenue Audit</span>

@@ -10,7 +10,7 @@ const systems = [
     category: 'Lead Systems',
     animationType: 'nodes',
     icon: Funnel,
-    color: 'from-gray-700 to-gray-600',
+    color: 'from-gray-800 to-gray-700',
     size: 'large'
   },
   {
@@ -18,7 +18,7 @@ const systems = [
     category: 'Sales Optimization',
     animationType: 'grid',
     icon: Monitor,
-    color: 'from-gray-600 to-gray-500',
+    color: 'from-gray-700 to-gray-600',
     size: 'small'
   },
   {
@@ -26,7 +26,7 @@ const systems = [
     category: 'Communication',
     animationType: 'waveforms',
     icon: Phone,
-    color: 'from-gray-500 to-gray-400',
+    color: 'from-gray-600 to-gray-500',
     size: 'medium'
   },
   {
@@ -34,7 +34,7 @@ const systems = [
     category: 'Sales Automation',
     animationType: 'pipeline',
     icon: BarChart3,
-    color: 'from-gray-400 to-gray-300',
+    color: 'from-gray-500 to-gray-400',
     size: 'small'
   },
   {
@@ -42,7 +42,7 @@ const systems = [
     category: 'Customer Service',
     animationType: 'typing',
     icon: MessageCircle,
-    color: 'from-gray-600 to-gray-500',
+    color: 'from-gray-700 to-gray-600',
     size: 'medium'
   },
   {
@@ -50,7 +50,7 @@ const systems = [
     category: 'HR Automation',
     animationType: 'avatars',
     icon: Users,
-    color: 'from-gray-500 to-gray-400',
+    color: 'from-gray-600 to-gray-500',
     size: 'large'
   },
   {
@@ -58,7 +58,7 @@ const systems = [
     category: 'Workflow Automation',
     animationType: 'kanban',
     icon: LayoutDashboard,
-    color: 'from-gray-400 to-gray-300',
+    color: 'from-gray-500 to-gray-400',
     size: 'medium'
   },
   {
@@ -66,7 +66,7 @@ const systems = [
     category: 'Marketing Systems',
     animationType: 'social',
     icon: Calendar,
-    color: 'from-gray-300 to-gray-200',
+    color: 'from-gray-400 to-gray-300',
     size: 'small'
   },
   {
@@ -74,7 +74,7 @@ const systems = [
     category: 'Lead Generation',
     animationType: 'funnel',
     icon: Clipboard,
-    color: 'from-gray-600 to-gray-500',
+    color: 'from-gray-700 to-gray-600',
     size: 'medium'
   }
 ];

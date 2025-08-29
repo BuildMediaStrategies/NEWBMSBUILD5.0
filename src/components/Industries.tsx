@@ -16,37 +16,37 @@ const industries = [
     icon: Hammer,
     title: 'Construction',
     description: 'Capture and qualify project leads, auto-quote, and schedule site visits',
-    gradient: 'from-gray-700 to-gray-600'
+    gradient: 'from-gray-800 to-gray-700'
   },
   {
     icon: ShoppingCart,
     title: 'Retail & E-commerce',
     description: 'Recover carts, personalize offers, and automate customer chat',
-    gradient: 'from-gray-600 to-gray-500'
+    gradient: 'from-gray-700 to-gray-600'
   },
   {
     icon: Heart,
     title: 'Healthcare & Clinics',
     description: 'Route enquiries, manage bookings, send reminders and follow-ups',
-    gradient: 'from-gray-500 to-gray-400'
+    gradient: 'from-gray-600 to-gray-500'
   },
   {
     icon: Coffee,
     title: 'Hospitality & Leisure',
     description: 'Handle bookings, waitlists, and post-visit reviews on autopilot',
-    gradient: 'from-gray-400 to-gray-300'
+    gradient: 'from-gray-500 to-gray-400'
   },
   {
     icon: Briefcase,
     title: 'Professional Services',
     description: 'Automate intake, proposals, and client updates',
-    gradient: 'from-gray-600 to-gray-500'
+    gradient: 'from-gray-700 to-gray-600'
   },
   {
     icon: GraduationCap,
     title: 'Education & Training',
     description: 'Enroll leads, schedule sessions, and send course reminders',
-    gradient: 'from-gray-500 to-gray-400'
+    gradient: 'from-gray-600 to-gray-500'
   }
 ];
 
@@ -68,7 +68,7 @@ export default function Industries() {
           <h2 className="h2-resp mb-6">Industries Losing Money Daily</h2>
           <ResponsiveText
             as="p"
-            className="p-resp p-narrow text-gray-300 line-clamp-3 sm:line-clamp-none"
+            className="p-resp p-narrow text-gray-400 line-clamp-3 sm:line-clamp-none"
             short="Every industry has revenue leaks. We identify and fix the biggest profit drains."
             long="Every industry has unique revenue leaks. We've identified the biggest profit drains and built systems to fix them."
           />
@@ -95,7 +95,7 @@ export default function Industries() {
                   {industry.title}
                 </h3>
                 
-                <p className="p-resp text-gray-300 group-hover:text-white transition-colors">
+                <p className="p-resp text-gray-400 group-hover:text-white transition-colors">
                   {industry.description}
                 </p>
               </Link>

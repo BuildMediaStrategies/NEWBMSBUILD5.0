@@ -22,7 +22,7 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className="fixed w-full z-50 bg-black/90 backdrop-blur-lg border-b border-gray-700"
+      className="fixed w-full z-50 bg-black/90 backdrop-blur-lg border-b border-gray-600"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -56,7 +56,7 @@ export default function Navbar() {
                   className={`transition-colors relative ${
                     isActive(item.path)
                       ? 'text-white'
-                      : 'text-gray-300 hover:text-white'
+                      : 'text-gray-400 hover:text-white'
                   }`}
                 >
                   <motion.span
@@ -82,7 +82,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-gray-400 hover:text-white transition-colors"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -95,7 +95,7 @@ export default function Navbar() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="md:hidden bg-black/95 backdrop-blur-lg border-t border-gray-700"
+          className="md:hidden bg-black/95 backdrop-blur-lg border-t border-gray-600"
         >
           <div className="px-4 py-6 space-y-4">
             {navItems.map((item) => (
@@ -106,7 +106,7 @@ export default function Navbar() {
                 className={`block transition-colors ${
                   isActive(item.path)
                     ? 'text-white'
-                    : 'text-gray-300 hover:text-white'
+                    : 'text-gray-400 hover:text-white'
                 }`}
               >
                 {item.name}

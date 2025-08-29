@@ -36,7 +36,7 @@ export default function Hero() {
         
         {/* Animated gradient overlay */}
         <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-gray-600/10 via-transparent to-gray-500/10"
+          className="absolute inset-0 bg-gradient-to-r from-gray-800/10 via-transparent to-gray-700/10"
           animate={{
             backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
           }}
@@ -77,9 +77,9 @@ export default function Hero() {
         <svg className="absolute inset-0 w-full h-full">
           <defs>
             <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="rgb(156, 163, 175)" stopOpacity="0.3" />
-              <stop offset="50%" stopColor="rgb(209, 213, 219)" stopOpacity="0.2" />
-              <stop offset="100%" stopColor="rgb(156, 163, 175)" stopOpacity="0.1" />
+              <stop offset="0%" stopColor="rgb(255, 255, 255)" stopOpacity="0.3" />
+              <stop offset="50%" stopColor="rgb(255, 255, 255)" stopOpacity="0.2" />
+              <stop offset="100%" stopColor="rgb(255, 255, 255)" stopOpacity="0.1" />
             </linearGradient>
           </defs>
           
@@ -119,7 +119,7 @@ export default function Hero() {
         {[...Array(12)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"
+            className="absolute w-2 h-2 bg-white rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -180,9 +180,9 @@ export default function Hero() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group bg-white p-[2px] rounded-full"
+                className="group bg-gray-300 p-[2px] rounded-full"
               >
-                <div className="bg-black rounded-full px-8 py-4 transition group-hover:bg-gray-900">
+                <div className="bg-black rounded-full px-8 py-4 transition group-hover:bg-gray-800">
                   <span className="flex items-center space-x-2 text-white group-hover:text-white">
                     <span>Stop The Revenue Leak</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

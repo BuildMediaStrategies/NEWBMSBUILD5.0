@@ -77,7 +77,7 @@ export default function WebDesignDover() {
                   transition={{ delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"
                 >
-                  <service.icon className="w-12 h-12 text-purple-400 mb-4" />
+                  <service.icon className="w-12 h-12 text-gray-300 mb-4" />
                   <h3 className="h3-resp mb-2">{service.title}</h3>
                   <p className="p-resp text-gray-400">{service.desc}</p>
                 </motion.div>
@@ -92,21 +92,21 @@ export default function WebDesignDover() {
             <h2 className="h2-resp mb-12 text-center">Our Services in Dover</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <Link to="/ai-automation-dover" className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                <h3 className="h3-resp mb-4 group-hover:text-purple-400 transition-colors">AI Automation Dover</h3>
+                <h3 className="h3-resp mb-4 group-hover:text-white transition-colors">AI Automation Dover</h3>
                 <p className="p-resp text-gray-400 mb-4">Intelligent automation systems for Dover businesses</p>
-                <ArrowRight className="w-5 h-5 text-purple-400 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 text-gray-300 group-hover:translate-x-1 transition-transform" />
               </Link>
               
               <Link to="/full-stack-development-dover" className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                <h3 className="h3-resp mb-4 group-hover:text-purple-400 transition-colors">Full-Stack Development Dover</h3>
+                <h3 className="h3-resp mb-4 group-hover:text-white transition-colors">Full-Stack Development Dover</h3>
                 <p className="p-resp text-gray-400 mb-4">Complete development solutions for Dover companies</p>
-                <ArrowRight className="w-5 h-5 text-purple-400 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 text-gray-300 group-hover:translate-x-1 transition-transform" />
               </Link>
               
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
                 <h3 className="h3-resp mb-4">Looking for services across Kent?</h3>
                 <p className="p-resp text-gray-400 mb-4">
-                  <Link to="/web-design-kent" className="text-purple-400 hover:text-purple-300 transition-colors">
+                  <Link to="/web-design-kent" className="text-gray-300 hover:text-white transition-colors">
                     See our Web Design Kent page
                   </Link>
                 </p>
@@ -124,7 +124,7 @@ export default function WebDesignDover() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center space-x-2 mx-auto"
+                className="bg-white text-black px-8 py-4 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 flex items-center space-x-2 mx-auto"
               >
                 <span>Get Started Today</span>
                 <ArrowRight className="w-5 h-5" />

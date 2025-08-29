@@ -75,7 +75,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-gray-400">jj@buildmediastrategies.com</p>
+                    <p className="text-gray-500">jj@buildmediastrategies.com</p>
                   </div>
                 </div>
                 
@@ -85,24 +85,24 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold">Location</h3>
-                    <p className="text-gray-400">Remote based workflow</p>
+                    <p className="text-gray-500">Remote based workflow</p>
                   </div>
                 </div>
               </div>
 
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
                 <h3 className="h3-resp mb-4">Why Choose BuildMediaStrategies?</h3>
-                <ul className="space-y-3 text-gray-400">
+                <ul className="space-y-3 text-gray-500">
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0" />
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0" />
                     <span className="p-resp">Proven track record with 500+ successful automation implementations</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0" />
                     <span className="p-resp">Average 40% increase in operational efficiency for our clients</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full mt-2 flex-shrink-0" />
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0" />
                     <span className="p-resp">24/7 support and ongoing optimization of your systems</span>
                   </li>
                 </ul>
@@ -117,23 +117,23 @@ export default function ContactPage() {
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">Name</label>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-500 mb-2">Name</label>
                     <input
                       type="text"
                       id="name"
                       className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white 
-                        placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent
+                        placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-transparent
                         transition-all duration-300"
                       placeholder="John Doe"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-500 mb-2">Email</label>
                     <input
                       type="email"
                       id="email"
                       className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white 
-                        placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent
+                        placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-transparent
                         transition-all duration-300"
                       placeholder="john@example.com"
                     />
@@ -141,23 +141,23 @@ export default function ContactPage() {
                 </div>
                 
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-400 mb-2">Company</label>
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-500 mb-2">Company</label>
                   <input
                     type="text"
                     id="company"
                     className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white 
-                      placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent
+                      placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-transparent
                       transition-all duration-300"
                     placeholder="Your Company"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-400 mb-2">Subject</label>
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-500 mb-2">Subject</label>
                   <select
                     id="subject"
                     className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white 
-                      focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent
+                      focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-transparent
                       transition-all duration-300"
                   >
                     <option value="">Select a topic</option>
@@ -170,12 +170,12 @@ export default function ContactPage() {
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-500 mb-2">Message</label>
                   <textarea
                     id="message"
                     rows={6}
                     className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white 
-                      placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent
+                      placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-transparent
                       transition-all duration-300"
                     placeholder="Tell us about your project and how we can help..."
                   />
@@ -184,8 +184,8 @@ export default function ContactPage() {
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg px-8 py-4
-                    flex items-center justify-center space-x-2 hover:from-purple-700 hover:to-pink-700 
+                  className="w-full bg-gray-200 text-black rounded-lg px-8 py-4
+                    flex items-center justify-center space-x-2 hover:bg-white 
                     transition-all duration-300"
                 >
                   <span>Get My Revenue Audit</span>
