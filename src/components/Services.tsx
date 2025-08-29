@@ -8,25 +8,25 @@ const values = [
     icon: Target,
     title: 'Mission-Driven',
     description: 'We believe in creating digital solutions that drive real business results and meaningful impact.',
-    gradient: 'from-purple-600 to-blue-600'
+    gradient: 'from-gray-700 to-gray-600'
   },
   {
     icon: Users,
     title: 'Client-Focused',
     description: 'Your success is our success. We work as an extension of your team to achieve your goals.',
-    gradient: 'from-blue-600 to-cyan-600'
+    gradient: 'from-gray-600 to-gray-500'
   },
   {
     icon: Lightbulb,
     title: 'Innovation First',
     description: 'We stay ahead of the curve, leveraging cutting-edge technology to solve complex challenges.',
-    gradient: 'from-cyan-600 to-teal-600'
+    gradient: 'from-gray-500 to-gray-400'
   },
   {
     icon: Award,
     title: 'Excellence Always',
     description: 'Quality is non-negotiable. We deliver exceptional work that exceeds expectations.',
-    gradient: 'from-teal-600 to-green-600'
+    gradient: 'from-gray-400 to-gray-300'
   }
 ];
 
@@ -63,49 +63,49 @@ export default function Services() {
             <h3 className="h3-resp mb-6 heading-safe">Our Process</h3>
             <ResponsiveText
               as="p"
-              className="p-resp p-narrow text-gray-400 mb-6 line-clamp-3 sm:line-clamp-none"
+              className="p-resp p-narrow text-gray-300 mb-6 line-clamp-3 sm:line-clamp-none"
               short="Four steps to stop your revenue leaks."
               long="Our proven four-step process to identify and eliminate revenue leaks in your business."
             />
             
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg bg-gray-700 flex items-center justify-center">
                   <span className="text-white text-sm font-bold">1</span>
                 </div>
                 <div>
                   <h4 className="font-semibold text-white">Discover</h4>
-                  <p className="text-sm text-gray-400">Analyze your business to identify revenue leaks</p>
+                  <p className="text-sm text-gray-300">Analyze your business to identify revenue leaks</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg bg-gray-600 flex items-center justify-center">
                   <span className="text-white text-sm font-bold">2</span>
                 </div>
                 <div>
                   <h4 className="font-semibold text-white">Design</h4>
-                  <p className="text-sm text-gray-400">Custom automation systems for your workflows</p>
+                  <p className="text-sm text-gray-300">Custom automation systems for your workflows</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-cyan-600 to-teal-600 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg bg-gray-500 flex items-center justify-center">
                   <span className="text-white text-sm font-bold">3</span>
                 </div>
                 <div>
                   <h4 className="font-semibold text-white">Automate</h4>
-                  <p className="text-sm text-gray-400">Implementation and integration</p>
+                  <p className="text-sm text-gray-300">Implementation and integration</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-teal-600 to-green-600 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg bg-gray-400 flex items-center justify-center">
                   <span className="text-white text-sm font-bold">4</span>
                 </div>
                 <div>
                   <h4 className="font-semibold text-white">Launch</h4>
-                  <p className="text-sm text-gray-400">Go live with ongoing support</p>
+                  <p className="text-sm text-gray-300">Go live with ongoing support</p>
                 </div>
               </div>
             </div>
@@ -136,7 +136,7 @@ export default function Services() {
           <h3 className="h3-resp mb-6 heading-safe">Why Choose BuildMediaStrategies</h3>
           <ResponsiveText
             as="p"
-            className="p-resp p-narrow text-gray-400 line-clamp-2 sm:line-clamp-none"
+            className="p-resp p-narrow text-gray-300 line-clamp-2 sm:line-clamp-none"
             short="What sets us apart from other agencies"
             long="What sets us apart from other automation agencies"
           />
@@ -151,12 +151,12 @@ export default function Services() {
               transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
               className="group text-center"
             >
-              <div className={`w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-r ${value.gradient} p-4 
+              <div className={`w-16 h-16 mx-auto mb-6 rounded-xl bg-gray-700 p-4 
                 transform group-hover:scale-110 transition-transform duration-300`}>
                 <value.icon className="w-full h-full text-white" />
               </div>
               <h4 className="text-xl font-bold mb-4 heading-safe">{value.title}</h4>
-              <p className="p-resp text-gray-400 group-hover:text-gray-300 transition-colors">
+              <p className="p-resp text-gray-300 group-hover:text-white transition-colors">
                 {value.description}
               </p>
             </motion.div>

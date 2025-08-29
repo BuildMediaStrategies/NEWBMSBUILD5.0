@@ -28,15 +28,15 @@ const floatingIcons = [
 ];
 export default function Hero() {
   return (
-    <div className="relative min-h-screen flex items-center overflow-hidden">
+    <div className="relative min-h-screen flex items-center overflow-hidden bg-black">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-black">
         {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-black to-pink-900/30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-800/20 via-black to-gray-700/10" />
         
         {/* Animated gradient overlay */}
         <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-transparent to-pink-600/20"
+          className="absolute inset-0 bg-gradient-to-r from-gray-600/10 via-transparent to-gray-500/10"
           animate={{
             backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
           }}
@@ -69,7 +69,7 @@ export default function Hero() {
               ease: 'easeInOut',
             }}
           >
-            <Icon className="w-8 h-8 text-purple-400/30" />
+            <Icon className="w-8 h-8 text-gray-400/30" />
           </motion.div>
         ))}
         
@@ -77,9 +77,9 @@ export default function Hero() {
         <svg className="absolute inset-0 w-full h-full">
           <defs>
             <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="rgb(147, 51, 234)" stopOpacity="0.3" />
-              <stop offset="50%" stopColor="rgb(236, 72, 153)" stopOpacity="0.2" />
-              <stop offset="100%" stopColor="rgb(147, 51, 234)" stopOpacity="0.1" />
+              <stop offset="0%" stopColor="rgb(156, 163, 175)" stopOpacity="0.3" />
+              <stop offset="50%" stopColor="rgb(209, 213, 219)" stopOpacity="0.2" />
+              <stop offset="100%" stopColor="rgb(156, 163, 175)" stopOpacity="0.1" />
             </linearGradient>
           </defs>
           
@@ -148,7 +148,7 @@ export default function Hero() {
           >
             <h1 className="h1-resp text-white mb-8 heading-safe">
               Your Business Is
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 gradient-safe">
+              <span className="block text-white gradient-safe">
                 Bleeding Revenue
               </span>
               {" "}
@@ -161,12 +161,12 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             variants={textVariants}
-            className="p-resp p-narrow text-gray-300 mb-8 sm:mb-12 line-clamp-3 sm:line-clamp-none"
+            className="p-resp p-narrow text-gray-400 mb-8 sm:mb-12 line-clamp-3 sm:line-clamp-none"
           >
             <ResponsiveText
               short="Manual work costs thousands daily. Competitors automate while you fall behind."
               long="Manual processes are costing you thousands in lost leads, missed opportunities, and wasted hours. While your competitors automate and scale, you're stuck doing everything by hand."
-              className="p-resp text-gray-300"
+              className="p-resp text-gray-400"
             />
           </motion.p>
 
@@ -180,10 +180,10 @@ export default function Hero() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 p-[2px] rounded-full"
+                className="group bg-white p-[2px] rounded-full"
               >
-                <div className="bg-black rounded-full px-8 py-4 transition group-hover:bg-transparent">
-                  <span className="flex items-center space-x-2 text-white">
+                <div className="bg-black rounded-full px-8 py-4 transition group-hover:bg-gray-900">
+                  <span className="flex items-center space-x-2 text-white group-hover:text-white">
                     <span>Stop The Revenue Leak</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </span>

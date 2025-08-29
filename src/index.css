@@ -9,19 +9,19 @@
   }
   
   body {
-    @apply antialiased text-gray-900;
+    @apply antialiased text-white bg-black;
     overflow-x: hidden;
   }
   
   html, body, #root { min-height: 100%; }
-  body { background-color: #0B0F1A; } /* match site bg */
+  body { background-color: #000000; } /* black background */
   /* keep our earlier horizontal clamp but allow vertical scroll */
   html, body, #root { overflow-x: clip; overflow-y: auto; }
 }
 
 @layer components {
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500;
+    @apply text-white;
   }
 
   .h1-resp { @apply text-3xl sm:text-5xl md:text-6xl font-bold leading-normal tracking-tight pb-3; }

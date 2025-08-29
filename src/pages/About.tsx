@@ -97,7 +97,7 @@ export default function About() {
           >
             <ResponsiveText
               as="p"
-              className="p-resp p-narrow text-gray-300 mb-8"
+              className="p-resp p-narrow text-gray-400 mb-8"
               short="Remote-first automation specialists based in Deal & Dover, UK."
               long="A remote-first automation agency based between Deal and Dover on the Kent coast. We help businesses stop revenue leaks through intelligent automation systems."
             />
@@ -106,7 +106,7 @@ export default function About() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={heroInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex items-center justify-center space-x-2 text-gray-400"
+              className="flex items-center justify-center space-x-2 text-gray-300"
             >
               <MapPin className="w-5 h-5" />
               <span className="text-sm">Deal & Dover, Kent, UK</span>
@@ -116,7 +116,7 @@ export default function About() {
       </section>
 
       {/* Collaboration Section */}
-      <section ref={collaborationRef} className="py-20 bg-gray-900">
+      <section ref={collaborationRef} className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto section-pad-resp">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -127,7 +127,7 @@ export default function About() {
             <h2 className="h2-resp mb-6">Strategic Partnership</h2>
             <ResponsiveText
               as="p"
-              className="p-resp p-narrow text-gray-400"
+              className="p-resp p-narrow text-gray-300"
               short="Partnered with ifucantfindit.com for enhanced digital solutions."
               long="We've partnered with ifucantfindit.com to deliver comprehensive digital solutions that go beyond automation."
             />
@@ -139,7 +139,7 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="max-w-4xl mx-auto"
           >
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-12 text-center">
+            <div className="bg-gray-900 backdrop-blur-sm border border-gray-600 rounded-2xl p-8 md:p-12 text-center">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={collaborationInView ? { opacity: 1, scale: 1 } : {}}
@@ -149,16 +149,16 @@ export default function About() {
                 <h3 className="h3-resp mb-4">ifucantfindit.com</h3>
                 <ResponsiveText
                   as="p"
-                  className="p-resp text-gray-300 mb-6"
+                  className="p-resp text-gray-400 mb-6"
                   short="Digital strategy, web development, and creative solutions that complement our automation expertise."
                   long="Our strategic partner brings digital strategy, web development, and creative solutions that perfectly complement our automation expertise, delivering complete business transformation."
                 />
-                <p className="p-resp text-gray-300 mb-6">
+                <p className="p-resp text-gray-400 mb-6">
                   <a 
                     href="https://ifucantfindit.com" 
                     target="_blank" 
                     rel="noopener"
-                    className="text-purple-400 hover:text-purple-300 transition-colors"
+                    className="text-white hover:text-gray-300 transition-colors"
                   >
                     Website design in Dover by ifucantfindit.com
                   </a>
@@ -172,25 +172,25 @@ export default function About() {
                 className="grid md:grid-cols-3 gap-6 mb-8"
               >
                 <div className="text-center">
-                  <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 p-3">
+                  <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-gray-700 p-3">
                     <Lightbulb className="w-full h-full text-white" />
                   </div>
                   <h4 className="font-semibold mb-2">Strategy</h4>
-                  <p className="text-sm text-gray-400">Digital transformation planning</p>
+                  <p className="text-sm text-gray-300">Digital transformation planning</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 p-3">
+                  <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-gray-600 p-3">
                     <Users className="w-full h-full text-white" />
                   </div>
                   <h4 className="font-semibold mb-2">Development</h4>
-                  <p className="text-sm text-gray-400">Custom web solutions</p>
+                  <p className="text-sm text-gray-300">Custom web solutions</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r from-teal-600 to-green-600 p-3">
+                  <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-gray-500 p-3">
                     <Rocket className="w-full h-full text-white" />
                   </div>
                   <h4 className="font-semibold mb-2">Creative</h4>
-                  <p className="text-sm text-gray-400">Brand and design excellence</p>
+                  <p className="text-sm text-gray-300">Brand and design excellence</p>
                 </div>
               </motion.div>
 
@@ -200,7 +200,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
+                className="inline-flex items-center space-x-2 bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300"
               >
                 <span>Visit ifucantfindit.com</span>
                 <ExternalLink className="w-4 h-4" />
@@ -222,7 +222,7 @@ export default function About() {
             <h2 className="h2-resp mb-6">Our Process</h2>
             <ResponsiveText
               as="p"
-              className="p-resp p-narrow text-gray-400"
+              className="p-resp p-narrow text-gray-300"
               short="Four steps to stop your revenue leaks."
               long="Our proven four-step process to identify and eliminate revenue leaks in your business."
             />
@@ -240,7 +240,7 @@ export default function About() {
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ duration: 0.3 }}
-                  className={`w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-r ${step.gradient} p-4`}
+                  className={`w-16 h-16 mx-auto mb-6 rounded-xl bg-gray-700 p-4`}
                 >
                   <step.icon className="w-full h-full text-white" />
                 </motion.div>
@@ -253,7 +253,7 @@ export default function About() {
                   <h3 className="h3-resp mb-3 group-hover:text-white transition-colors">
                     {step.title}
                   </h3>
-                  <p className="p-resp text-gray-400 group-hover:text-gray-300 transition-colors">
+                  <p className="p-resp text-gray-300 group-hover:text-white transition-colors">
                     {step.description}
                   </p>
                 </motion.div>
@@ -263,7 +263,7 @@ export default function About() {
                     initial={{ scaleX: 0 }}
                     animate={timelineInView ? { scaleX: 1 } : {}}
                     transition={{ duration: 0.8, delay: index * 0.15 + 0.6 }}
-                    className="hidden lg:block absolute top-8 left-full w-8 h-0.5 bg-gradient-to-r from-gray-600 to-gray-700 origin-left"
+                    className="hidden lg:block absolute top-8 left-full w-8 h-0.5 bg-gray-600 origin-left"
                     style={{ transform: 'translateX(2rem)' }}
                   />
                 )}
@@ -274,7 +274,7 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section ref={ctaRef} className="py-20 bg-gradient-to-r from-purple-600/10 to-pink-600/10 border-t border-white/10">
+      <section ref={ctaRef} className="py-20 bg-gray-800 border-t border-gray-600">
         <div className="max-w-4xl mx-auto section-pad-resp text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -284,7 +284,7 @@ export default function About() {
             <h2 className="h2-resp mb-6">Ready to Stop Revenue Leaks?</h2>
             <ResponsiveText
               as="p"
-              className="p-resp p-narrow text-gray-400 mb-8"
+              className="p-resp p-narrow text-gray-300 mb-8"
               short="Let's discuss how automation can transform your business."
               long="Let's discuss how our automation systems can transform your business and plug those revenue leaks for good."
             />
@@ -298,7 +298,7 @@ export default function About() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center space-x-2 mx-auto"
+                  className="bg-white text-black px-8 py-4 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 flex items-center space-x-2 mx-auto"
                 >
                   <span>Get Started Today</span>
                   <ArrowRight className="w-5 h-5" />

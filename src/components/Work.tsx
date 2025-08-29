@@ -10,7 +10,7 @@ const systems = [
     category: 'Lead Systems',
     animationType: 'nodes',
     icon: Funnel,
-    color: 'from-purple-600 to-blue-600',
+    color: 'from-gray-700 to-gray-600',
     size: 'large'
   },
   {
@@ -18,7 +18,7 @@ const systems = [
     category: 'Sales Optimization',
     animationType: 'grid',
     icon: Monitor,
-    color: 'from-blue-600 to-cyan-600',
+    color: 'from-gray-600 to-gray-500',
     size: 'small'
   },
   {
@@ -26,7 +26,7 @@ const systems = [
     category: 'Communication',
     animationType: 'waveforms',
     icon: Phone,
-    color: 'from-cyan-600 to-teal-600',
+    color: 'from-gray-500 to-gray-400',
     size: 'medium'
   },
   {
@@ -34,7 +34,7 @@ const systems = [
     category: 'Sales Automation',
     animationType: 'pipeline',
     icon: BarChart3,
-    color: 'from-teal-600 to-green-600',
+    color: 'from-gray-400 to-gray-300',
     size: 'small'
   },
   {
@@ -42,7 +42,7 @@ const systems = [
     category: 'Customer Service',
     animationType: 'typing',
     icon: MessageCircle,
-    color: 'from-red-600 to-orange-600',
+    color: 'from-gray-600 to-gray-500',
     size: 'medium'
   },
   {
@@ -50,7 +50,7 @@ const systems = [
     category: 'HR Automation',
     animationType: 'avatars',
     icon: Users,
-    color: 'from-orange-600 to-yellow-600',
+    color: 'from-gray-500 to-gray-400',
     size: 'large'
   },
   {
@@ -58,7 +58,7 @@ const systems = [
     category: 'Workflow Automation',
     animationType: 'kanban',
     icon: LayoutDashboard,
-    color: 'from-yellow-600 to-pink-600',
+    color: 'from-gray-400 to-gray-300',
     size: 'medium'
   },
   {
@@ -66,7 +66,7 @@ const systems = [
     category: 'Marketing Systems',
     animationType: 'social',
     icon: Calendar,
-    color: 'from-pink-600 to-purple-600',
+    color: 'from-gray-300 to-gray-200',
     size: 'small'
   },
   {
@@ -74,7 +74,7 @@ const systems = [
     category: 'Lead Generation',
     animationType: 'funnel',
     icon: Clipboard,
-    color: 'from-indigo-600 to-blue-600',
+    color: 'from-gray-600 to-gray-500',
     size: 'medium'
   }
 ];
@@ -96,7 +96,7 @@ const AnimatedBackground = ({ type, color }: { type: string; color: string }) =>
   switch (type) {
     case 'nodes':
       return (
-        <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-80`}>
+        <div className={`absolute inset-0 bg-gray-800 opacity-80`}>
           {[...Array(8)].map((_, i) => (
             <motion.div
               key={i}
@@ -133,7 +133,7 @@ const AnimatedBackground = ({ type, color }: { type: string; color: string }) =>
 
     case 'grid':
       return (
-        <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-80`}>
+        <div className={`absolute inset-0 bg-gray-700 opacity-80`}>
           {[...Array(12)].map((_, i) => (
             <motion.div
               key={i}
@@ -161,7 +161,7 @@ const AnimatedBackground = ({ type, color }: { type: string; color: string }) =>
 
     case 'waveforms':
       return (
-        <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-80`}>
+        <div className={`absolute inset-0 bg-gray-600 opacity-80`}>
           {[...Array(6)].map((_, i) => (
             <motion.div
               key={i}
@@ -191,7 +191,7 @@ const AnimatedBackground = ({ type, color }: { type: string; color: string }) =>
 
     case 'pipeline':
       return (
-        <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-80`}>
+        <div className={`absolute inset-0 bg-gray-500 opacity-80`}>
           {[...Array(4)].map((_, i) => (
             <motion.div
               key={i}
@@ -220,7 +220,7 @@ const AnimatedBackground = ({ type, color }: { type: string; color: string }) =>
 
     case 'typing':
       return (
-        <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-80`}>
+        <div className={`absolute inset-0 bg-gray-700 opacity-80`}>
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex space-x-2">
             {[...Array(3)].map((_, i) => (
               <motion.div
@@ -244,7 +244,7 @@ const AnimatedBackground = ({ type, color }: { type: string; color: string }) =>
 
     case 'avatars':
       return (
-        <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-80`}>
+        <div className={`absolute inset-0 bg-gray-600 opacity-80`}>
           {[...Array(6)].map((_, i) => (
             <motion.div
               key={i}
@@ -270,7 +270,7 @@ const AnimatedBackground = ({ type, color }: { type: string; color: string }) =>
 
     case 'kanban':
       return (
-        <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-80`}>
+        <div className={`absolute inset-0 bg-gray-500 opacity-80`}>
           {[...Array(3)].map((_, i) => (
             <motion.div
               key={i}
@@ -297,7 +297,7 @@ const AnimatedBackground = ({ type, color }: { type: string; color: string }) =>
 
     case 'social':
       return (
-        <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-80`}>
+        <div className={`absolute inset-0 bg-gray-400 opacity-80`}>
           {[...Array(5)].map((_, i) => (
             <motion.div
               key={i}
@@ -324,7 +324,7 @@ const AnimatedBackground = ({ type, color }: { type: string; color: string }) =>
 
     case 'funnel':
       return (
-        <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-80`}>
+        <div className={`absolute inset-0 bg-gray-600 opacity-80`}>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-white/30 
             clip-path-polygon-[20%_20%,80%_20%,70%_80%,30%_80%]" />
           {[...Array(8)].map((_, i) => (
@@ -351,7 +351,7 @@ const AnimatedBackground = ({ type, color }: { type: string; color: string }) =>
       );
 
     default:
-      return <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-80`} />;
+      return <div className={`absolute inset-0 bg-gray-700 opacity-80`} />;
   }
 };
 
@@ -449,7 +449,7 @@ export default function Work() {
           <h2 className="h2-resp mb-6">Revenue Recovery Systems</h2>
           <ResponsiveText
             as="p"
-            className="p-resp p-narrow text-gray-400 line-clamp-3 sm:line-clamp-none"
+            className="p-resp p-narrow text-gray-300 line-clamp-3 sm:line-clamp-none"
             short="Stop losing money to manual work. These systems plug your revenue leaks."
             long="Stop losing money to manual processes. These systems plug the revenue leaks in your business."
           />
@@ -469,7 +469,7 @@ export default function Work() {
                 className={`group relative w-full ${getSizeClass(system.size)} mb-6 overflow-hidden rounded-2xl cursor-pointer`}
               >
                 <AnimatedBackground type={system.animationType} color={system.color} />
-                <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:opacity-20" />
+                <div className="absolute inset-0 bg-black/60 transition-opacity duration-300 group-hover:opacity-40" />
                 <AnimatedIcon Icon={system.icon} type={system.animationType} />
                 
                 <div className="absolute inset-0 p-8 flex flex-col justify-between z-10 relative">
@@ -478,14 +478,14 @@ export default function Work() {
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.2 }}
-                      className="text-sm font-medium text-white/80 backdrop-blur-sm bg-black/20 px-4 py-2 rounded-full"
+                      className="text-sm font-medium text-white/90 backdrop-blur-sm bg-black/40 px-4 py-2 rounded-full"
                     >
                       {system.category}
                     </motion.span>
                     <motion.div
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center
+                      className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center
                         opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300"
                     >
                       <ArrowUpRight className="w-5 h-5 text-white" />

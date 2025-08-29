@@ -16,37 +16,37 @@ const industries = [
     icon: Hammer,
     title: 'Construction',
     description: 'Capture and qualify project leads, auto-quote, and schedule site visits',
-    gradient: 'from-orange-600 to-red-600'
+    gradient: 'from-gray-700 to-gray-600'
   },
   {
     icon: ShoppingCart,
     title: 'Retail & E-commerce',
     description: 'Recover carts, personalize offers, and automate customer chat',
-    gradient: 'from-purple-600 to-pink-600'
+    gradient: 'from-gray-600 to-gray-500'
   },
   {
     icon: Heart,
     title: 'Healthcare & Clinics',
     description: 'Route enquiries, manage bookings, send reminders and follow-ups',
-    gradient: 'from-blue-600 to-cyan-600'
+    gradient: 'from-gray-500 to-gray-400'
   },
   {
     icon: Coffee,
     title: 'Hospitality & Leisure',
     description: 'Handle bookings, waitlists, and post-visit reviews on autopilot',
-    gradient: 'from-cyan-600 to-teal-600'
+    gradient: 'from-gray-400 to-gray-300'
   },
   {
     icon: Briefcase,
     title: 'Professional Services',
     description: 'Automate intake, proposals, and client updates',
-    gradient: 'from-green-600 to-yellow-600'
+    gradient: 'from-gray-600 to-gray-500'
   },
   {
     icon: GraduationCap,
     title: 'Education & Training',
     description: 'Enroll leads, schedule sessions, and send course reminders',
-    gradient: 'from-yellow-600 to-orange-600'
+    gradient: 'from-gray-500 to-gray-400'
   }
 ];
 
@@ -68,7 +68,7 @@ export default function Industries() {
           <h2 className="h2-resp mb-6">Industries Losing Money Daily</h2>
           <ResponsiveText
             as="p"
-            className="p-resp p-narrow text-gray-400 line-clamp-3 sm:line-clamp-none"
+            className="p-resp p-narrow text-gray-300 line-clamp-3 sm:line-clamp-none"
             short="Every industry has revenue leaks. We identify and fix the biggest profit drains."
             long="Every industry has unique revenue leaks. We've identified the biggest profit drains and built systems to fix them."
           />
@@ -83,10 +83,10 @@ export default function Industries() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 
                 hover:bg-white/10 hover:border-white/20 transition-all duration-300 
-                hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/10"
+                hover:-translate-y-2 hover:shadow-2xl hover:shadow-white/10"
             >
               <Link to="/sectors" className="block">
-                <div className={`w-12 h-12 mb-4 rounded-lg bg-gradient-to-r ${industry.gradient} p-3 
+                <div className={`w-12 h-12 mb-4 rounded-lg bg-gray-700 p-3 
                   transform group-hover:scale-110 transition-transform duration-300`}>
                   <industry.icon className="w-full h-full text-white" />
                 </div>
@@ -95,7 +95,7 @@ export default function Industries() {
                   {industry.title}
                 </h3>
                 
-                <p className="p-resp text-gray-400 group-hover:text-gray-300 transition-colors">
+                <p className="p-resp text-gray-300 group-hover:text-white transition-colors">
                   {industry.description}
                 </p>
               </Link>
