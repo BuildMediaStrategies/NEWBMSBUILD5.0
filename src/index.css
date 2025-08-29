@@ -1,3 +1,84 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /* Responsive Typography Scale */
+  .h1-resp {
+    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight;
+  }
+  
+  .h2-resp {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight;
+  }
+  
+  .h3-resp {
+    @apply text-xl sm:text-2xl font-semibold leading-tight;
+  }
+  
+  .p-resp {
+    @apply text-base sm:text-lg leading-relaxed;
+  }
+  
+  .p-narrow {
+    @apply max-w-3xl mx-auto;
+  }
+  
+  .section-pad-resp {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Gradient Text Utilities */
+  .gradient-text {
+    @apply bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent;
+  }
+  
+  .gradient-safe {
+    @apply bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent;
+  }
+  
+  .heading-safe {
+    @apply text-white;
+  }
+  
+  /* Masonry Layout for Work Section */
+  .masonry {
+    @apply columns-1 md:columns-2 lg:columns-3 gap-6;
+  }
+  
+  .masonry > * {
+    @apply break-inside-avoid mb-6;
+  }
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-black text-white antialiased;
+  }
+  
+  /* Line clamp utilities */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-none {
+    display: block;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+    overflow: visible;
+  }
+}
