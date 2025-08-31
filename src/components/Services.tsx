@@ -121,7 +121,7 @@ export default function Services() {
               <img
                 src="https://github.com/BuildMediaStrategies/BMSAIASSETS/blob/d077c835d2ec6ca6a99b63cfbd1c7951fd5fe6d7/0f29ff3b-8c8d-475e-b2d8-d48e5a9a776b.png?raw=true"
                 alt="BuildMediaStrategies Process Visualization"
-                className="w-full h-full object-contain rounded-2xl"
+                className="w-full h-full object-contain rounded-2xl border border-white/20"
               />
             </div>
           </motion.div>
