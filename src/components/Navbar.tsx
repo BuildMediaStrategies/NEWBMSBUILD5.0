@@ -31,11 +31,11 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
           >
             <Link 
-              src="https://github.com/BuildMediaStrategies/BMSAIASSETS/raw/d024a590a283a16be689839f7cea5b67f16dc7f6/BUILDMEDEA.AI%20Logo%20Design.png"
+              to="/"
               className="flex items-center h-10 overflow-visible"
             >
               <img
-                src="https://github.com/BuildMediaStrategies/BMSAIASSETS/raw/fadb565686c0fbad489ba0c4c4dba29a5eea4d09/ChatGPT%20Image%20Aug%2026%2C%202025%2C%2012_14_26%20AM.png"
+                src="https://github.com/BuildMediaStrategies/BMSAIASSETS/raw/d024a590a283a16be689839f7cea5b67f16dc7f6/BUILDMEDEA.AI%20Logo%20Design.png"
                 alt="BuildMediaStrategies"
                 className="w-40 md:w-48 object-contain -translate-y-[2px]"
               />
