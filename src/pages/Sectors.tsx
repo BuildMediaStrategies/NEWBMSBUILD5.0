@@ -286,16 +286,20 @@ export default function Sectors() {
 
                     {/* CTA buttons */}
                     <div className="flex space-x-3 pt-2">
-                      <button className="flex-1 bg-white text-black 
-                        px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 
-                        transition-all duration-300 flex items-center justify-center space-x-2">
-                        <Calendar className="w-4 h-4" />
-                        <span>Book a call</span>
-                      </button>
-                      <button className="flex-1 bg-white/5 border border-white/20 text-white px-4 py-2 
-                        rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-300">
-                        <span>See case studies</span>
-                      </button>
+                      <Link to="/contact" className="flex-1">
+                        <button className="w-full bg-white text-black 
+                          px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 
+                          transition-all duration-300 flex items-center justify-center space-x-2">
+                          <Calendar className="w-4 h-4" />
+                          <span>Book a call</span>
+                        </button>
+                      </Link>
+                      <Link to="/systems" className="flex-1">
+                        <button className="w-full bg-white/5 border border-white/20 text-white px-4 py-2 
+                          rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-300">
+                          <span>See case studies</span>
+                        </button>
+                      </Link>
                     </div>
                   </motion.div>
                 )}
@@ -363,12 +367,14 @@ export default function Sectors() {
           >
             <h3 className="h3-resp mb-4">Don't See Your Industry?</h3>
             <p className="p-resp text-gray-400 mb-6">Every business has revenue leaks. Let's find yours and fix them.</p>
-            <button className="bg-white text-black px-8 py-3 
-              rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 
-              flex items-center space-x-2 mx-auto">
-              <Calendar className="w-5 h-5" />
-              <span>Get Free Revenue Audit</span>
-            </button>
+            <Link to="/contact">
+              <button className="bg-white text-black px-8 py-3 
+                rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 
+                flex items-center space-x-2 mx-auto">
+                <Calendar className="w-5 h-5" />
+                <span>Get Free Revenue Audit</span>
+              </button>
+            </Link>
           </motion.div>
         </div>
       </section>

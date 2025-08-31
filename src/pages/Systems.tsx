@@ -420,18 +420,22 @@ export default function Systems() {
 
                       {/* CTA buttons */}
                       <div className="flex space-x-3 pt-2">
-                        <button className="flex-1 bg-white text-black 
-                          px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 
-                          transition-all duration-300 flex items-center justify-center space-x-2">
-                          <Calendar className="w-4 h-4" />
-                          <span>Book a call</span>
-                        </button>
-                        <button className="flex-1 bg-gray-800 border border-gray-600 text-white px-4 py-2 
-                          rounded-lg text-sm font-medium hover:bg-gray-700 transition-all duration-300 
-                          flex items-center justify-center space-x-2">
-                          <ExternalLink className="w-4 h-4" />
-                          <span>See examples</span>
-                        </button>
+                        <Link to="/contact" className="flex-1">
+                          <button className="w-full bg-white text-black 
+                            px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 
+                            transition-all duration-300 flex items-center justify-center space-x-2">
+                            <Calendar className="w-4 h-4" />
+                            <span>Book a call</span>
+                          </button>
+                        </Link>
+                        <Link to="/sectors" className="flex-1">
+                          <button className="w-full bg-gray-800 border border-gray-600 text-white px-4 py-2 
+                            rounded-lg text-sm font-medium hover:bg-gray-700 transition-all duration-300 
+                            flex items-center justify-center space-x-2">
+                            <ExternalLink className="w-4 h-4" />
+                            <span>See examples</span>
+                          </button>
+                        </Link>
                       </div>
                     </motion.div>
                   )}
@@ -522,12 +526,14 @@ export default function Systems() {
           >
             <h3 className="h3-resp mb-4">Stop The Money Drain</h3>
             <p className="p-resp text-gray-300 mb-6">Get a free audit of your biggest revenue leaks</p>
-            <button className="bg-white text-black px-8 py-3 
-              rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 
-              flex items-center space-x-2 mx-auto">
-              <Calendar className="w-5 h-5" />
-              <span>Get Free Revenue Audit</span>
-            </button>
+            <Link to="/contact">
+              <button className="bg-white text-black px-8 py-3 
+                rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 
+                flex items-center space-x-2 mx-auto">
+                <Calendar className="w-5 h-5" />
+                <span>Get Free Revenue Audit</span>
+              </button>
+            </Link>
           </motion.div>
         </div>
       </section>
