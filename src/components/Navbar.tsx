@@ -39,6 +39,8 @@ export default function Navbar() {
                 src="https://github.com/BuildMediaStrategies/BMSAIASSETS/raw/d024a590a283a16be689839f7cea5b67f16dc7f6/BUILDMEDEA.AI%20Logo%20Design.png"
                 alt="BuildMediaStrategies"
                 className="w-40 md:w-48 object-contain -translate-y-[2px]"
+                loading="eager"
+                fetchPriority="high"
               />
             </Link>
           </motion.div>
