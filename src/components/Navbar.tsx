@@ -31,7 +31,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
           >
             <Link 
-              to="/"
+              src="https://github.com/BuildMediaStrategies/BMSAIASSETS/raw/d024a590a283a16be689839f7cea5b67f16dc7f6/BUILDMEDEA.AI%20Logo%20Design.png"
               className="flex items-center h-10 overflow-visible"
             >
               <img
