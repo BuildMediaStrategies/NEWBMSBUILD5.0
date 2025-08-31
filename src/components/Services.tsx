@@ -119,11 +119,16 @@ export default function Services() {
           >
             <div className="aspect-[4/3] rounded-2xl overflow-hidden">
               <img
-                src="https://raw.githubusercontent.com/BuildMediaStrategies/BMSAIASSETS/d077c835d2ec6ca6a99b63cfbd1c7951fd5fe6d7/0f29ff3b-8c8d-475e-b2d8-d48e5a9a776b.png"
+                src="https://raw.githubusercontent.com/BuildMediaStrategies/BMSAIASSETS/main/0f29ff3b-8c8d-475e-b2d8-d48e5a9a776b.png"
                 alt="BuildMediaStrategies Process Visualization"
                 className="w-full h-full object-contain rounded-2xl border border-white/20"
                 loading="eager"
                 fetchPriority="high"
+                onError={(e) => {
+                  console.error('Process image failed to load:', e);
+                  // Fallback to placeholder
+                  e.currentTarget.src = 'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80';
+                }}
               />
             </div>
           </motion.div>

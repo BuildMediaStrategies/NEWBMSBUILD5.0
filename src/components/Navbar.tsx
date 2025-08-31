@@ -36,11 +36,17 @@ export default function Navbar() {
               className="flex items-center h-10 overflow-visible"
             >
               <img
-                src="https://github.com/BuildMediaStrategies/BMSAIASSETS/raw/d024a590a283a16be689839f7cea5b67f16dc7f6/BUILDMEDEA.AI%20Logo%20Design.png"
+                src="https://raw.githubusercontent.com/BuildMediaStrategies/BMSAIASSETS/main/BUILDMEDEA.AI%20Logo%20Design.png"
                 alt="BuildMediaStrategies"
                 className="w-40 md:w-48 object-contain -translate-y-[2px]"
                 loading="eager"
                 fetchPriority="high"
+                onError={(e) => {
+                  console.error('Logo failed to load:', e);
+                  // Fallback to text logo
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.parentElement!.innerHTML = '<span class="text-white font-bold text-xl">BuildMediaStrategies</span>';
+                }}
               />
             </Link>
           </motion.div>
