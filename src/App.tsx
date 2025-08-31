@@ -13,6 +13,7 @@ import FullStackDover from './pages/FullStackDover';
 import WebDesignKent from './pages/WebDesignKent';
 import AppDevelopmentKent from './pages/AppDevelopmentKent';
 import FullStackKent from './pages/FullStackKent';
+import CaseStudies from './pages/CaseStudies';
 import Privacy from './pages/privacy';
 import Cookies from './pages/cookies';
 import Terms from './pages/terms';
@@ -35,6 +36,7 @@ function App() {
           <Route path="/systems" element={<Systems />} />
           <Route path="/about" element={<About />} />
           <Route path="/sectors" element={<Sectors />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/web-design-dover" element={<WebDesignDover />} />
           <Route path="/ai-automation-dover" element={<AiAutomationDover />} />
