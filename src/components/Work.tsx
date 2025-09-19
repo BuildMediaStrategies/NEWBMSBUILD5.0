@@ -450,8 +450,8 @@ export default function Work() {
           <ResponsiveText
             as="p"
             className="p-resp p-narrow text-gray-300 line-clamp-3 sm:line-clamp-none"
-            short="Stop losing money to manual work. These systems plug your revenue leaks."
-            long="Stop losing money to manual processes. These systems plug the revenue leaks in your business."
+            short="Recover lost revenue from manual work. These systems turn missed opportunities into clients."
+            long="Recover lost revenue from manual processes. These systems turn missed opportunities into clients automatically."
           />
         </motion.div>
 

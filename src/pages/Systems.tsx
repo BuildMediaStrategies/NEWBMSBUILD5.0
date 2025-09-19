@@ -296,8 +296,8 @@ export default function Systems() {
             animate={{ opacity: 1, y: 0 }}
             className="h1-resp mb-6 heading-safe"
           >
-            Your Business Is Hemorrhaging Money Through{' '}
-            <span className="gradient-text gradient-safe">Manual Processes</span>
+            Transform Manual Processes Into{' '}
+            <span className="gradient-text gradient-safe">Revenue Engines</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -306,8 +306,8 @@ export default function Systems() {
             className="p-resp p-narrow text-gray-400 line-clamp-3 sm:line-clamp-none"
           >
             <ResponsiveText
-              short="Manual tasks leak revenue. Competitors close deals while you chase leads. These systems plug leaks automatically."
-              long="Every manual task is a revenue leak. While you're manually qualifying leads, your competitors are closing deals. While you're chasing follow-ups, opportunities slip away. These systems plug the leaks and put money back in your pocket automatically."
+              short="Manual tasks waste potential. While you chase leads, competitors close deals. These systems capture opportunities automatically."
+              long="Every manual task wastes growth potential. While you're manually qualifying leads, competitors are closing deals. While you're chasing follow-ups, opportunities multiply. These systems capture every opportunity and grow your revenue automatically."
               className="p-resp text-gray-400"
             />
           </motion.p>

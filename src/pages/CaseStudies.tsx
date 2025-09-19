@@ -101,8 +101,8 @@ export default function CaseStudies() {
               className="p-resp p-narrow text-gray-400"
             >
               <ResponsiveText
-                short="Real results from real businesses that stopped their revenue leaks."
-                long="Real results from real businesses that stopped their revenue leaks and transformed their websites into client acquisition machines."
+                short="Real results from real businesses that captured their growth potential."
+                long="Real results from real businesses that captured their growth potential and transformed their websites into client acquisition machines."
               />
             </motion.p>
           </div>

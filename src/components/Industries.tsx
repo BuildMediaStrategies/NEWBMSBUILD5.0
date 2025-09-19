@@ -65,12 +65,12 @@ export default function Industries() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="h2-resp mb-6">Industries Losing Money Daily</h2>
+          <h2 className="h2-resp mb-6">Industries Ready for Growth</h2>
           <ResponsiveText
             as="p"
             className="p-resp p-narrow text-gray-400 line-clamp-3 sm:line-clamp-none"
-            short="Every industry has revenue leaks. We identify and fix the biggest profit drains."
-            long="Every industry has unique revenue leaks. We've identified the biggest profit drains and built systems to fix them."
+            short="Every industry has growth opportunities. We identify and capture the biggest profit potential."
+            long="Every industry has unique growth opportunities. We've identified the biggest profit potential and built systems to capture it."
           />
         </motion.div>
 

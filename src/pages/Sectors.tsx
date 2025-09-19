@@ -186,7 +186,7 @@ export default function Sectors() {
             animate={{ opacity: 1, y: 0 }}
             className="h1-resp mb-6 heading-safe"
           >
-            Industries Bleeding <span className="gradient-text gradient-safe">Revenue Daily</span>
+            Industries Ready for <span className="gradient-text gradient-safe">Revenue Growth</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -195,8 +195,8 @@ export default function Sectors() {
             className="p-resp p-narrow text-gray-400 line-clamp-3 sm:line-clamp-none"
           >
             <ResponsiveText
-              short="Every industry bleeds money differently. We identify sector-specific profit drains and plug them automatically."
-              long="Every industry has unique ways money walks out the door. Missed appointments, abandoned carts, unqualified leads eating up sales time. We've identified the biggest profit drains in each sector and built systems that plug them automatically."
+              short="Every industry grows differently. We identify sector-specific opportunities and capture them automatically."
+              long="Every industry has unique growth opportunities. Recovered appointments, captured carts, qualified leads converting to sales. We've identified the biggest growth potential in each sector and built systems that capture it automatically."
               className="p-resp text-gray-400"
             />
           </motion.p>
@@ -309,8 +309,8 @@ export default function Sectors() {
             transition={{ delay: 0.5 }}
             className="mt-16 bg-gradient-to-r from-gray-800 to-gray-700 rounded-2xl p-8 text-center border border-white/10"
           >
-            <h3 className="h3-resp mb-4">See Your Industry's Revenue Leaks?</h3>
-            <p className="p-resp text-gray-300 mb-6">Let's identify and fix the profit drains specific to your business</p>
+            <h3 className="h3-resp mb-4">See Your Industry's Growth Potential?</h3>
+            <p className="p-resp text-gray-300 mb-6">Let's identify and capture the opportunities specific to your business</p>
             <Link to="/contact">
               <button className="bg-white text-black px-8 py-3 
                 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 
@@ -331,8 +331,8 @@ export default function Sectors() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             className="text-center mb-12"
           >
-            <h2 className="h2-resp mb-4">Industry-Specific Revenue Concerns</h2>
-            <p className="p-resp text-gray-400">Common questions about working across different sectors</p>
+            <h2 className="h2-resp mb-4">Industry-Specific Growth Questions</h2>
+            <p className="p-resp text-gray-400">Common questions about maximizing potential across different sectors</p>
           </motion.div>
 
           <div className="space-y-4">
@@ -380,7 +380,7 @@ export default function Sectors() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
           >
             <h3 className="h3-resp mb-4">Don't See Your Industry?</h3>
-            <p className="p-resp text-gray-400 mb-6">Every business has revenue leaks. Let's find yours and fix them.</p>
+            <p className="p-resp text-gray-400 mb-6">Every business has growth potential. Let's find yours and capture it.</p>
             <Link to="/contact">
               <button className="bg-white text-black px-8 py-3 
                 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 

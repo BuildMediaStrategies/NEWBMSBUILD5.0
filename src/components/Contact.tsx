@@ -18,12 +18,12 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="h2-resp mb-6">Stop Losing Money Today</h2>
+          <h2 className="h2-resp mb-6">Start Growing Revenue Today</h2>
           <ResponsiveText
             as="p"
             className="p-resp p-narrow text-gray-400 line-clamp-3 sm:line-clamp-none"
-            short="Every day you wait costs money. Let's identify and fix your revenue leaks."
-            long="Every day you wait is money walking out the door. Let's identify your biggest revenue leaks and fix them."
+            short="Every day you wait is missed growth. Let's identify and capture your biggest opportunities."
+            long="Every day you wait is missed growth potential. Let's identify your biggest opportunities and capture them."
           />
         </motion.div>
 
