@@ -147,12 +147,10 @@ export default function Hero() {
             variants={textVariants}
           >
             <h1 className="h1-resp text-white mb-8 heading-safe">
-              Your Business Is
-              <span className="block text-white gradient-safe">
-                Bleeding Revenue
+              Turn Your Website Into a{" "}
+              <span className="gradient-text gradient-safe">
+                24/7 Client Engine
               </span>
-              {" "}
-              Every Single Day
             </h1>
           </motion.div>
           
@@ -164,8 +162,8 @@ export default function Hero() {
             className="p-resp p-narrow text-gray-400 mb-8 sm:mb-12 line-clamp-3 sm:line-clamp-none"
           >
             <ResponsiveText
-              short="Manual work costs thousands daily. Competitors automate while you fall behind."
-              long="Manual processes are costing you thousands in lost leads, missed opportunities, and wasted hours. While your competitors automate and scale, you're stuck doing everything by hand."
+              short="Your website should work as hard as you do. We design, build, and automate systems that convert visitors into clients — on autopilot."
+              long="Your website should work as hard as you do. We design, build, and automate systems that convert visitors into clients — on autopilot."
               className="p-resp text-gray-400"
             />
           </motion.p>
@@ -184,7 +182,7 @@ export default function Hero() {
               >
                 <div className="bg-black rounded-full px-8 py-4 transition group-hover:bg-gray-800">
                   <span className="flex items-center space-x-2 text-white group-hover:text-white">
-                    <span>Stop The Revenue Leak</span>
+                    <span>Turn Your Website Into a 24/7 Client Engine</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </div>
