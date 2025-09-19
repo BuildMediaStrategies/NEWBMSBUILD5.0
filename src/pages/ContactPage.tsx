@@ -48,13 +48,13 @@ export default function ContactPage() {
             transition={{ duration: 0.4 }}
           >
             <h1 className="h1-resp heading-safe">
-              Get In <span className="gradient-text gradient-safe">Touch</span>
+              Let's Build Your Website & <span className="gradient-text gradient-safe">Automation Strategy</span>
             </h1>
 
             <p className="p-resp p-narrow text-gray-400 mt-3">
               <ResponsiveText
-                short="Ready to stop revenue leaks? Let's discuss plugging your profit drains."
-                long="Ready to stop revenue leaks? Let's discuss plugging your profit drains and building a system that scales."
+                short="Ready to transform your website? Let's discuss your automation strategy."
+                long="Ready to transform your website into a client acquisition machine? Let's discuss your custom automation strategy."
               />
             </p>
           </motion.div>
@@ -121,8 +121,8 @@ export default function ContactPage() {
                     <input
                       type="text"
                       id="name"
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white 
-                        placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-transparent
+                      className="w-full bg-white/90 border border-gray-300 rounded-lg px-4 py-3 text-gray-900 
+                        placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
                         transition-all duration-300"
                       placeholder="John Doe"
                     />
@@ -132,35 +132,49 @@ export default function ContactPage() {
                     <input
                       type="email"
                       id="email"
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white 
-                        placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-transparent
+                      className="w-full bg-white/90 border border-gray-300 rounded-lg px-4 py-3 text-gray-900 
+                        placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
                         transition-all duration-300"
                       placeholder="john@example.com"
                     />
                   </div>
                 </div>
                 
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-500 mb-2">Company</label>
-                  <input
-                    type="text"
-                    id="company"
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white 
-                      placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-transparent
-                      transition-all duration-300"
-                    placeholder="Your Company"
-                  />
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-500 mb-2">Phone (Optional)</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      className="w-full bg-white/90 border border-gray-300 rounded-lg px-4 py-3 text-gray-900 
+                        placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                        transition-all duration-300"
+                      placeholder="+44 7123 456789"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-500 mb-2">Company (Optional)</label>
+                    <input
+                      type="text"
+                      id="company"
+                      className="w-full bg-white/90 border border-gray-300 rounded-lg px-4 py-3 text-gray-900 
+                        placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                        transition-all duration-300"
+                      placeholder="Your Company"
+                    />
+                  </div>
                 </div>
                 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-500 mb-2">Subject</label>
                   <select
                     id="subject"
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white 
-                      focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-transparent
+                    className="w-full bg-white/90 border border-gray-300 rounded-lg px-4 py-3 text-gray-900 
+                      focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
                       transition-all duration-300"
                   >
                     <option value="">Select a topic</option>
+                    <option value="website">Website Design</option>
                     <option value="automation">Automation Systems</option>
                     <option value="consultation">Free Consultation</option>
                     <option value="partnership">Partnership Inquiry</option>
@@ -174,10 +188,10 @@ export default function ContactPage() {
                   <textarea
                     id="message"
                     rows={6}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white 
-                      placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-transparent
+                    className="w-full bg-white/90 border border-gray-300 rounded-lg px-4 py-3 text-gray-900 
+                      placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
                       transition-all duration-300"
-                    placeholder="Tell us about your project and how we can help..."
+                    placeholder="Tell us about your website goals and automation needs..."
                   />
                 </div>
 
@@ -189,9 +203,22 @@ export default function ContactPage() {
                     flex items-center justify-center space-x-2 hover:bg-white 
                     transition-all duration-300"
                 >
-                  <span>Get My Revenue Audit</span>
+                  <span>Book Your Free Website & Systems Audit</span>
                   <Send className="w-5 h-5" />
                 </motion.button>
+                
+                <div className="text-center pt-4 border-t border-white/10">
+                  <p className="text-gray-400 text-sm mb-2">Prefer a call? Book instantly here</p>
+                  <a 
+                    href="https://calendly.com/buildmediastrategies" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
+                  >
+                    <Calendar className="w-4 h-4 mr-2" />
+                    Schedule a Call
+                  </a>
+                </div>
               </form>
             </motion.div>
           </div>
