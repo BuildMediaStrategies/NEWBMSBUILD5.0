@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { ArrowRight, Calendar, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { ArrowRight, Calendar, ChevronLeft, ChevronRight, Quote, TrendingUp, Users, Zap } from 'lucide-react';
 import ResponsiveText from '../components/ResponsiveText';
 
 const caseStudies = [
@@ -11,28 +11,55 @@ const caseStudies = [
     id: 'little-co',
     title: 'Little & Co',
     category: 'Website + Branding',
-    problem: 'Local business struggling with outdated website that failed to convert visitors into customers, resulting in lost leads and poor brand perception.',
-    solution: 'Complete website redesign with modern branding, mobile-first approach, and conversion-optimized landing pages with clear calls-to-action.',
-    result: '+150% website conversions, +85% mobile engagement, +40% brand recognition in local market within 3 months.',
-    gradient: 'from-gray-700 to-gray-600'
+    industry: 'Local Business',
+    timeline: '6 weeks',
+    challenge: 'Local business struggling with outdated website that failed to convert visitors into customers, resulting in lost leads and poor brand perception in competitive market.',
+    solution: 'Complete website redesign with modern branding, mobile-first approach, conversion-optimized landing pages with clear calls-to-action, and integrated lead capture system.',
+    results: [
+      { metric: 'Website Conversions', value: '+150%', icon: TrendingUp },
+      { metric: 'Mobile Engagement', value: '+85%', icon: Users },
+      { metric: 'Brand Recognition', value: '+40%', icon: Zap }
+    ],
+    testimonial: "The new website transformed our business. We're getting quality leads every day now.",
+    author: "Sarah Little",
+    gradient: 'from-blue-600 to-purple-600',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80'
   },
   {
     id: 'sos-electrical',
     title: 'SOS Electrical',
     category: 'Website + AI Sales Process',
-    problem: 'Electrical contractor losing qualified leads due to slow response times and manual quote processes, with competitors capturing business.',
-    solution: 'New responsive website integrated with AI-powered lead qualification system and automated quote generation for common electrical services.',
-    result: '+200% lead response speed, +75% quote accuracy, +60% conversion rate from inquiry to booked job.',
-    gradient: 'from-gray-600 to-gray-500'
+    industry: 'Electrical Services',
+    timeline: '4 weeks',
+    challenge: 'Electrical contractor losing qualified leads due to slow response times and manual quote processes, with competitors capturing business during delays.',
+    solution: 'New responsive website integrated with AI-powered lead qualification system, automated quote generation for common electrical services, and instant response workflows.',
+    results: [
+      { metric: 'Lead Response Speed', value: '+200%', icon: Zap },
+      { metric: 'Quote Accuracy', value: '+75%', icon: TrendingUp },
+      { metric: 'Conversion Rate', value: '+60%', icon: Users }
+    ],
+    testimonial: "The AI system handles our quotes perfectly. We can focus on the actual electrical work.",
+    author: "Mike Thompson",
+    gradient: 'from-orange-600 to-red-600',
+    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80'
   },
   {
     id: 'ifucantfindit',
     title: 'Ifucantfindit',
     category: 'WhatsApp Lead Agent',
-    problem: 'Service directory missing potential customers due to complex inquiry process and delayed responses to service requests.',
-    solution: 'Intelligent WhatsApp bot that qualifies service requests, matches customers with providers, and handles initial communications automatically.',
-    result: '+300% inquiry handling capacity, +90% faster customer-provider matching, +45% successful service connections.',
-    gradient: 'from-gray-500 to-gray-400'
+    industry: 'Service Directory',
+    timeline: '8 weeks',
+    challenge: 'Service directory missing potential customers due to complex inquiry process and delayed responses to service requests, leading to lost connections.',
+    solution: 'Intelligent WhatsApp bot that qualifies service requests, matches customers with providers, handles initial communications automatically, and tracks success rates.',
+    results: [
+      { metric: 'Inquiry Capacity', value: '+300%', icon: Users },
+      { metric: 'Matching Speed', value: '+90%', icon: Zap },
+      { metric: 'Service Connections', value: '+45%', icon: TrendingUp }
+    ],
+    testimonial: "WhatsApp automation increased our service connections by 45%. Game changer.",
+    author: "James Wilson",
+    gradient: 'from-green-600 to-teal-600',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80'
   }
 ];
 
@@ -40,17 +67,20 @@ const testimonials = [
   {
     quote: "The new website transformed our business. We're getting quality leads every day now.",
     author: "Sarah Little",
-    company: "Little & Co"
+    company: "Little & Co",
+    result: "150% more conversions"
   },
   {
     quote: "The AI system handles our quotes perfectly. We can focus on the actual electrical work.",
     author: "Mike Thompson",
-    company: "SOS Electrical"
+    company: "SOS Electrical",
+    result: "200% faster responses"
   },
   {
     quote: "WhatsApp automation increased our service connections by 45%. Game changer.",
     author: "James Wilson",
-    company: "Ifucantfindit"
+    company: "Ifucantfindit",
+    result: "300% more capacity"
   }
 ];
 
@@ -85,74 +115,143 @@ export default function CaseStudies() {
       </Helmet>
       <div className="bg-black text-white min-h-screen pt-20">
         {/* Hero Section */}
-        <section className="py-20">
+        <section className="py-20 lg:py-32">
           <div className="max-w-7xl mx-auto section-pad-resp text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mb-6"
+            >
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-full text-sm font-medium text-blue-300 mb-6">
+                Success Stories
+              </span>
+            </motion.div>
+            
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
               className="h1-resp mb-6 heading-safe"
             >
-              Case Studies
+              Real Results from Real Businesses
             </motion.h1>
+            
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="p-resp p-narrow text-gray-400"
+              className="p-resp p-narrow text-gray-400 mb-12"
             >
               <ResponsiveText
-                short="Real results from real businesses that captured their growth potential."
-                long="Real results from real businesses that captured their growth potential and transformed their websites into client acquisition machines."
+                short="See how we've transformed websites into client acquisition machines."
+                long="See how we've transformed websites into client acquisition machines that capture growth potential and deliver measurable results."
               />
             </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="flex flex-wrap justify-center gap-8 text-center"
+            >
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                <div className="text-3xl font-bold text-white mb-2">150%+</div>
+                <div className="text-gray-400 text-sm">Average Conversion Increase</div>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                <div className="text-3xl font-bold text-white mb-2">6 Weeks</div>
+                <div className="text-gray-400 text-sm">Average Project Timeline</div>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                <div className="text-3xl font-bold text-white mb-2">100%</div>
+                <div className="text-gray-400 text-sm">Client Satisfaction Rate</div>
+              </div>
+            </motion.div>
           </div>
         </section>
 
-        {/* Case Studies Grid */}
+        {/* Case Studies */}
         <section ref={ref} className="pb-20">
           <div className="max-w-7xl mx-auto section-pad-resp">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="space-y-20">
               {caseStudies.map((study, index) => (
                 <motion.div
                   key={study.id}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 40 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 
-                    hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  className="group"
                 >
-                  <div className="mb-4">
-                    <span className="px-3 py-1 bg-white/10 border border-white/20 rounded-full text-xs font-medium text-white">
-                      {study.category}
-                    </span>
-                  </div>
-                  
-                  <h3 className="h3-resp mb-4">{study.title}</h3>
-                  
-                  <div className="space-y-4 mb-6">
-                    <div>
-                      <h4 className="font-semibold mb-2 text-white">Problem</h4>
-                      <p className="text-gray-400 text-sm">{study.problem}</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold mb-2 text-white">Solution</h4>
-                      <p className="text-gray-400 text-sm">{study.solution}</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold mb-2 text-white">Result</h4>
-                      <p className="text-gray-300 text-sm font-medium">{study.result}</p>
-                    </div>
-                  </div>
+                  <div className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${study.gradient} p-1`}>
+                    <div className="bg-black rounded-3xl p-8 lg:p-12">
+                      <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        {/* Content */}
+                        <div className="space-y-8">
+                          <div>
+                            <div className="flex flex-wrap items-center gap-4 mb-4">
+                              <span className="px-3 py-1 bg-white/10 border border-white/20 rounded-full text-xs font-medium text-white">
+                                {study.category}
+                              </span>
+                              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">
+                                {study.industry}
+                              </span>
+                              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">
+                                {study.timeline}
+                              </span>
+                            </div>
+                            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">{study.title}</h2>
+                          </div>
 
-                  <Link to="/contact">
-                    <button className="w-full inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold shadow-sm hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-300"
-                      style={{ background: 'linear-gradient(90deg, #FF6A00, #FF2E85)', color: '#fff' }}>
-                      <Calendar className="w-4 h-4 mr-2" />
-                      <span>Book Your Free Website & Systems Audit</span>
-                    </button>
-                  </Link>
+                          <div className="space-y-6">
+                            <div>
+                              <h3 className="text-xl font-semibold text-white mb-3">The Challenge</h3>
+                              <p className="text-gray-300 leading-relaxed">{study.challenge}</p>
+                            </div>
+
+                            <div>
+                              <h3 className="text-xl font-semibold text-white mb-3">Our Solution</h3>
+                              <p className="text-gray-300 leading-relaxed">{study.solution}</p>
+                            </div>
+                          </div>
+
+                          {/* Results Grid */}
+                          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            {study.results.map((result, idx) => (
+                              <div key={idx} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center">
+                                <result.icon className="w-6 h-6 text-white mx-auto mb-2" />
+                                <div className="text-2xl font-bold text-white mb-1">{result.value}</div>
+                                <div className="text-xs text-gray-400">{result.metric}</div>
+                              </div>
+                            ))}
+                          </div>
+
+                          {/* Testimonial */}
+                          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                            <Quote className="w-8 h-8 text-gray-400 mb-4" />
+                            <blockquote className="text-lg text-white mb-4 font-medium italic">
+                              "{study.testimonial}"
+                            </blockquote>
+                            <cite className="text-gray-300 font-semibold">
+                              — {study.author}
+                            </cite>
+                          </div>
+                        </div>
+
+                        {/* Image */}
+                        <div className="relative">
+                          <div className="aspect-[4/3] rounded-2xl overflow-hidden">
+                            <img
+                              src={study.image}
+                              alt={`${study.title} case study visualization`}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -160,7 +259,7 @@ export default function CaseStudies() {
         </section>
 
         {/* Testimonial Slider */}
-        <section className="py-20 bg-gray-900 border-t border-white/10">
+        <section className="py-20 bg-gray-900/50 border-y border-white/10">
           <div className="max-w-4xl mx-auto section-pad-resp">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -178,45 +277,50 @@ export default function CaseStudies() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.5 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 text-center"
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center"
               >
-                <Quote className="w-8 h-8 text-gray-400 mx-auto mb-4" />
-                <blockquote className="text-xl text-white mb-6 font-medium">
+                <Quote className="w-12 h-12 text-gray-400 mx-auto mb-6" />
+                <blockquote className="text-xl lg:text-2xl text-white mb-6 font-medium leading-relaxed">
                   "{testimonials[currentTestimonial].quote}"
                 </blockquote>
-                <div>
-                  <cite className="text-gray-300 font-semibold">
+                <div className="mb-4">
+                  <cite className="text-gray-300 font-semibold text-lg">
                     {testimonials[currentTestimonial].author}
                   </cite>
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-gray-400">
                     {testimonials[currentTestimonial].company}
                   </p>
+                </div>
+                <div className="inline-block px-4 py-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-full text-sm font-medium text-blue-300">
+                  {testimonials[currentTestimonial].result}
                 </div>
               </motion.div>
 
               {/* Navigation buttons */}
               <button
                 onClick={prevTestimonial}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300"
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm border border-white/10"
               >
-                <ChevronLeft className="w-5 h-5 text-white" />
+                <ChevronLeft className="w-6 h-6 text-white" />
               </button>
               
               <button
                 onClick={nextTestimonial}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300"
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm border border-white/10"
               >
-                <ChevronRight className="w-5 h-5 text-white" />
+                <ChevronRight className="w-6 h-6 text-white" />
               </button>
 
               {/* Dots indicator */}
-              <div className="flex justify-center space-x-2 mt-6">
+              <div className="flex justify-center space-x-3 mt-8">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === currentTestimonial ? 'bg-white' : 'bg-gray-600'
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentTestimonial 
+                        ? 'bg-gradient-to-r from-blue-600 to-purple-600' 
+                        : 'bg-gray-600 hover:bg-gray-500'
                     }`}
                   />
                 ))}
@@ -226,21 +330,27 @@ export default function CaseStudies() {
         </section>
 
         {/* Bottom CTA Banner */}
-        <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-700 border-t border-white/10">
+        <section className="py-20">
           <div className="max-w-4xl mx-auto section-pad-resp text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
+              className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/20 rounded-3xl p-12"
             >
-              <h2 className="h2-resp mb-6">Ready to see what a conversion-ready site can do?</h2>
-              <p className="p-resp text-gray-300 mb-8">Join these successful businesses and transform your website into a revenue machine</p>
+              <h2 className="h2-resp mb-6">Ready to Join These Success Stories?</h2>
+              <p className="p-resp text-gray-300 mb-8 max-w-2xl mx-auto">
+                Transform your website into a revenue machine and join these successful businesses
+              </p>
               <Link to="/contact">
-                <button className="inline-flex items-center rounded-xl px-8 py-4 text-lg font-semibold shadow-sm hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-300"
-                  style={{ background: 'linear-gradient(90deg, #FF6A00, #FF2E85)', color: '#fff' }}>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
                   <Calendar className="w-5 h-5 mr-2" />
-                  <span>Book Your Free Website & Systems Audit</span>
+                  <span>Get Your Free Strategy Session</span>
                   <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
+                </motion.button>
               </Link>
             </motion.div>
           </div>
