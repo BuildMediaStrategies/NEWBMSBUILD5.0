@@ -42,7 +42,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center overflow-hidden bg-black">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-black">
         {/* Base gradient */}
@@ -236,6 +236,6 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

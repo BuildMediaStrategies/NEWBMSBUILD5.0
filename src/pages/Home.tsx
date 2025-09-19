@@ -23,10 +23,10 @@ export default function Home() {
       </Helmet>
       <main>
         <Hero />
-        <Contact />
         <HowItWorks />
         <Work />
         <Industries />
+        <Contact />
       </main>
     </>
   );

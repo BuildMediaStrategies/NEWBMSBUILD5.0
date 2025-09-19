@@ -33,7 +33,7 @@ export default function Contact() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="h3-resp mb-8">Why Choose BuildMediaStrategies?</h3>
+            <h3 className="h3-resp mb-8">Ready to Transform Your Business?</h3>
             
             <div className="space-y-6 mb-12">
               <div className="flex items-center space-x-4">
@@ -41,8 +41,8 @@ export default function Contact() {
                   <Mail className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Global Reach</h4>
-                  <p className="text-gray-400">Serving businesses across the US and worldwide</p>
+                  <h4 className="font-semibold">Fast Implementation</h4>
+                  <p className="text-gray-400">Systems built and launched in days, not months</p>
                 </div>
               </div>
               
@@ -51,8 +51,8 @@ export default function Contact() {
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Fast Implementation</h4>
-                  <p className="text-gray-400">Systems built and launched in days, not months</p>
+                  <h4 className="font-semibold">Proven Results</h4>
+                  <p className="text-gray-400">Average 40% increase in operational efficiency</p>
                 </div>
               </div>
             </div>
