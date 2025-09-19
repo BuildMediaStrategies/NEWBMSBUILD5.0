@@ -4,6 +4,7 @@ import Services from '../components/Services';
 import Work from '../components/Work';
 import Industries from '../components/Industries';
 import Contact from '../components/Contact';
+import HowItWorks from '../components/HowItWorks';
 
 export default function Home() {
   return (
