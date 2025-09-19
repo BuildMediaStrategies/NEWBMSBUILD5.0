@@ -10,13 +10,13 @@ export default function Contact() {
   });
 
   return (
-    <section ref={ref} id="contact" className="py-32 bg-black text-white">
+    <section ref={ref} id="contact" className="section-spacing bg-black text-white">
       <div className="max-w-7xl mx-auto section-pad-resp">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-20"
         >
           <h2 className="h2-resp mb-6">Start Your Free Strategy Session</h2>
           <ResponsiveText
@@ -27,7 +27,7 @@ export default function Contact() {
           />
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -35,7 +35,7 @@ export default function Contact() {
           >
             <h3 className="h3-resp mb-8">Why Choose BuildMediaStrategies?</h3>
             
-            <div className="space-y-6 mb-12">
+            <div className="space-y-6 mb-8 sm:mb-12">
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center">
                   <Mail className="w-6 h-6 text-white" />
@@ -82,16 +82,14 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">Name *</label>
                   <input
                     type="text"
                     id="name"
                     required
-                    className="w-full bg-white/90 border border-gray-300 rounded-lg px-4 py-3 text-gray-900 
-                      placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
-                      transition-all duration-300"
+                    className="form-input"
                     placeholder="John Doe"
                   />
                 </div>
@@ -101,23 +99,19 @@ export default function Contact() {
                     type="email"
                     id="email"
                     required
-                    className="w-full bg-white/90 border border-gray-300 rounded-lg px-4 py-3 text-gray-900 
-                      placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
-                      transition-all duration-300"
+                    className="form-input"
                     placeholder="john@example.com"
                   />
                 </div>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-400 mb-2">Phone (Optional)</label>
                   <input
                     type="tel"
                     id="phone"
-                    className="w-full bg-white/90 border border-gray-300 rounded-lg px-4 py-3 text-gray-900 
-                      placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
-                      transition-all duration-300"
+                    className="form-input"
                     placeholder="+1 (555) 123-4567"
                   />
                 </div>
@@ -126,9 +120,7 @@ export default function Contact() {
                   <input
                     type="text"
                     id="company"
-                    className="w-full bg-white/90 border border-gray-300 rounded-lg px-4 py-3 text-gray-900 
-                      placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
-                      transition-all duration-300"
+                    className="form-input"
                     placeholder="Your Company"
                   />
                 </div>
@@ -138,9 +130,7 @@ export default function Contact() {
                 <label htmlFor="goal" className="block text-sm font-medium text-gray-400 mb-2">Choose your goal</label>
                 <select
                   id="goal"
-                  className="w-full bg-white/90 border border-gray-300 rounded-lg px-4 py-3 text-gray-900 
-                    focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
-                    transition-all duration-300"
+                  className="form-input"
                 >
                   <option value="">Select your primary goal</option>
                   <option value="lead-gen">Lead Generation</option>
@@ -156,20 +146,17 @@ export default function Contact() {
                 <textarea
                   id="message"
                   rows={6}
-                  className="w-full bg-white/90 border border-gray-300 rounded-lg px-4 py-3 text-gray-900 
-                    placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
-                    transition-all duration-300"
+                  className="form-input resize-none"
                   placeholder="What challenges are you facing? What would you like to automate?"
                 />
               </div>
 
               <motion.button
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full bg-gray-200 text-black rounded-lg px-8 py-4
-                  flex items-center justify-center space-x-2 hover:bg-white 
-                  transition-all duration-300"
+                className="btn-primary w-full bg-gray-200 text-black hover:bg-white 
+                  flex items-center justify-center space-x-2"
               >
                 <span>Start Your Free Strategy Session</span>
                 <Send className="w-5 h-5" />
@@ -181,7 +168,7 @@ export default function Contact() {
                   href="https://calendly.com/buildmediastrategies" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1"
                 >
                   <Phone className="w-4 h-4 mr-2" />
                   Schedule a Call

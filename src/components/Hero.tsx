@@ -42,7 +42,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center overflow-hidden bg-black">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-black">
         {/* Base gradient */}
@@ -152,15 +152,15 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="relative max-w-7xl mx-auto section-pad-resp py-32">
-        <div className="max-w-4xl section-pad-resp text-center">
+      <div className="relative w-full max-w-7xl mx-auto section-pad-resp py-16 sm:py-32">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             custom={1}
             initial="hidden"
             animate="visible"
             variants={textVariants}
           >
-            <h1 className="h1-resp text-white mb-8 heading-safe">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.5] sm:leading-tight text-white mb-6 sm:mb-8 heading-safe">
               AI Systems That{" "}
               <span className="gradient-text gradient-safe">
                 Grow Your Business
@@ -174,7 +174,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             variants={textVariants}
-            className="p-resp p-narrow text-gray-400 mb-8 sm:mb-12 line-clamp-3 sm:line-clamp-none"
+            className="text-lg sm:text-xl leading-[1.6] max-w-3xl mx-auto text-gray-400 mb-8 sm:mb-12 line-clamp-3 sm:line-clamp-none"
           >
             <ResponsiveText
               short="Affordable, global-ready automation and lead generation — built to launch in days, not months."
@@ -190,12 +190,12 @@ export default function Hero() {
             variants={textVariants}
           >
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.95 }}
               onClick={scrollToContact}
-              className="group bg-gray-300 p-[2px] rounded-full"
+              className="group bg-gray-300 p-[2px] rounded-full btn-mobile-wide"
             >
-              <div className="bg-black rounded-full px-8 py-4 transition group-hover:bg-gray-800">
+              <div className="bg-black rounded-full px-6 sm:px-8 py-3 sm:py-4 min-h-[48px] flex items-center justify-center transition group-hover:bg-gray-800">
                 <span className="flex items-center space-x-2 text-white group-hover:text-white">
                   <span>Start Your Free Strategy Session</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -212,22 +212,22 @@ export default function Hero() {
             variants={textVariants}
             className="mt-16"
           >
-            <p className="text-gray-500 text-sm mb-6">Powered by industry-leading tools</p>
-            <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
+            <p className="text-gray-500 text-sm sm:text-base mb-6">Powered by industry-leading tools</p>
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 opacity-60">
               {trustLogos.map((tool, index) => (
                 <motion.div
                   key={tool.name}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 + index * 0.1 }}
-                  className="flex items-center space-x-2"
+                  className="flex items-center space-x-1 sm:space-x-2"
                 >
-                  <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 bg-white/10 rounded-lg flex items-center justify-center">
+                    <span className="text-white text-xs sm:text-sm font-bold">
                       {tool.name.charAt(0)}
                     </span>
                   </div>
-                  <span className="text-gray-400 text-sm font-medium">
+                  <span className="text-gray-400 text-xs sm:text-sm font-medium">
                     {tool.name}
                   </span>
                 </motion.div>

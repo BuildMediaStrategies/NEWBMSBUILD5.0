@@ -57,13 +57,13 @@ export default function Industries() {
   });
 
   return (
-    <section ref={ref} id="industries" className="py-32 bg-gray-900 text-white">
+    <section ref={ref} id="industries" className="section-spacing bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto section-pad-resp">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-20"
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-8">Industries Ready for Growth</h2>
           <ResponsiveText
@@ -74,18 +74,18 @@ export default function Industries() {
           />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 overflow-hidden">
           {industries.map((industry, index) => (
             <motion.div
               key={industry.title}
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 
+              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 sm:p-8 
                 hover:bg-white/10 hover:border-white/20 transition-all duration-300 
                 hover:-translate-y-2 hover:shadow-2xl hover:shadow-white/10"
             >
-              <Link to="/sectors" className="block">
+              <Link to="/sectors" className="block focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
                 <div className={`w-12 h-12 mb-4 rounded-lg bg-gray-700 p-3 
                   transform group-hover:scale-110 transition-transform duration-300`}>
                   <industry.icon className="w-full h-full text-white" />
@@ -108,7 +108,7 @@ export default function Industries() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 1.0 }}
-          className="text-center mt-16"
+          className="text-center mt-12 sm:mt-16"
         >
           <button
             onClick={() => {
@@ -117,7 +117,7 @@ export default function Industries() {
                 contactSection.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="inline-flex items-center text-lg font-semibold text-white hover:text-orange-400 transition-colors group"
+            className="inline-flex items-center text-lg font-semibold text-white hover:text-orange-400 transition-colors group focus:outline-none focus:ring-2 focus:ring-orange-400 rounded px-4 py-2 active:scale-95"
           >
             Get My Free Strategy Session
             <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>

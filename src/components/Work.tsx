@@ -438,13 +438,13 @@ export default function Work() {
   });
 
   return (
-    <section ref={ref} id="systems" className="py-32 bg-black text-white">
+    <section ref={ref} id="systems" className="section-spacing bg-black text-white">
       <div className="max-w-7xl mx-auto section-pad-resp">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-20"
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-8">What We Build</h2>
           <ResponsiveText
@@ -455,7 +455,7 @@ export default function Work() {
           />
         </motion.div>
 
-        <div className="masonry overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-hidden">
           {systems.map((system, index) => (
             <Link
               key={system.title}
@@ -466,19 +466,19 @@ export default function Work() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`group relative w-full ${getSizeClass(system.size)} mb-6 overflow-hidden rounded-2xl cursor-pointer`}
+                className={`group relative w-full h-80 sm:${getSizeClass(system.size)} overflow-hidden rounded-2xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500`}
               >
                 <AnimatedBackground type={system.animationType} color={system.color} />
                 <div className="absolute inset-0 bg-black/60 transition-opacity duration-300 group-hover:opacity-40" />
                 <AnimatedIcon Icon={system.icon} type={system.animationType} />
                 
-                <div className="absolute inset-0 p-8 flex flex-col justify-between z-10 relative">
+                <div className="absolute inset-0 p-4 sm:p-8 flex flex-col justify-between z-10 relative">
                   <div className="flex justify-between items-start">
                     <motion.span
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.2 }}
-                      className="text-sm font-medium text-white/90 backdrop-blur-sm bg-black/40 px-4 py-2 rounded-full"
+                      className="text-xs sm:text-sm font-medium text-white/90 backdrop-blur-sm bg-black/40 px-3 sm:px-4 py-1 sm:py-2 rounded-full"
                     >
                       {system.category}
                     </motion.span>
@@ -498,7 +498,7 @@ export default function Work() {
                     transition={{ delay: 0.3 }}
                     className="transform group-hover:-translate-y-2 transition-transform duration-300"
                   >
-                    <h3 className="text-3xl font-bold text-white mb-2">{system.title}</h3>
+                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-2">{system.title}</h3>
                     <div className="h-1 w-12 bg-white rounded-full transform origin-left group-hover:scale-x-150 transition-transform duration-300" />
                   </motion.div>
                 </div>
@@ -512,7 +512,7 @@ export default function Work() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 1.0 }}
-          className="text-center mt-16"
+          className="text-center mt-12 sm:mt-16"
         >
           <button
             onClick={() => {
@@ -521,7 +521,7 @@ export default function Work() {
                 contactSection.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="inline-flex items-center text-lg font-semibold text-white hover:text-orange-400 transition-colors group"
+            className="inline-flex items-center text-lg font-semibold text-white hover:text-orange-400 transition-colors group focus:outline-none focus:ring-2 focus:ring-orange-400 rounded px-4 py-2 active:scale-95"
           >
             Get My Free Strategy Session
             <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
