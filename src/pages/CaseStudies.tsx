@@ -154,10 +154,10 @@ export default function CaseStudies() {
 
                   <Link to="/contact">
                     <motion.button 
-                      className="w-full inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold shadow-sm hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-300"
-                      style={{ background: 'linear-gradient(90deg, #FF6A00, #FF2E85)', color: '#fff' }}>
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
+                      className="w-full inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold shadow-sm hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-300"
+                      style={{ background: 'linear-gradient(90deg, #FF6A00, #FF2E85)', color: '#fff' }}
                     >
                       <Calendar className="w-4 h-4 mr-2" />
                       <span>Book Your Free Website & Systems Audit</span>
