@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ExternalLink, MapPin, Users, Lightbulb, Rocket } from 'lucide-react';
+import { ArrowRight, MapPin, Users, Lightbulb, Rocket } from 'lucide-react';
 import ResponsiveText from '../components/ResponsiveText';
 
 const timelineSteps = [
@@ -34,11 +34,6 @@ const timelineSteps = [
 
 export default function About() {
   const [heroRef, heroInView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1
-  });
-
-  const [collaborationRef, collaborationInView] = useInView({
     triggerOnce: true,
     threshold: 0.1
   });
@@ -115,103 +110,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* Collaboration Section */}
-      <section ref={collaborationRef} className="py-20 bg-gray-800">
-        <div className="max-w-7xl mx-auto section-pad-resp">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={collaborationInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="h2-resp mb-6">Strategic Partnership</h2>
-            <ResponsiveText
-              as="p"
-              className="p-resp p-narrow text-gray-400"
-              short="Partnered with ifucantfindit.com for enhanced digital solutions."
-              long="We've partnered with ifucantfindit.com to deliver comprehensive digital solutions that go beyond automation."
-            />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={collaborationInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="bg-gray-900 backdrop-blur-sm border border-gray-600 rounded-2xl p-8 md:p-12 text-center">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={collaborationInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="mb-8"
-              >
-                <h3 className="h3-resp mb-4">ifucantfindit.com</h3>
-                <ResponsiveText
-                  as="p"
-                  className="p-resp text-gray-500 mb-6"
-                  short="Digital strategy, web development, and creative solutions that complement our automation expertise."
-                  long="Our strategic partner brings digital strategy, web development, and creative solutions that perfectly complement our automation expertise, delivering complete business transformation."
-                />
-                <p className="p-resp text-gray-500 mb-6">
-                  <a 
-                    href="https://ifucantfindit.com" 
-                    target="_blank" 
-                    rel="noopener"
-                    className="text-white hover:text-gray-400 transition-colors"
-                  >
-                    Website design in Dover by ifucantfindit.com
-                  </a>
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={collaborationInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="grid md:grid-cols-3 gap-6 mb-8"
-              >
-                <div className="text-center">
-                  <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-gray-700 p-3">
-                    <Lightbulb className="w-full h-full text-white" />
-                  </div>
-                  <h4 className="font-semibold mb-2">Strategy</h4>
-                  <p className="text-sm text-gray-400">Digital transformation planning</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-gray-600 p-3">
-                    <Users className="w-full h-full text-white" />
-                  </div>
-                  <h4 className="font-semibold mb-2">Development</h4>
-                  <p className="text-sm text-gray-400">Custom web solutions</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-gray-500 p-3">
-                    <Rocket className="w-full h-full text-white" />
-                  </div>
-                  <h4 className="font-semibold mb-2">Creative</h4>
-                  <p className="text-sm text-gray-400">Brand and design excellence</p>
-                </div>
-              </motion.div>
-
-              <motion.a
-                href="https://ifucantfindit.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center space-x-2 bg-gray-200 text-black px-6 py-3 rounded-lg font-medium hover:bg-white transition-all duration-300"
-              >
-                <span>Visit ifucantfindit.com</span>
-                <ExternalLink className="w-4 h-4" />
-              </motion.a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Timeline Section */}
-      <section ref={timelineRef} className="py-20">
+      <section ref={timelineRef} className="py-32">
         <div className="max-w-7xl mx-auto section-pad-resp">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -274,7 +174,7 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section ref={ctaRef} className="py-20 bg-gray-800 border-t border-gray-600">
+      <section ref={ctaRef} className="py-32 bg-gray-800 border-t border-gray-600">
         <div className="max-w-4xl mx-auto section-pad-resp text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
