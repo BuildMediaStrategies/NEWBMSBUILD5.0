@@ -435,14 +435,19 @@ export default function Systems() {
 
                   {/* Learn More button - always visible */}
                   {expandedSystem !== system.id && (
-                    <div className="mt-4">
+                    <div className="mt-4 flex flex-wrap gap-3">
                       <Link to="/contact">
-                        <button className="w-full bg-white/10 border border-white/20 text-white px-4 py-2 
-                          rounded-lg text-sm font-medium hover:bg-white/20 transition-all duration-300">
-                          Learn More
+                        <button className="inline-flex items-center rounded-xl px-5 py-3 text-sm font-semibold shadow-sm hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2"
+                          style={{ background: 'linear-gradient(90deg, #FF6A00, #FF2E85)', color: '#fff' }}>
+                          Book Your Free Website &amp; Systems Audit
                         </button>
                       </Link>
-                    </motion.div>
+                      <Link to="/case-studies">
+                        <button className="inline-flex items-center rounded-xl px-5 py-3 text-sm font-semibold border border-white/20 hover:bg-white/5">
+                          See Examples
+                        </button>
+                      </Link>
+                    </div>
                   )}
                 </motion.div>
               ))}
