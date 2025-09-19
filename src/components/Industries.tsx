@@ -65,10 +65,10 @@ export default function Industries() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="h2-resp mb-6">Industries Ready for Growth</h2>
+          <h2 className="text-5xl md:text-6xl font-bold mb-8">Industries Ready for Growth</h2>
           <ResponsiveText
             as="p"
-            className="p-resp p-narrow text-gray-400 line-clamp-3 sm:line-clamp-none"
+            className="text-xl md:text-2xl p-narrow text-gray-400 line-clamp-3 sm:line-clamp-none"
             short="Every industry has growth opportunities. We identify and capture the biggest profit potential."
             long="Every industry has unique growth opportunities. We've identified the biggest profit potential and built systems to capture it."
           />
@@ -102,6 +102,27 @@ export default function Industries() {
             </motion.div>
           ))}
         </div>
+        
+        {/* Inline CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 1.0 }}
+          className="text-center mt-16"
+        >
+          <button
+            onClick={() => {
+              const contactSection = document.getElementById('contact');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="inline-flex items-center text-lg font-semibold text-white hover:text-orange-400 transition-colors group"
+          >
+            Get My Free Strategy Session
+            <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+          </button>
+        </motion.div>
       </div>
     </section>
   );

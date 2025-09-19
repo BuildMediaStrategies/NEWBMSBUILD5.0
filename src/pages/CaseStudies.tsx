@@ -118,40 +118,50 @@ export default function CaseStudies() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 
-                    hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+                  className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 
+                    hover:bg-white/10 hover:border-white/20 hover:-translate-y-2 hover:shadow-2xl hover:shadow-white/10 
+                    transition-all duration-500 cursor-pointer"
                 >
                   <div className="mb-4">
-                    <span className="px-3 py-1 bg-white/10 border border-white/20 rounded-full text-xs font-medium text-white">
+                    <span className="px-3 py-1 bg-white/10 border border-white/20 rounded-full text-xs font-medium text-white group-hover:bg-white/20 transition-colors">
                       {study.category}
                     </span>
                   </div>
                   
-                  <h3 className="h3-resp mb-4">{study.title}</h3>
+                  <motion.h3 
+                    className="text-2xl font-bold mb-4 group-hover:text-orange-400 transition-colors"
+                    whileHover={{ scale: 1.02 }}
+                  >
+                    {study.title}
+                  </motion.h3>
                   
                   <div className="space-y-4 mb-6">
                     <div>
-                      <h4 className="font-semibold mb-2 text-white">Problem</h4>
-                      <p className="text-gray-400 text-sm">{study.problem}</p>
+                      <h4 className="font-semibold mb-2 text-white group-hover:text-orange-300 transition-colors">Problem</h4>
+                      <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors">{study.problem}</p>
                     </div>
                     
                     <div>
-                      <h4 className="font-semibold mb-2 text-white">Solution</h4>
-                      <p className="text-gray-400 text-sm">{study.solution}</p>
+                      <h4 className="font-semibold mb-2 text-white group-hover:text-orange-300 transition-colors">Solution</h4>
+                      <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors">{study.solution}</p>
                     </div>
                     
                     <div>
-                      <h4 className="font-semibold mb-2 text-white">Result</h4>
-                      <p className="text-gray-300 text-sm font-medium">{study.result}</p>
+                      <h4 className="font-semibold mb-2 text-white group-hover:text-orange-300 transition-colors">Result</h4>
+                      <p className="text-gray-300 text-sm font-medium group-hover:text-white transition-colors">{study.result}</p>
                     </div>
                   </div>
 
                   <Link to="/contact">
-                    <button className="w-full inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold shadow-sm hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-300"
+                    <motion.button 
+                      className="w-full inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold shadow-sm hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-300"
                       style={{ background: 'linear-gradient(90deg, #FF6A00, #FF2E85)', color: '#fff' }}>
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
                       <Calendar className="w-4 h-4 mr-2" />
                       <span>Book Your Free Website & Systems Audit</span>
-                    </button>
+                    </motion.button>
                   </Link>
                 </motion.div>
               ))}

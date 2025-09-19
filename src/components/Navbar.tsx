@@ -23,7 +23,12 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className="fixed w-full z-50 bg-black/90 backdrop-blur-lg border-b border-gray-600"
+      className="fixed w-full z-50 bg-black/90 backdrop-blur-lg border-b border-gray-600 transition-shadow duration-300"
+      style={{
+        boxShadow: typeof window !== 'undefined' && window.scrollY > 50 
+          ? '0 4px 20px rgba(0, 0, 0, 0.3)' 
+          : 'none'
+      }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -86,6 +91,25 @@ export default function Navbar() {
                 </Link>
               </motion.div>
             ))}
+            
+            {/* CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: navItems.length * 0.1 }}
+            >
+              <button
+                onClick={() => {
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="bg-gradient-to-r from-blue-900 to-orange-500 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-800 hover:to-orange-400 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Free Strategy Session
+              </button>
+            </motion.div>
           </div>
 
           <div className="md:hidden">
@@ -121,6 +145,20 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
+            
+            {/* Mobile CTA Button */}
+            <button
+              onClick={() => {
+                setIsOpen(false);
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="bg-gradient-to-r from-blue-900 to-orange-500 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-800 hover:to-orange-400 transition-all duration-300 shadow-lg text-center"
+            >
+              Free Strategy Session
+            </button>
           </div>
         </motion.div>
       )}
