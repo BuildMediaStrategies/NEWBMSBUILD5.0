@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Bot, Zap, GitBranch, Cpu, Database, Network, Workflow, Target } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import ResponsiveText from '../components/ResponsiveText';
 
 const textVariants = {
@@ -26,7 +25,22 @@ const floatingIcons = [
   { Icon: Workflow, delay: 3, x: '75%', y: '50%' },
   { Icon: Target, delay: 3.5, x: '45%', y: '80%' },
 ];
+
+const trustLogos = [
+  { name: 'n8n', logo: 'https://docs.n8n.io/assets/images/n8n-logo.png' },
+  { name: 'Make.com', logo: 'https://www.make.com/en/help/image/uuid-e6978baa-7c96-7877-5a36-9d4d21b1ea90.png' },
+  { name: 'Voiceflow', logo: 'https://cdn.voiceflow.com/assets/logo-dark.png' },
+  { name: 'Zapier', logo: 'https://cdn.zapier.com/storage/photos/9ec65c79de8ae54080c98384d4e7b2fd.png' }
+];
+
 export default function Hero() {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="relative min-h-screen flex items-center overflow-hidden bg-black">
       {/* Animated Background */}
@@ -147,10 +161,11 @@ export default function Hero() {
             variants={textVariants}
           >
             <h1 className="h1-resp text-white mb-8 heading-safe">
-              Turn Your Website Into a{" "}
+              AI Systems That{" "}
               <span className="gradient-text gradient-safe">
-                24/7 Client Engine
-              </span>
+                Grow Your Business
+              </span>{" "}
+              — Fast.
             </h1>
           </motion.div>
           
@@ -162,8 +177,8 @@ export default function Hero() {
             className="p-resp p-narrow text-gray-400 mb-8 sm:mb-12 line-clamp-3 sm:line-clamp-none"
           >
             <ResponsiveText
-              short="Your website should work as hard as you do. We design, build, and automate systems that convert visitors into clients — on autopilot."
-              long="Your website should work as hard as you do. We design, build, and automate systems that convert visitors into clients — on autopilot."
+              short="Affordable, global-ready automation and lead generation — built to launch in days, not months."
+              long="Affordable, global-ready automation and lead generation — built to launch in days, not months."
               className="p-resp text-gray-400"
             />
           </motion.p>
@@ -174,20 +189,50 @@ export default function Hero() {
             animate="visible"
             variants={textVariants}
           >
-            <Link to="/contact">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group bg-gray-300 p-[2px] rounded-full"
-              >
-                <div className="bg-black rounded-full px-8 py-4 transition group-hover:bg-gray-800">
-                  <span className="flex items-center space-x-2 text-white group-hover:text-white">
-                    <span>Turn Your Website Into a 24/7 Client Engine</span>
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={scrollToContact}
+              className="group bg-gray-300 p-[2px] rounded-full"
+            >
+              <div className="bg-black rounded-full px-8 py-4 transition group-hover:bg-gray-800">
+                <span className="flex items-center space-x-2 text-white group-hover:text-white">
+                  <span>Start Your Free Strategy Session</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </div>
+            </motion.button>
+          </motion.div>
+
+          {/* Trust Bar */}
+          <motion.div
+            custom={4}
+            initial="hidden"
+            animate="visible"
+            variants={textVariants}
+            className="mt-16"
+          >
+            <p className="text-gray-500 text-sm mb-6">Powered by industry-leading tools</p>
+            <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
+              {trustLogos.map((tool, index) => (
+                <motion.div
+                  key={tool.name}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 + index * 0.1 }}
+                  className="flex items-center space-x-2"
+                >
+                  <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center">
+                    <span className="text-white text-xs font-bold">
+                      {tool.name.charAt(0)}
+                    </span>
+                  </div>
+                  <span className="text-gray-400 text-sm font-medium">
+                    {tool.name}
                   </span>
-                </div>
-              </motion.button>
-            </Link>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </div>

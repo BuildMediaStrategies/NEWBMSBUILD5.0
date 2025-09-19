@@ -9,32 +9,23 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Web Design Dover & AI Automation Experts | BuildMediaStrategies</title>
-        <meta name="description" content="BuildMediaStrategies helps Dover and Kent businesses with Web Design, AI Automation, App Development, and Full-Stack systems. Fast, modern, and scalable." />
+        <title>AI Automation & Lead Generation Systems | BuildMediaStrategies</title>
+        <meta name="description" content="Affordable, fast AI automation systems for businesses worldwide. Boost leads, sales, and operations with zero upfront cost. Book your free strategy session today." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "BuildMediaStrategies",
-            "url": "https://buildmediastrategies.com",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Dover",
-              "addressRegion": "Kent",
-              "addressCountry": "UK"
-            },
-            "areaServed": ["Dover","Kent"],
-            "serviceProvided": ["Web Design","AI Automation","App Development","Full-Stack Development"],
-            "sameAs": ["https://ifucantfindit.com"]
+            "url": "https://buildmediastrategies.com"
           })}
         </script>
       </Helmet>
       <main>
         <Hero />
-        <Services />
+        <Contact />
+        <HowItWorks />
         <Work />
         <Industries />
-        <Contact />
       </main>
     </>
   );

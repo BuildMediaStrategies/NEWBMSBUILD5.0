@@ -450,8 +450,8 @@ export default function Work() {
           <ResponsiveText
             as="p"
             className="p-resp p-narrow text-gray-300 line-clamp-3 sm:line-clamp-none"
-            short="Recover lost revenue from manual work. These systems turn missed opportunities into clients."
-            long="Recover lost revenue from manual processes. These systems turn missed opportunities into clients automatically."
+            short="What We Build for Your Business"
+            long="Custom AI automation systems that work 24/7 to grow your business, capture leads, and optimize operations."
           />
         </motion.div>
 

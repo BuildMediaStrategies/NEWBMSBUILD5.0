@@ -49,8 +49,8 @@ export default function Services() {
           <ResponsiveText
             as="p"
             className="p-resp p-narrow text-gray-400 mb-12 line-clamp-3 sm:line-clamp-none"
-            short="Remote-first automation specialists based in Deal & Dover, UK."
-            long="A remote-first automation agency based between Deal and Dover on the Kent coast. We help businesses stop revenue leaks through intelligent automation systems."
+            short="Global automation specialists serving businesses worldwide."
+            long="A global automation agency serving businesses across the US and worldwide. We help businesses capture growth opportunities through intelligent automation systems."
           />
         </motion.div>
 
