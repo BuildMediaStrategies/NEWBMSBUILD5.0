@@ -426,18 +426,22 @@ export default function Systems() {
                             px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 
                             transition-all duration-300 flex items-center justify-center space-x-2">
                             <Calendar className="w-4 h-4" />
-                            <span>Book a call</span>
-                          </button>
-                        </Link>
-                        <Link to="/sectors" className="flex-1">
-                          <button className="w-full bg-gray-800 border border-gray-600 text-white px-4 py-2 
-                            rounded-lg text-sm font-medium hover:bg-gray-700 transition-all duration-300 
-                            flex items-center justify-center space-x-2">
-                            <ExternalLink className="w-4 h-4" />
-                            <span>See examples</span>
+                            <span>Book Your Free Website & Systems Audit</span>
                           </button>
                         </Link>
                       </div>
+                    </motion.div>
+                  )}
+
+                  {/* Learn More button - always visible */}
+                  {expandedSystem !== system.id && (
+                    <div className="mt-4">
+                      <Link to="/contact">
+                        <button className="w-full bg-white/10 border border-white/20 text-white px-4 py-2 
+                          rounded-lg text-sm font-medium hover:bg-white/20 transition-all duration-300">
+                          Learn More
+                        </button>
+                      </Link>
                     </motion.div>
                   )}
                 </motion.div>
@@ -519,20 +523,20 @@ export default function Systems() {
       </section>
 
       {/* Final CTA Strip */}
-      <section className="py-12 bg-gray-800 border-t border-gray-600">
+      <section className="py-20 bg-gray-900 border-t border-gray-600">
         <div className="max-w-4xl mx-auto section-pad-resp text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
           >
-            <h3 className="h3-resp mb-4">Stop The Money Drain</h3>
-            <p className="p-resp text-gray-300 mb-6">Get a free audit of your biggest revenue leaks</p>
+            <h2 className="h2-resp mb-6">Ready to Build a Revenue-Ready Website?</h2>
+            <p className="p-resp text-gray-300 mb-8">Transform your website into a 24/7 client acquisition machine</p>
             <Link to="/contact">
               <button className="bg-white text-black px-8 py-3 
                 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 
                 flex items-center space-x-2 mx-auto">
                 <Calendar className="w-5 h-5" />
-                <span>Get Free Revenue Audit</span>
+                <span>Book Your Free Website & Systems Audit</span>
               </button>
             </Link>
           </motion.div>

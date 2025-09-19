@@ -292,13 +292,7 @@ export default function Sectors() {
                           px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 
                           transition-all duration-300 flex items-center justify-center space-x-2">
                           <Calendar className="w-4 h-4" />
-                          <span>Book a call</span>
-                        </button>
-                      </Link>
-                      <Link to="/systems" className="flex-1">
-                        <button className="w-full bg-white/5 border border-white/20 text-white px-4 py-2 
-                          rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-300">
-                          <span>See case studies</span>
+                          <span>Book Your Free Website & Systems Audit</span>
                         </button>
                       </Link>
                     </div>
@@ -307,6 +301,25 @@ export default function Sectors() {
               </motion.div>
             ))}
           </div>
+
+          {/* Sticky CTA Banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.5 }}
+            className="mt-16 bg-gradient-to-r from-gray-800 to-gray-700 rounded-2xl p-8 text-center border border-white/10"
+          >
+            <h3 className="h3-resp mb-4">See Your Industry's Revenue Leaks?</h3>
+            <p className="p-resp text-gray-300 mb-6">Let's identify and fix the profit drains specific to your business</p>
+            <Link to="/contact">
+              <button className="bg-white text-black px-8 py-3 
+                rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 
+                flex items-center space-x-2 mx-auto">
+                <Calendar className="w-5 h-5" />
+                <span>Book Your Free Website & Systems Audit</span>
+              </button>
+            </Link>
+          </motion.div>
         </div>
       </section>
 
@@ -373,7 +386,7 @@ export default function Sectors() {
                 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 
                 flex items-center space-x-2 mx-auto">
                 <Calendar className="w-5 h-5" />
-                <span>Get Free Revenue Audit</span>
+                <span>Book Your Free Website & Systems Audit</span>
               </button>
             </Link>
           </motion.div>
