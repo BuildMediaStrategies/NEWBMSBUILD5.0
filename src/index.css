@@ -5,19 +5,19 @@
 @layer components {
   /* Responsive Typography Scale */
   .h1-resp {
-    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.5] sm:leading-tight;
+    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight;
   }
   
   .h2-resp {
-    @apply text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.5] sm:leading-tight;
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight;
   }
   
   .h3-resp {
-    @apply text-xl sm:text-2xl font-semibold leading-[1.5] sm:leading-tight;
+    @apply text-xl sm:text-2xl font-semibold leading-tight;
   }
   
   .p-resp {
-    @apply text-lg sm:text-xl leading-[1.6];
+    @apply text-base sm:text-lg leading-relaxed;
   }
   
   .p-narrow {
@@ -26,29 +26,6 @@
   
   .section-pad-resp {
     @apply px-4 sm:px-6 lg:px-8;
-  }
-  
-  /* Mobile-first spacing */
-  .section-spacing {
-    @apply py-16 sm:py-20 lg:py-32;
-  }
-  
-  /* Button improvements */
-  .btn-primary {
-    @apply min-h-[48px] px-6 py-3 text-base font-medium rounded-lg transition-all duration-200 
-           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500
-           active:scale-95 hover:scale-[1.02];
-  }
-  
-  .btn-mobile-wide {
-    @apply w-4/5 sm:w-auto;
-  }
-  
-  /* Form improvements */
-  .form-input {
-    @apply w-full min-h-[48px] px-4 py-3 text-base bg-white/90 border border-gray-300 rounded-lg 
-           text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 
-           focus:border-transparent transition-all duration-300;
   }
   
   /* Gradient Text Utilities */
@@ -76,18 +53,11 @@
 
 @layer base {
   html {
-    @apply scroll-smooth text-base sm:text-lg;
+    @apply scroll-smooth;
   }
   
   body {
     @apply bg-black text-white antialiased;
-    font-size: 16px;
-  }
-  
-  @media (min-width: 640px) {
-    body {
-      font-size: 18px;
-    }
   }
   
   /* Line clamp utilities */
@@ -110,17 +80,5 @@
     -webkit-line-clamp: unset;
     -webkit-box-orient: unset;
     overflow: visible;
-  }
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
 }

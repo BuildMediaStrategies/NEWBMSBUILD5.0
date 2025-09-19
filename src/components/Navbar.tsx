@@ -23,27 +23,22 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className="fixed w-full z-50 bg-black/90 backdrop-blur-lg border-b border-gray-600 transition-all duration-300"
-      style={{
-        boxShadow: typeof window !== 'undefined' && window.scrollY > 50 
-          ? '0 4px 20px rgba(0, 0, 0, 0.3)' 
-          : 'none'
-      }}
+      className="fixed w-full z-50 bg-black/90 backdrop-blur-lg border-b border-gray-600"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 sm:h-20">
+        <div className="flex justify-between items-center h-20">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
           >
             <Link 
               to="/"
-              className="flex items-center h-8 sm:h-10 overflow-visible focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+              className="flex items-center h-10 overflow-visible"
             >
               <img
                 src="https://raw.githubusercontent.com/BuildMediaStrategies/BMSAIASSETS/main/BUILDMEDEA.AI%20Logo%20Design.png"
                 alt="BuildMediaStrategies"
-                className="w-32 sm:w-40 md:w-48 object-contain -translate-y-[2px]"
+                className="w-40 md:w-48 object-contain -translate-y-[2px]"
                 loading="eager"
                 fetchPriority="high"
                 onError={(e) => {
@@ -71,7 +66,7 @@ export default function Navbar() {
                     isActive(item.path)
                       ? 'text-white'
                       : 'text-gray-400 hover:text-white'
-                  } focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1`}
+                  }`}
                 >
                   <motion.span
                     whileHover={{ y: -2 }}
@@ -91,32 +86,12 @@ export default function Navbar() {
                 </Link>
               </motion.div>
             ))}
-            
-            {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: navItems.length * 0.1 }}
-            >
-              <button
-                onClick={() => {
-                  const contactSection = document.getElementById('contact');
-                  if (contactSection) {
-                    contactSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                className="bg-gradient-to-r from-blue-900 to-orange-500 text-white px-4 sm:px-6 py-2 rounded-lg font-medium hover:from-blue-800 hover:to-orange-400 transition-all duration-300 shadow-lg hover:shadow-xl min-h-[40px] flex items-center focus:outline-none focus:ring-2 focus:ring-orange-400 active:scale-95"
-              >
-                Free Strategy Session
-              </button>
-            </motion.div>
           </div>
 
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-400 hover:text-white transition-colors p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded min-h-[48px] min-w-[48px] flex items-center justify-center"
-              aria-label="Toggle navigation menu"
+              className="text-gray-400 hover:text-white transition-colors"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -129,10 +104,9 @@ export default function Navbar() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="md:hidden bg-black/95 backdrop-blur-lg border-t border-gray-600 fixed inset-x-0 top-16 sm:top-20 bottom-0 overflow-y-auto"
+          className="md:hidden bg-black/95 backdrop-blur-lg border-t border-gray-600"
         >
-          <div className="px-4 py-6 space-y-6 flex flex-col h-full">
-            <div className="space-y-4">
+          <div className="px-4 py-6 space-y-4">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -142,28 +116,11 @@ export default function Navbar() {
                   isActive(item.path)
                     ? 'text-white'
                     : 'text-gray-400 hover:text-white'
-                } py-3 px-2 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 rounded`}
+                }`}
               >
                 {item.name}
               </Link>
             ))}
-            </div>
-            
-            {/* Mobile CTA Button */}
-            <div className="mt-auto pb-safe">
-            <button
-              onClick={() => {
-                setIsOpen(false);
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              className="w-full bg-gradient-to-r from-blue-900 to-orange-500 text-white px-6 py-4 rounded-lg font-medium hover:from-blue-800 hover:to-orange-400 transition-all duration-300 shadow-lg text-center min-h-[48px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-orange-400 active:scale-95"
-            >
-              Free Strategy Session
-            </button>
-            </div>
           </div>
         </motion.div>
       )}
