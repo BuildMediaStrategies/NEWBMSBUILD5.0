@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
+import HowItWorks from '../components/HowItWorks';
 import Services from '../components/Services';
 import Work from '../components/Work';
 import Industries from '../components/Industries';
