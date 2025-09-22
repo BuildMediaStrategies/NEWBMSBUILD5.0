@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Send, Mail, MapPin } from 'lucide-react';
+import { Send, Mail, MapPin, Calendar } from 'lucide-react';
 import ResponsiveText from '../components/ResponsiveText';
 
 export default function ContactPage() {
