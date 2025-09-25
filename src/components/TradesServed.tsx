@@ -1,36 +1,78 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
-import { Zap, Building, Shield, Hammer } from 'lucide-react';
+import { Zap, Building, Shield, Hammer, Wrench, HardHat, Home, Trees, Thermometer, Settings } from 'lucide-react';
 
 const trades = [
   {
     icon: Zap,
     title: 'Electricians',
     outcome: 'Quote emergency jobs in 5 minutes, even at midnight',
-    route: '/electricians',
+    route: '/sectors/electricians',
     gradient: 'from-yellow-600 to-orange-600'
   },
   {
     icon: Building,
     title: 'Scaffolders',
     outcome: 'Site surveys booked automatically from enquiries',
-    route: '/scaffolders',
+    route: '/sectors/scaffolders',
     gradient: 'from-blue-600 to-cyan-600'
   },
   {
     icon: Shield,
     title: 'Security & CCTV',
     outcome: 'Urgent callouts handled while you sleep',
-    route: '/security-cctv',
+    route: '/sectors/security-cctv',
     gradient: 'from-red-600 to-pink-600'
   },
   {
     icon: Hammer,
     title: 'General Contractors',
     outcome: 'Project leads qualified before you call back',
-    route: '/general-contractors',
+    route: '/sectors/general-contractors',
     gradient: 'from-gray-600 to-gray-500'
+  },
+  {
+    icon: Wrench,
+    title: 'Plumbers',
+    outcome: 'Emergency callouts handled 24/7, even on weekends',
+    route: '/sectors/plumbers',
+    gradient: 'from-blue-500 to-teal-600'
+  },
+  {
+    icon: HardHat,
+    title: 'Builders',
+    outcome: 'Project quotes generated while you\'re on other sites',
+    route: '/sectors/builders',
+    gradient: 'from-orange-500 to-red-500'
+  },
+  {
+    icon: Home,
+    title: 'Roofers',
+    outcome: 'Weather damage leads captured instantly after storms',
+    route: '/sectors/roofers',
+    gradient: 'from-slate-600 to-gray-600'
+  },
+  {
+    icon: Trees,
+    title: 'Landscapers',
+    outcome: 'Seasonal bookings managed automatically year-round',
+    route: '/sectors/landscapers',
+    gradient: 'from-green-600 to-emerald-600'
+  },
+  {
+    icon: Thermometer,
+    title: 'HVAC Engineers',
+    outcome: 'Heating emergencies prioritized and scheduled instantly',
+    route: '/sectors/hvac-engineers',
+    gradient: 'from-purple-600 to-indigo-600'
+  },
+  {
+    icon: Settings,
+    title: 'Property Maintenance',
+    outcome: 'Tenant requests sorted and assigned automatically',
+    route: '/sectors/property-maintenance',
+    gradient: 'from-cyan-600 to-blue-600'
   }
 ];
 
@@ -55,7 +97,7 @@ export default function TradesServed() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8">
           {trades.map((trade, index) => (
             <Link key={trade.title} to={trade.route}>
               <motion.div
