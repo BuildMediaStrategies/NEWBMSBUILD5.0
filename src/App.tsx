@@ -32,6 +32,8 @@ import Roofers from './pages/Roofers';
 import Landscapers from './pages/Landscapers';
 import HVACEngineers from './pages/HVACEngineers';
 import PropertyMaintenance from './pages/PropertyMaintenance';
+import PaintersDecorators from './pages/PaintersDecorators';
+import WasteManagement from './pages/WasteManagement';
 import Footer from './components/Footer';
 import CookieConsent from './components/CookieConsent';
 
@@ -72,6 +74,8 @@ function App() {
           <Route path="/sectors/landscapers" element={<Landscapers />} />
           <Route path="/sectors/hvac-engineers" element={<HVACEngineers />} />
           <Route path="/sectors/property-maintenance" element={<PropertyMaintenance />} />
+          <Route path="/sectors/painters-decorators" element={<PaintersDecorators />} />
+          <Route path="/sectors/waste-management" element={<WasteManagement />} />
         </Routes>
         <Footer />
         <CookieConsent />

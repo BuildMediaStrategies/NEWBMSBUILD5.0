@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
-import { Zap, Building, Shield, Hammer, Wrench, HardHat, Home, Trees, Thermometer, Settings } from 'lucide-react';
+import { Zap, Building, Shield, Hammer, Wrench, HardHat, Home, Trees, Thermometer, Settings, PaintBucket, Truck } from 'lucide-react';
 
 const trades = [
   {
@@ -73,6 +73,20 @@ const trades = [
     outcome: 'Tenant requests sorted and assigned automatically',
     route: '/sectors/property-maintenance',
     gradient: 'from-cyan-600 to-blue-600'
+  }
+  {
+    icon: PaintBucket,
+    title: 'Painters & Decorators',
+    outcome: 'Interior and exterior jobs scheduled around weather automatically',
+    route: '/sectors/painters-decorators',
+    gradient: 'from-pink-600 to-rose-600'
+  },
+  {
+    icon: Truck,
+    title: 'Waste Management',
+    outcome: 'Skip hire and collection bookings managed 24/7',
+    route: '/sectors/waste-management',
+    gradient: 'from-amber-600 to-yellow-600'
   }
 ];
 
