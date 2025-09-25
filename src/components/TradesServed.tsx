@@ -73,7 +73,7 @@ const trades = [
     outcome: 'Tenant requests sorted and assigned automatically',
     route: '/sectors/property-maintenance',
     gradient: 'from-cyan-600 to-blue-600'
-  }
+  },
   {
     icon: PaintBucket,
     title: 'Painters & Decorators',
