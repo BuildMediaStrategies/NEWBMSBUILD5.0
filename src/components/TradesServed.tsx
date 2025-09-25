@@ -97,7 +97,7 @@ export default function TradesServed() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {trades.map((trade, index) => (
             <Link key={trade.title} to={trade.route}>
               <motion.div
@@ -106,18 +106,27 @@ export default function TradesServed() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 
                   hover:bg-white/10 hover:border-white/20 transition-all duration-300 
-                  hover:-translate-y-2 hover:shadow-2xl hover:shadow-white/10 cursor-pointer"
+                  hover:-translate-y-2 hover:shadow-2xl hover:shadow-white/10 cursor-pointer
+                  min-h-[200px] flex flex-col focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black"
+                role="link"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    window.location.href = trade.route;
+                  }
+                }}
               >
                 <div className={`w-12 h-12 mb-4 rounded-lg bg-gradient-to-r ${trade.gradient} p-3 
-                  transform group-hover:scale-110 transition-transform duration-300`}>
+                  transform group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
                   <trade.icon className="w-full h-full text-white" />
                 </div>
                 
-                <h3 className="h3-resp mb-3 group-hover:text-white transition-colors">
+                <h3 className="h3-resp mb-3 group-hover:text-white transition-colors line-clamp-2">
                   {trade.title}
                 </h3>
                 
-                <p className="p-resp text-gray-400 group-hover:text-white transition-colors">
+                <p className="p-resp text-gray-400 group-hover:text-white transition-colors line-clamp-3 flex-grow">
                   {trade.outcome}
                 </p>
               </motion.div>
