@@ -118,43 +118,45 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        {/* UK Trust Signal - Desktop */}
-        <div className="hidden lg:flex items-center text-xs text-gray-400 absolute left-4 top-2">
-          <span>🇬🇧 UK-based • Nationwide coverage</span>
-        </div>
-        
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          className="md:hidden bg-black/95 backdrop-blur-lg border-t border-gray-600"
-        >
-          <div className="px-4 py-6 space-y-4">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                onClick={() => setIsOpen(false)}
-                className={`block transition-colors ${
-                  isActive(item.path)
-                    ? 'text-white'
-                    : 'text-gray-400 hover:text-white'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
-            
-            {/* CTA Button - Mobile */}
-            <div className="pt-4 border-t border-gray-600">
-              <Link to="/contact" onClick={() => setIsOpen(false)}>
-                <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
-                  Free Strategy Session
-                </button>
-              </Link>
-            </div>
+        <>
+          {/* UK Trust Signal - Desktop */}
+          <div className="hidden lg:flex items-center text-xs text-gray-400 absolute left-4 top-2">
+            <span>🇬🇧 UK-based • Nationwide coverage</span>
           </div>
-        </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="md:hidden bg-black/95 backdrop-blur-lg border-t border-gray-600"
+          >
+            <div className="px-4 py-6 space-y-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`block transition-colors ${
+                    isActive(item.path)
+                      ? 'text-white'
+                      : 'text-gray-400 hover:text-white'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              
+              {/* CTA Button - Mobile */}
+              <div className="pt-4 border-t border-gray-600">
+                <Link to="/contact" onClick={() => setIsOpen(false)}>
+                  <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                    Free Strategy Session
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        </>
       )}
       
       {/* UK Trust Signal - Mobile */}
