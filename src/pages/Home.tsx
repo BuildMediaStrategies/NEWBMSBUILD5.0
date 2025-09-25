@@ -18,7 +18,19 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "BuildMediaStrategies",
-            "url": "https://buildmediastrategies.com"
+            "url": "https://buildmediastrategies.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Dover",
+              "addressRegion": "Kent",
+              "addressCountry": "GB"
+            },
+            "areaServed": ["GB", "United Kingdom", "England", "Kent", "Dover"],
+            "telephone": "+44-1304-123456",
+            "priceRange": "£££",
+            "currenciesAccepted": "GBP",
+            "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
+            "serviceProvided": ["Web Design","AI Automation","App Development","Full-Stack Development"]
           })}
         </script>
       </Helmet>

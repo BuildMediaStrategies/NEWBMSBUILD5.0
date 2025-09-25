@@ -63,9 +63,12 @@ export default function About() {
               "@type": "PostalAddress",
               "addressLocality": "Dover",
               "addressRegion": "Kent",
-              "addressCountry": "UK"
+              "addressCountry": "GB"
             },
-            "areaServed": ["Dover","Kent"],
+            "areaServed": ["GB", "United Kingdom", "England", "Kent", "Dover"],
+            "telephone": "+44-1304-123456",
+            "priceRange": "£££",
+            "currenciesAccepted": "GBP",
             "serviceProvided": ["Web Design","AI Automation","App Development","Full-Stack Development"],
             "sameAs": ["https://ifucantfindit.com"]
           })}

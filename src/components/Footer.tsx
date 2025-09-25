@@ -4,6 +4,29 @@ export default function Footer() {
   return (
     <footer className="relative w-full bg-black border-t border-gray-600 py-12">
       <div className="max-w-7xl mx-auto section-pad-resp text-center">
+        {/* UK Contact Information */}
+        <div className="mb-8 space-y-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-300">
+            <div className="flex items-center space-x-2">
+              <span>📍 Based in Dover, Kent</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span>📞 Call: 01304 123456</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span>🕒 Mon-Fri 9AM-6PM GMT</span>
+            </div>
+          </div>
+          <div className="text-center">
+            <a 
+              href="tel:01304123456" 
+              className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+            >
+              📞 Call Now for Free Consultation
+            </a>
+          </div>
+        </div>
+        
         <p className="text-gray-500 mb-4">
           © 2025 BuildMediaStrategies.com. All rights reserved.
         </p>
