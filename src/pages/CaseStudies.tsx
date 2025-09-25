@@ -143,8 +143,8 @@ export default function CaseStudies() {
               className="p-resp p-narrow text-gray-400 mb-12"
             >
               <ResponsiveText
-                short="See how we've transformed websites into client acquisition machines."
-                long="See how we've transformed websites into client acquisition machines that capture growth potential and deliver measurable results."
+                short="See how we've turned websites into client acquisition machines."
+                long="See how we've turned websites into client acquisition machines that capture growth potential and deliver measurable results."
               />
             </motion.p>
 

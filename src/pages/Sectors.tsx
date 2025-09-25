@@ -198,7 +198,7 @@ export default function Sectors() {
             className="p-resp p-narrow text-gray-400 line-clamp-3 sm:line-clamp-none"
           >
             <ResponsiveText
-              short="Every industry grows differently. We identify sector-specific opportunities and capture them automatically."
+              short="Every industry grows differently. We identify sector specific opportunities and capture them automatically."
               long="Every industry has unique growth opportunities. Recovered appointments, captured carts, qualified leads converting to sales. We've identified the biggest growth potential in each sector and built systems that capture it automatically."
               className="p-resp text-gray-400"
             />

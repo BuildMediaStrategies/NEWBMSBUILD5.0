@@ -22,8 +22,8 @@ export default function Contact() {
           <ResponsiveText
             as="p"
             className="p-resp p-narrow text-gray-400 line-clamp-3 sm:line-clamp-none"
-            short="Tell us about your business goals and we'll show you exactly how AI automation can help you achieve them."
-            long="Tell us about your business goals and we'll show you exactly how AI automation can help you achieve them faster and more efficiently."
+            short="Tell us about your business goals and we'll show you exactly how automation can help you achieve them."
+            long="Tell us about your business goals and we'll show you exactly how automation can help you achieve them faster and more efficiently."
           />
         </motion.div>
 

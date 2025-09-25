@@ -175,8 +175,8 @@ export default function Hero() {
             className="p-resp p-narrow text-gray-400 mb-8 sm:mb-12 line-clamp-3 sm:line-clamp-none"
           >
             <ResponsiveText
-              short="UK construction and trade businesses use our systems to respond to enquiries in minutes, not hours. Book more jobs while you're on-site."
-              long="UK construction and trade businesses use our automated systems to respond to enquiries in minutes, not hours. Book more jobs while you're on-site, sleeping, or with family."
+              short="UK construction and trade businesses use our systems to respond to enquiries in minutes, not hours. Book more jobs while on site."
+              long="UK construction and trade businesses use our automated systems to respond to enquiries in minutes, not hours. Book more jobs while on site, sleeping, or with family."
               className="p-resp text-gray-400"
             />
           </motion.p>

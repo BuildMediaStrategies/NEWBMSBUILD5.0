@@ -64,8 +64,8 @@ export default function Services() {
             <ResponsiveText
               as="p"
               className="p-resp p-narrow text-gray-300 mb-6 line-clamp-3 sm:line-clamp-none"
-              short="Four steps to stop your revenue leaks."
-              long="Our proven four-step process to identify and eliminate revenue leaks in your business."
+              short="Global automation specialists serving businesses worldwide."
+              long="A global automation agency serving businesses across the US and worldwide. We help businesses capture growth opportunities through intelligent automation systems."
             />
             
             <div className="space-y-4">

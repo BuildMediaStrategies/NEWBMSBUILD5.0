@@ -43,8 +43,8 @@ export default function HowItWorks() {
           <ResponsiveText
             as="p"
             className="p-resp p-narrow text-gray-400 line-clamp-3 sm:line-clamp-none"
-            short="Three simple steps to transform your business with AI automation."
-            long="Three simple steps to transform your business with AI automation systems that work around the clock."
+            short="Three simple steps to automate your business processes."
+            long="Three simple steps to automate your business with systems that work around the clock."
           />
         </motion.div>
 

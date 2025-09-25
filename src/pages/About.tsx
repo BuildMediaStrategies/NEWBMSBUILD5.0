@@ -96,8 +96,8 @@ export default function About() {
             <ResponsiveText
               as="p"
               className="p-resp p-narrow text-gray-500 mb-8"
-              short="Remote-first automation specialists based in Deal, Kent, UK."
-              long="A remote-first automation agency based in Deal on the Kent coast. We help businesses stop revenue leaks through intelligent automation systems."
+              short="Remote first automation specialists based in Deal, Kent, UK."
+              long="A remote first automation agency based in Deal on the Kent coast. We help businesses stop revenue leaks through intelligent automation systems."
             />
             
             <motion.div
@@ -127,7 +127,7 @@ export default function About() {
               as="p"
               className="p-resp p-narrow text-gray-400"
               short="Four steps to stop your revenue leaks."
-              long="Our proven four-step process to identify and eliminate revenue leaks in your business."
+              long="Our proven four step process to identify and eliminate revenue leaks in your business."
             />
           </motion.div>
 

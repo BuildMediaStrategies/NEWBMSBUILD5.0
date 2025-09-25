@@ -299,8 +299,8 @@ export default function Systems() {
             animate={{ opacity: 1, y: 0 }}
             className="h1-resp mb-6 heading-safe"
           >
-            Transform Manual Processes Into{' '}
-            <span className="gradient-text gradient-safe">Revenue Engines</span>
+            Stop Losing Revenue to{' '}
+            <span className="gradient-text gradient-safe">Manual Processes</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -309,8 +309,8 @@ export default function Systems() {
             className="p-resp p-narrow text-gray-400 line-clamp-3 sm:line-clamp-none"
           >
             <ResponsiveText
-              short="Manual tasks waste potential. While you chase leads, competitors close deals. These systems capture opportunities automatically."
-              long="Every manual task wastes growth potential. While you're manually qualifying leads, competitors are closing deals. While you're chasing follow-ups, opportunities multiply. These systems capture every opportunity and grow your revenue automatically."
+              short="Manual tasks cost you jobs. While you chase leads, competitors close deals. These systems work 24/7."
+              long="Manual tasks cost you real jobs. While you manually qualify leads, competitors close deals. While you chase follow-ups, opportunities slip away. These systems work around the clock."
               className="p-resp text-gray-400"
             />
           </motion.p>
@@ -342,7 +342,7 @@ export default function Systems() {
         {/* Main Content */}
         <div className="flex-1">
           <section ref={ref} className="pb-20">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
               {filteredSystems.map((system, index) => (
                 <motion.div
                   key={system.id}
@@ -351,26 +351,28 @@ export default function Systems() {
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 
-                    hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+                    hover:bg-white/10 hover:border-white/20 transition-all duration-300 flex flex-col h-full"
                 >
                   <div className={`w-12 h-12 mb-4 rounded-lg bg-gray-700 p-3`}>
                     <system.icon className="w-full h-full text-white" />
                   </div>
                   
-                  <h3 className="h3-resp mb-3">{system.title}</h3>
-                  <p className="p-resp text-gray-300 mb-4">{system.tldr}</p>
+                  <h3 className="h3-resp mb-3 text-white">{system.title}</h3>
+                  <p className="p-resp text-gray-300 mb-4 flex-grow">{system.tldr}</p>
                   
-                  <button
-                    onClick={() => setExpandedSystem(expandedSystem === system.id ? null : system.id)}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors text-sm font-medium"
-                  >
-                    <span>View details</span>
-                    {expandedSystem === system.id ? (
-                      <ChevronUp className="w-4 h-4" />
-                    ) : (
-                      <ChevronDown className="w-4 h-4" />
-                    )}
-                  </button>
+                  <div className="mt-auto">
+                    <button
+                      onClick={() => setExpandedSystem(expandedSystem === system.id ? null : system.id)}
+                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors text-sm font-medium mb-4"
+                    >
+                      <span>View details</span>
+                      {expandedSystem === system.id ? (
+                        <ChevronUp className="w-4 h-4" />
+                      ) : (
+                        <ChevronDown className="w-4 h-4" />
+                      )}
+                    </button>
+                  </div>
 
                   {expandedSystem === system.id && (
                     <motion.div
@@ -422,14 +424,14 @@ export default function Systems() {
                         </div>
                       </div>
 
-                      {/* CTA buttons */}
-                      <div className="flex space-x-3 pt-2">
+                      {/* CTA buttons - aligned */}
+                      <div className="flex flex-col space-y-3 pt-2">
                         <Link to="/contact" className="flex-1">
                           <button className="w-full bg-white text-black 
                             px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 
                             transition-all duration-300 flex items-center justify-center space-x-2">
                             <Calendar className="w-4 h-4" />
-                            <span>Book Your Free Website & Systems Audit</span>
+                            <span>Book Free Audit</span>
                           </button>
                         </Link>
                       </div>
@@ -438,14 +440,15 @@ export default function Systems() {
 
                   {/* Learn More button - always visible */}
                   {expandedSystem !== system.id && (
-                    <div className="mt-4 flex flex-wrap gap-3">
+                    <div className="mt-auto pt-4 flex flex-col space-y-3">
                       <Link to="/contact">
-                        <button className="inline-flex items-center rounded-xl px-5 py-3 text-sm font-semibold shadow-sm bg-white text-black hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-300">
-                          Book Your Free Website &amp; Systems Audit
+                        <button className="w-full bg-white text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-all duration-300 flex items-center justify-center space-x-2">
+                          <Calendar className="w-4 h-4" />
+                          <span>Book Free Audit</span>
                         </button>
                       </Link>
                       <Link to="/case-studies">
-                        <button className="inline-flex items-center rounded-xl px-5 py-3 text-sm font-semibold border border-white/30 text-white hover:bg-white/10 transition-all duration-300">
+                        <button className="w-full border border-white/30 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-300 text-center">
                           See Examples
                         </button>
                       </Link>
@@ -537,13 +540,13 @@ export default function Systems() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
           >
             <h2 className="h2-resp mb-6">Ready to Build a Revenue-Ready Website?</h2>
-            <p className="p-resp text-gray-300 mb-8">Transform your website into a 24/7 client acquisition machine</p>
+            <p className="p-resp text-gray-300 mb-8">Turn your website into a 24/7 client acquisition machine</p>
             <Link to="/contact">
               <button className="bg-white text-black px-8 py-3 
                 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 
                 flex items-center space-x-2 mx-auto">
                 <Calendar className="w-5 h-5" />
-                <span>Book Your Free Website & Systems Audit</span>
+                <span>Book Free Audit</span>
               </button>
             </Link>
           </motion.div>
