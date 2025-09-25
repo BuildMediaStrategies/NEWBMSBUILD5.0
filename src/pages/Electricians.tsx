@@ -25,7 +25,7 @@ export default function Electricians() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               className="mb-6"
             >
-              <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-r from-yellow-600 to-orange-600 p-4">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gray-700 p-4">
                 <Zap className="w-full h-full text-white" />
               </div>
             </motion.div>
@@ -55,17 +55,17 @@ export default function Electricians() {
               className="flex flex-wrap justify-center gap-8 text-center"
             >
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <Clock className="w-8 h-8 text-yellow-400 mx-auto mb-2" />
+                <Clock className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">5 Min</div>
                 <div className="text-gray-400 text-sm">Emergency Quote Time</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <Phone className="w-8 h-8 text-yellow-400 mx-auto mb-2" />
+                <Phone className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">24/7</div>
                 <div className="text-gray-400 text-sm">Automated Responses</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <Zap className="w-8 h-8 text-yellow-400 mx-auto mb-2" />
+                <Zap className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">+40%</div>
                 <div className="text-gray-400 text-sm">More Emergency Jobs</div>
               </div>

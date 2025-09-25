@@ -277,11 +277,11 @@ export default function Systems() {
             "url": "https://buildmediastrategies.com",
             "address": {
               "@type": "PostalAddress",
-              "addressLocality": "Dover",
+              "addressLocality": "Deal",
               "addressRegion": "Kent",
               "addressCountry": "GB"
             },
-            "areaServed": ["GB", "United Kingdom", "England", "Kent", "Dover"],
+            "areaServed": ["GB", "United Kingdom", "England", "Kent", "Deal"],
             "telephone": "+44-1304-123456",
             "priceRange": "£££",
             "currenciesAccepted": "GBP",

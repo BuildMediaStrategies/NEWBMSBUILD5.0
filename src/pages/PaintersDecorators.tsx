@@ -25,7 +25,7 @@ export default function PaintersDecorators() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               className="mb-6"
             >
-              <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-r from-pink-600 to-rose-600 p-4">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gray-700 p-4">
                 <PaintBucket className="w-full h-full text-white" />
               </div>
             </motion.div>
@@ -55,17 +55,17 @@ export default function PaintersDecorators() {
               className="flex flex-wrap justify-center gap-8 text-center"
             >
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <Cloud className="w-8 h-8 text-pink-400 mx-auto mb-2" />
+                <Cloud className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">Auto</div>
                 <div className="text-gray-400 text-sm">Weather Scheduling</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <Calendar className="w-8 h-8 text-pink-400 mx-auto mb-2" />
+                <Calendar className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">+30%</div>
                 <div className="text-gray-400 text-sm">More Jobs Completed</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <PaintBucket className="w-8 h-8 text-pink-400 mx-auto mb-2" />
+                <PaintBucket className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">-10 hrs</div>
                 <div className="text-gray-400 text-sm">Scheduling Time/Week</div>
               </div>

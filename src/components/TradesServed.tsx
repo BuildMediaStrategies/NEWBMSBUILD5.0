@@ -9,84 +9,84 @@ const trades = [
     title: 'Electricians',
     outcome: 'Quote emergency jobs in 5 minutes, even at midnight',
     route: '/sectors/electricians',
-    gradient: 'from-yellow-600 to-orange-600'
+    gradient: 'from-gray-700 to-gray-600'
   },
   {
     icon: Building,
     title: 'Scaffolders',
     outcome: 'Site surveys booked automatically from enquiries',
     route: '/sectors/scaffolders',
-    gradient: 'from-blue-600 to-cyan-600'
+    gradient: 'from-gray-700 to-gray-600'
   },
   {
     icon: Shield,
     title: 'Security & CCTV',
     outcome: 'Urgent callouts handled while you sleep',
     route: '/sectors/security-cctv',
-    gradient: 'from-red-600 to-pink-600'
+    gradient: 'from-gray-700 to-gray-600'
   },
   {
     icon: Hammer,
     title: 'General Contractors',
     outcome: 'Project leads qualified before you call back',
     route: '/sectors/general-contractors',
-    gradient: 'from-gray-600 to-gray-500'
+    gradient: 'from-gray-700 to-gray-600'
   },
   {
     icon: Wrench,
     title: 'Plumbers',
     outcome: 'Emergency callouts handled 24/7, even on weekends',
     route: '/sectors/plumbers',
-    gradient: 'from-blue-500 to-teal-600'
+    gradient: 'from-gray-700 to-gray-600'
   },
   {
     icon: HardHat,
     title: 'Builders',
     outcome: 'Project quotes generated while you\'re on other sites',
     route: '/sectors/builders',
-    gradient: 'from-orange-500 to-red-500'
+    gradient: 'from-gray-700 to-gray-600'
   },
   {
     icon: Home,
     title: 'Roofers',
     outcome: 'Weather damage leads captured instantly after storms',
     route: '/sectors/roofers',
-    gradient: 'from-slate-600 to-gray-600'
+    gradient: 'from-gray-700 to-gray-600'
   },
   {
     icon: Trees,
     title: 'Landscapers',
     outcome: 'Seasonal bookings managed automatically year-round',
     route: '/sectors/landscapers',
-    gradient: 'from-green-600 to-emerald-600'
+    gradient: 'from-gray-700 to-gray-600'
   },
   {
     icon: Thermometer,
     title: 'HVAC Engineers',
     outcome: 'Heating emergencies prioritized and scheduled instantly',
     route: '/sectors/hvac-engineers',
-    gradient: 'from-purple-600 to-indigo-600'
+    gradient: 'from-gray-700 to-gray-600'
   },
   {
     icon: Settings,
     title: 'Property Maintenance',
     outcome: 'Tenant requests sorted and assigned automatically',
     route: '/sectors/property-maintenance',
-    gradient: 'from-cyan-600 to-blue-600'
+    gradient: 'from-gray-700 to-gray-600'
   },
   {
     icon: PaintBucket,
     title: 'Painters & Decorators',
     outcome: 'Interior and exterior jobs scheduled around weather automatically',
     route: '/sectors/painters-decorators',
-    gradient: 'from-pink-600 to-rose-600'
+    gradient: 'from-gray-700 to-gray-600'
   },
   {
     icon: Truck,
     title: 'Waste Management',
     outcome: 'Skip hire and collection bookings managed 24/7',
     route: '/sectors/waste-management',
-    gradient: 'from-amber-600 to-yellow-600'
+    gradient: 'from-gray-700 to-gray-600'
   }
 ];
 
@@ -136,7 +136,7 @@ export default function TradesServed() {
               >
                 <div className={`w-12 h-12 mb-4 rounded-lg bg-gradient-to-r ${trade.gradient} p-3 
                   transform group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
-                  <trade.icon className="w-full h-full text-black" />
+                  <trade.icon className="w-full h-full text-white" />
                 </div>
                 
                 <h3 className="h3-resp mb-3 group-hover:text-white transition-colors line-clamp-2">

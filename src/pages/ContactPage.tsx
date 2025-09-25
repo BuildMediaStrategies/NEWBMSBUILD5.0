@@ -23,11 +23,11 @@ export default function ContactPage() {
             "url": "https://buildmediastrategies.com",
             "address": {
               "@type": "PostalAddress",
-              "addressLocality": "Dover",
+              "addressLocality": "Deal",
               "addressRegion": "Kent",
               "addressCountry": "GB"
             },
-            "areaServed": ["GB", "United Kingdom", "England", "Kent", "Dover"],
+            "areaServed": ["GB", "United Kingdom", "England", "Kent", "Deal"],
             "telephone": "+44-1304-123456",
             "priceRange": "£££",
             "currenciesAccepted": "GBP",
@@ -88,7 +88,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold">Location</h3>
-                    <p className="text-gray-500">Remote based workflow</p>
+                    <p className="text-gray-500">Based in Deal, Kent</p>
                   </div>
                 </div>
               </div>

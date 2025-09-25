@@ -121,7 +121,7 @@ export default function Navbar() {
         <>
           {/* UK Trust Signal - Desktop */}
           <div className="hidden lg:flex items-center text-xs text-gray-400 absolute left-4 top-2">
-            <span>🇬🇧 UK-based • Nationwide coverage</span>
+            <span>UK-based • Nationwide coverage</span>
           </div>
           
           <motion.div
@@ -161,7 +161,7 @@ export default function Navbar() {
       
       {/* UK Trust Signal - Mobile */}
       <div className="lg:hidden bg-gray-800 text-center py-1">
-        <span className="text-xs text-gray-400">🇬🇧 UK-based • Nationwide coverage</span>
+        <span className="text-xs text-gray-400">UK-based • Nationwide coverage</span>
       </div>
     </motion.nav>
   );

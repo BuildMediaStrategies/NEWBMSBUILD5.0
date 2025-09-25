@@ -25,7 +25,7 @@ export default function Builders() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               className="mb-6"
             >
-              <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 p-4">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gray-700 p-4">
                 <HardHat className="w-full h-full text-white" />
               </div>
             </motion.div>
@@ -55,17 +55,17 @@ export default function Builders() {
               className="flex flex-wrap justify-center gap-8 text-center"
             >
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <Clock className="w-8 h-8 text-orange-400 mx-auto mb-2" />
+                <Clock className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">Auto</div>
                 <div className="text-gray-400 text-sm">Quote Generation</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <Users className="w-8 h-8 text-orange-400 mx-auto mb-2" />
+                <Users className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">+45%</div>
                 <div className="text-gray-400 text-sm">More Projects</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <HardHat className="w-8 h-8 text-orange-400 mx-auto mb-2" />
+                <HardHat className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">-18 hrs</div>
                 <div className="text-gray-400 text-sm">Admin Time/Week</div>
               </div>

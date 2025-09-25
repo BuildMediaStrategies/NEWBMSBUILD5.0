@@ -25,7 +25,7 @@ export default function WasteManagement() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               className="mb-6"
             >
-              <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-r from-amber-600 to-yellow-600 p-4">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gray-700 p-4">
                 <Truck className="w-full h-full text-white" />
               </div>
             </motion.div>
@@ -55,17 +55,17 @@ export default function WasteManagement() {
               className="flex flex-wrap justify-center gap-8 text-center"
             >
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <Clock className="w-8 h-8 text-amber-400 mx-auto mb-2" />
+                <Clock className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">24/7</div>
                 <div className="text-gray-400 text-sm">Booking System</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <Calendar className="w-8 h-8 text-amber-400 mx-auto mb-2" />
+                <Calendar className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">+40%</div>
                 <div className="text-gray-400 text-sm">Route Efficiency</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <Truck className="w-8 h-8 text-amber-400 mx-auto mb-2" />
+                <Truck className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">Auto</div>
                 <div className="text-gray-400 text-sm">Collection Scheduling</div>
               </div>

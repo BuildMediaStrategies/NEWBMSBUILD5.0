@@ -25,7 +25,7 @@ export default function Scaffolders() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               className="mb-6"
             >
-              <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 p-4">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gray-700 p-4">
                 <Building className="w-full h-full text-white" />
               </div>
             </motion.div>
@@ -55,17 +55,17 @@ export default function Scaffolders() {
               className="flex flex-wrap justify-center gap-8 text-center"
             >
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <Calendar className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                <Calendar className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">Auto</div>
                 <div className="text-gray-400 text-sm">Survey Booking</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                <MapPin className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">+60%</div>
                 <div className="text-gray-400 text-sm">Site Visit Rate</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <Building className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                <Building className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">24/7</div>
                 <div className="text-gray-400 text-sm">Quote Handling</div>
               </div>

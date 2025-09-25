@@ -25,7 +25,7 @@ export default function GeneralContractors() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               className="mb-6"
             >
-              <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-r from-gray-600 to-gray-500 p-4">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gray-700 p-4">
                 <Hammer className="w-full h-full text-white" />
               </div>
             </motion.div>
@@ -55,17 +55,17 @@ export default function GeneralContractors() {
               className="flex flex-wrap justify-center gap-8 text-center"
             >
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <Users className="w-8 h-8 text-gray-400 mx-auto mb-2" />
+                <Users className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">Auto</div>
                 <div className="text-gray-400 text-sm">Lead Qualification</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <CheckCircle className="w-8 h-8 text-gray-400 mx-auto mb-2" />
+                <CheckCircle className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">+50%</div>
                 <div className="text-gray-400 text-sm">Qualified Leads</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <Hammer className="w-8 h-8 text-gray-400 mx-auto mb-2" />
+                <Hammer className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">-15 hrs</div>
                 <div className="text-gray-400 text-sm">Admin Time/Week</div>
               </div>

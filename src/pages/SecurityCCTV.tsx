@@ -25,7 +25,7 @@ export default function SecurityCCTV() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               className="mb-6"
             >
-              <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-r from-red-600 to-pink-600 p-4">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gray-700 p-4">
                 <Shield className="w-full h-full text-white" />
               </div>
             </motion.div>
@@ -55,17 +55,17 @@ export default function SecurityCCTV() {
               className="flex flex-wrap justify-center gap-8 text-center"
             >
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <Clock className="w-8 h-8 text-red-400 mx-auto mb-2" />
+                <Clock className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">24/7</div>
                 <div className="text-gray-400 text-sm">Emergency Response</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <Phone className="w-8 h-8 text-red-400 mx-auto mb-2" />
+                <Phone className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">2 Min</div>
                 <div className="text-gray-400 text-sm">Response Time</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <Shield className="w-8 h-8 text-red-400 mx-auto mb-2" />
+                <Shield className="w-8 h-8 text-white mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">+80%</div>
                 <div className="text-gray-400 text-sm">Emergency Jobs Won</div>
               </div>

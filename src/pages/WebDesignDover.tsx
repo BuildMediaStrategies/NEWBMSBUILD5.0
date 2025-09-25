@@ -24,11 +24,11 @@ export default function WebDesignDover() {
             "url": "https://buildmediastrategies.com",
             "address": {
               "@type": "PostalAddress",
-              "addressLocality": "Dover",
+              "addressLocality": "Deal",
               "addressRegion": "Kent",
               "addressCountry": "UK"
             },
-            "areaServed": ["Dover","Kent"],
+            "areaServed": ["Deal","Kent"],
             "serviceProvided": ["Web Design","AI Automation","App Development","Full-Stack Development"],
             "sameAs": ["https://ifucantfindit.com"]
           })}

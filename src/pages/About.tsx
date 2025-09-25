@@ -61,11 +61,11 @@ export default function About() {
             "url": "https://buildmediastrategies.com",
             "address": {
               "@type": "PostalAddress",
-              "addressLocality": "Dover",
+              "addressLocality": "Deal",
               "addressRegion": "Kent",
               "addressCountry": "GB"
             },
-            "areaServed": ["GB", "United Kingdom", "England", "Kent", "Dover"],
+            "areaServed": ["GB", "United Kingdom", "England", "Kent", "Deal"],
             "telephone": "+44-1304-123456",
             "priceRange": "£££",
             "currenciesAccepted": "GBP",
@@ -96,8 +96,8 @@ export default function About() {
             <ResponsiveText
               as="p"
               className="p-resp p-narrow text-gray-500 mb-8"
-              short="Remote-first automation specialists based in Deal & Dover, UK."
-              long="A remote-first automation agency based between Deal and Dover on the Kent coast. We help businesses stop revenue leaks through intelligent automation systems."
+              short="Remote-first automation specialists based in Deal, Kent, UK."
+              long="A remote-first automation agency based in Deal on the Kent coast. We help businesses stop revenue leaks through intelligent automation systems."
             />
             
             <motion.div
@@ -107,7 +107,7 @@ export default function About() {
               className="flex items-center justify-center space-x-2 text-gray-300"
             >
               <MapPin className="w-5 h-5" />
-              <span className="text-sm">Deal & Dover, Kent, UK</span>
+              <span className="text-sm">Deal, Kent, UK</span>
             </motion.div>
           </motion.div>
         </div>
