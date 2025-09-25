@@ -104,10 +104,13 @@ export default function TradesServed() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 
-                  hover:bg-white/10 hover:border-white/20 transition-all duration-300 
-                  hover:-translate-y-2 hover:shadow-2xl hover:shadow-white/10 cursor-pointer
-                  min-h-[200px] flex flex-col focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black"
+                className="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 cursor-pointer
+                  h-full flex flex-col
+                  shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_4px_12px_rgba(0,0,0,0.3),0_2px_4px_rgba(0,0,0,0.2)]
+                  hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15),0_8px_24px_rgba(0,0,0,0.4),0_4px_8px_rgba(0,0,0,0.3)]
+                  hover:-translate-y-1 transition-all duration-300 ease-out
+                  focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black
+                  border border-white/5 hover:border-white/10"
                 role="link"
                 tabIndex={0}
                 onKeyDown={(e) => {
