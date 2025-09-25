@@ -39,7 +39,6 @@ export default function Home() {
         <TradesServed />
         <HowItWorks />
         <Work />
-        <Industries />
         <Contact />
       </main>
     </>
