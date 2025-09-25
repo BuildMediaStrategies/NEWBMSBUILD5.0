@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Bot, Zap, GitBranch, Cpu, Database, Network, Workflow, Target } from 'lucide-react';
+import { ArrowRight, Bot, Zap, GitBranch, Cpu, Database, Network, Workflow, Target, Play, Phone } from 'lucide-react';
 import ResponsiveText from '../components/ResponsiveText';
 
 const textVariants = {
@@ -26,11 +26,10 @@ const floatingIcons = [
   { Icon: Target, delay: 3.5, x: '45%', y: '80%' },
 ];
 
-const trustLogos = [
-  { name: 'n8n', logo: 'https://docs.n8n.io/assets/images/n8n-logo.png' },
-  { name: 'Make.com', logo: 'https://www.make.com/en/help/image/uuid-e6978baa-7c96-7877-5a36-9d4d21b1ea90.png' },
-  { name: 'Voiceflow', logo: 'https://cdn.voiceflow.com/assets/logo-dark.png' },
-  { name: 'Zapier', logo: 'https://cdn.zapier.com/storage/photos/9ec65c79de8ae54080c98384d4e7b2fd.png' }
+const proofPoints = [
+  { metric: '+150%', description: 'More qualified leads' },
+  { metric: '-20 hrs', description: 'Admin time saved per week' },
+  { metric: '2 min', description: 'Average response time' }
 ];
 
 export default function Hero() {
@@ -161,11 +160,10 @@ export default function Hero() {
             variants={textVariants}
           >
             <h1 className="h1-resp text-white mb-8 heading-safe">
-              AI Systems That{" "}
+              Stop Losing Jobs to{" "}
               <span className="gradient-text gradient-safe">
-                Grow Your Business
+                Faster Competitors
               </span>{" "}
-              — Fast.
             </h1>
           </motion.div>
           
@@ -177,8 +175,8 @@ export default function Hero() {
             className="p-resp p-narrow text-gray-400 mb-8 sm:mb-12 line-clamp-3 sm:line-clamp-none"
           >
             <ResponsiveText
-              short="Affordable, global-ready automation and lead generation — built to launch in days, not months."
-              long="Affordable, global-ready automation and lead generation — built to launch in days, not months."
+              short="UK construction and trade businesses use our systems to respond to enquiries in minutes, not hours. Book more jobs while you're on-site."
+              long="UK construction and trade businesses use our automated systems to respond to enquiries in minutes, not hours. Book more jobs while you're on-site, sleeping, or with family."
               className="p-resp text-gray-400"
             />
           </motion.p>
@@ -188,47 +186,52 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             variants={textVariants}
+            className="flex flex-col sm:flex-row gap-4 items-center justify-center mb-16"
           >
+            {/* Primary CTA */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={scrollToContact}
-              className="group bg-gray-300 p-[2px] rounded-full"
+              className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center space-x-2"
             >
-              <div className="bg-black rounded-full px-8 py-4 transition group-hover:bg-gray-800">
-                <span className="flex items-center space-x-2 text-white group-hover:text-white">
-                  <span>Start Your Free Strategy Session</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </div>
+              <Phone className="w-5 h-5" />
+              <span>Book Your Free Call</span>
+            </motion.button>
+
+            {/* Secondary CTA */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="group bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-lg font-medium hover:bg-white/20 transition-all duration-300 flex items-center space-x-2"
+            >
+              <Play className="w-5 h-5" />
+              <span>Watch 2-Min Demo</span>
             </motion.button>
           </motion.div>
 
-          {/* Trust Bar */}
+          {/* Proof Strip */}
           <motion.div
             custom={4}
             initial="hidden"
             animate="visible"
             variants={textVariants}
-            className="mt-16"
           >
-            <p className="text-gray-500 text-sm mb-6">Powered by industry-leading tools</p>
-            <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
-              {trustLogos.map((tool, index) => (
+            <p className="text-gray-500 text-sm mb-6">Results from UK construction and trade businesses</p>
+            <div className="flex flex-wrap items-center justify-center gap-8">
+              {proofPoints.map((point, index) => (
                 <motion.div
-                  key={tool.name}
+                  key={point.metric}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 + index * 0.1 }}
-                  className="flex items-center space-x-2"
+                  className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 min-w-[140px]"
                 >
-                  <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">
-                      {tool.name.charAt(0)}
-                    </span>
+                  <div className="text-2xl font-bold text-white mb-1">
+                    {point.metric}
                   </div>
-                  <span className="text-gray-400 text-sm font-medium">
-                    {tool.name}
+                  <span className="text-gray-400 text-sm">
+                    {point.description}
                   </span>
                 </motion.div>
               ))}
