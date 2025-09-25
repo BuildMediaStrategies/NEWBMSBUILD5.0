@@ -201,7 +201,7 @@ export default function About() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gray-200 text-black px-8 py-4 rounded-lg font-medium hover:bg-white transition-all duration-300 flex items-center space-x-2 mx-auto"
+                  className="bg-white text-black px-8 py-4 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 flex items-center space-x-2 mx-auto"
                 >
                   <span>Get Started Today</span>
                   <ArrowRight className="w-5 h-5" />

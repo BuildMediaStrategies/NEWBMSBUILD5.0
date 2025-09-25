@@ -167,8 +167,8 @@ export default function Contact() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full bg-gray-200 text-black rounded-lg px-8 py-4
-                  flex items-center justify-center space-x-2 hover:bg-white 
+                className="w-full bg-white text-black rounded-lg px-8 py-4
+                  flex items-center justify-center space-x-2 hover:bg-gray-200 
                   transition-all duration-300"
               >
                 <span>Start Your Free Strategy Session</span>

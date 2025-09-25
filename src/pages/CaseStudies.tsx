@@ -345,7 +345,7 @@ export default function CaseStudies() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center bg-white text-black px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-200 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   <Calendar className="w-5 h-5 mr-2" />
                   <span>Get Your Free Strategy Session</span>

@@ -82,7 +82,7 @@ export default function HowItWorks() {
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ duration: 0.3 }}
-                  className={`w-12 h-12 mx-auto mb-6 rounded-xl bg-gray-600 p-3`}
+                  className="w-12 h-12 mx-auto mb-6 rounded-xl bg-gray-600 p-3"
                 >
                   <step.icon className="w-full h-full text-white" />
                 </motion.div>

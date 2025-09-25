@@ -99,7 +99,7 @@ export default function Navbar() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+                className="bg-white text-black px-6 py-2 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300"
               >
                 Free Strategy Session
               </motion.button>
@@ -149,7 +149,7 @@ export default function Navbar() {
               {/* CTA Button - Mobile */}
               <div className="pt-4 border-t border-gray-600">
                 <Link to="/contact" onClick={() => setIsOpen(false)}>
-                  <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                  <button className="w-full bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300">
                     Free Strategy Session
                   </button>
                 </Link>

@@ -30,11 +30,11 @@
   
   /* Gradient Text Utilities */
   .gradient-text {
-    @apply bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent;
+    @apply text-white;
   }
   
   .gradient-safe {
-    @apply bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent;
+    @apply text-white;
   }
   
   .heading-safe {

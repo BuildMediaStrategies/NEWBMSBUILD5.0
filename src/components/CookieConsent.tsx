@@ -72,13 +72,13 @@ export default function CookieConsent() {
             </button>
             <button
               onClick={rejectNonEssential}
-              className="bg-white/10 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/20 transition-all duration-300"
+              className="border border-white/30 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-300"
             >
               Reject non-essential
             </button>
             <button
               onClick={() => setShowPreferences(true)}
-              className="bg-white/5 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center space-x-1"
+              className="border border-white/20 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center space-x-1"
             >
               <Settings className="w-4 h-4" />
               <span>Preferences</span>

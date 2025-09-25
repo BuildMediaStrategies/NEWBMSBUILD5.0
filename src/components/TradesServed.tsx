@@ -136,7 +136,7 @@ export default function TradesServed() {
               >
                 <div className={`w-12 h-12 mb-4 rounded-lg bg-gradient-to-r ${trade.gradient} p-3 
                   transform group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
-                  <trade.icon className="w-full h-full text-white" />
+                  <trade.icon className="w-full h-full text-black" />
                 </div>
                 
                 <h3 className="h3-resp mb-3 group-hover:text-white transition-colors line-clamp-2">

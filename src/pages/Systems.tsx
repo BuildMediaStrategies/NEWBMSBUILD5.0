@@ -440,13 +440,12 @@ export default function Systems() {
                   {expandedSystem !== system.id && (
                     <div className="mt-4 flex flex-wrap gap-3">
                       <Link to="/contact">
-                        <button className="inline-flex items-center rounded-xl px-5 py-3 text-sm font-semibold shadow-sm hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2"
-                          style={{ background: 'linear-gradient(90deg, #FF6A00, #FF2E85)', color: '#fff' }}>
+                        <button className="inline-flex items-center rounded-xl px-5 py-3 text-sm font-semibold shadow-sm bg-white text-black hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-300">
                           Book Your Free Website &amp; Systems Audit
                         </button>
                       </Link>
                       <Link to="/case-studies">
-                        <button className="inline-flex items-center rounded-xl px-5 py-3 text-sm font-semibold border border-white/20 hover:bg-white/5">
+                        <button className="inline-flex items-center rounded-xl px-5 py-3 text-sm font-semibold border border-white/30 text-white hover:bg-white/10 transition-all duration-300">
                           See Examples
                         </button>
                       </Link>
