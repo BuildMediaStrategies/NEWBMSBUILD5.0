@@ -22,6 +22,10 @@ import Subprocessors from './pages/subprocessors';
 import AiTransparency from './pages/ai-transparency';
 import AiCompliance from './pages/ai-compliance';
 import Accessibility from './pages/accessibility';
+import Electricians from './pages/Electricians';
+import Scaffolders from './pages/Scaffolders';
+import SecurityCCTV from './pages/SecurityCCTV';
+import GeneralContractors from './pages/GeneralContractors';
 import Footer from './components/Footer';
 import CookieConsent from './components/CookieConsent';
 
@@ -52,6 +56,10 @@ function App() {
           <Route path="/ai-transparency" element={<AiTransparency />} />
           <Route path="/ai-compliance" element={<AiCompliance />} />
           <Route path="/accessibility" element={<Accessibility />} />
+          <Route path="/electricians" element={<Electricians />} />
+          <Route path="/scaffolders" element={<Scaffolders />} />
+          <Route path="/security-cctv" element={<SecurityCCTV />} />
+          <Route path="/general-contractors" element={<GeneralContractors />} />
         </Routes>
         <Footer />
         <CookieConsent />
