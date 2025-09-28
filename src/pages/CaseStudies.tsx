@@ -8,64 +8,70 @@ import ResponsiveText from '../components/ResponsiveText';
 
 const caseStudies = [
   {
+    id: 'curecancer-ucl',
+    title: 'CureCancer @ UCL',
+    category: 'Charity / Research Project',
+    industry: 'Non‑profit / Academia',
+    timeline: 'Ongoing',
+    challenge: 'Charity research initiative requiring a clear, credible web presence to communicate impact and drive donations while remaining accessible and compliant.',
+    solution: 'Clean, accessible site structure with focused messaging, fast load times, and donation pathways that reduce friction for supporters and researchers.',
+    results: [
+      { metric: 'Clarity & Trust Signals', value: 'Improved', icon: TrendingUp },
+      { metric: 'Accessibility', value: 'Enhanced', icon: Users },
+      { metric: 'Performance', value: 'Optimised', icon: Zap }
+    ],
+    testimonial: "Professional, fast, and focused on outcomes — exactly what we needed.",
+    author: "Project Team",
+    gradient: 'from-gray-700 to-gray-600',
+    image: 'https://github.com/BuildMediaStrategies/BMSAIASSETS/blob/2d7930b51ff8071f72d1937570b26405c6adc4b7/2a26a5f0-5b74-47b0-8c42-8e20a3982577.png?raw=true',
+    alt: 'Hero section of CureCancer @ UCL website.',
+    externalUrl: 'https://curecancer-ucl.org/'
+  },
+  {
+    id: 'sos-electrical',
+    title: 'SOS Electrical LTD',
+    category: 'Website + AI Sales Process',
+    industry: 'Electrical Services',
+    timeline: '4 weeks',
+    challenge: 'Slow response times and manual quoting led to missed enquiries and admin burden.',
+    solution: 'Responsive site with AI qualification, automated quoting for common jobs, and instant replies.',
+    results: [
+      { metric: 'Enquiries', value: '+71%', icon: TrendingUp },
+      { metric: 'Admin Hours', value: '−38%', icon: Users },
+      { metric: 'First Response', value: '<60s', icon: Zap }
+    ],
+    testimonial: "The AI system handles our quotes. We focus on the work.",
+    author: "Mike Thompson",
+    gradient: 'from-gray-700 to-gray-600',
+    image: 'https://github.com/BuildMediaStrategies/BMSAIASSETS/blob/2d7930b51ff8071f72d1937570b26405c6adc4b7/62cc0135-156f-410f-84a8-b9c744fbd0f2.png?raw=true',
+    alt: 'Hero section of SOS Electrical LTD website.',
+    externalUrl: 'https://soselectricalltd.co.uk/'
+  },
+  {
     id: 'little-co',
     title: 'Little & Co',
-    category: 'Website + Branding',
-    industry: 'Local Business',
+    category: 'Branding / E‑Commerce Project',
+    industry: 'Retail',
     timeline: '6 weeks',
-    challenge: 'Local business struggling with outdated website that failed to convert visitors into customers, resulting in lost leads and poor brand perception in competitive market.',
-    solution: 'Complete website redesign with modern branding, mobile-first approach, conversion-optimized landing pages with clear calls-to-action, and integrated lead capture system.',
+    challenge: 'Outdated site underperformed for conversions and didn’t reflect the brand.',
+    solution: 'Modern brand system, mobile-first UX, conversion-led PDPs and streamlined checkout.',
     results: [
       { metric: 'Website Conversions', value: '+150%', icon: TrendingUp },
       { metric: 'Mobile Engagement', value: '+85%', icon: Users },
       { metric: 'Brand Recognition', value: '+40%', icon: Zap }
     ],
-    testimonial: "The new website transformed our business. We're getting quality leads every day now.",
+    testimonial: "We’re getting quality leads every day now.",
     author: "Sarah Little",
-    gradient: 'from-blue-600 to-purple-600',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80'
-  },
-  {
-    id: 'sos-electrical',
-    title: 'SOS Electrical',
-    category: 'Website + AI Sales Process',
-    industry: 'Electrical Services',
-    timeline: '4 weeks',
-    challenge: 'Electrical contractor losing qualified leads due to slow response times and manual quote processes, with competitors capturing business during delays.',
-    solution: 'New responsive website integrated with AI-powered lead qualification system, automated quote generation for common electrical services, and instant response workflows.',
-    results: [
-      { metric: 'Lead Response Speed', value: '+200%', icon: Zap },
-      { metric: 'Quote Accuracy', value: '+75%', icon: TrendingUp },
-      { metric: 'Conversion Rate', value: '+60%', icon: Users }
-    ],
-    testimonial: "The AI system handles our quotes perfectly. We can focus on the actual electrical work.",
-    author: "Mike Thompson",
-    gradient: 'from-orange-600 to-red-600',
-    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80'
-  },
-  {
-    id: 'ifucantfindit',
-    title: 'Ifucantfindit',
-    category: 'WhatsApp Lead Agent',
-    industry: 'Service Directory',
-    timeline: '8 weeks',
-    challenge: 'Service directory missing potential customers due to complex inquiry process and delayed responses to service requests, leading to lost connections.',
-    solution: 'Intelligent WhatsApp bot that qualifies service requests, matches customers with providers, handles initial communications automatically, and tracks success rates.',
-    results: [
-      { metric: 'Inquiry Capacity', value: '+300%', icon: Users },
-      { metric: 'Matching Speed', value: '+90%', icon: Zap },
-      { metric: 'Service Connections', value: '+45%', icon: TrendingUp }
-    ],
-    testimonial: "WhatsApp automation increased our service connections by 45%. Game changer.",
-    author: "James Wilson",
-    gradient: 'from-green-600 to-teal-600',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80'
+    gradient: 'from-gray-700 to-gray-600',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80',
+    alt: 'Hero section of Little & Co website.',
+    externalUrl: undefined
   }
 ];
 
 const testimonials = [
   {
-    quote: "The new website transformed our business. We're getting quality leads every day now.",
+    quote: "We’re getting quality leads every day now.",
     author: "Sarah Little",
     company: "Little & Co",
     result: "150% more conversions"
@@ -73,14 +79,8 @@ const testimonials = [
   {
     quote: "The AI system handles our quotes perfectly. We can focus on the actual electrical work.",
     author: "Mike Thompson",
-    company: "SOS Electrical",
-    result: "200% faster responses"
-  },
-  {
-    quote: "WhatsApp automation increased our service connections by 45%. Game changer.",
-    author: "James Wilson",
-    company: "Ifucantfindit",
-    result: "300% more capacity"
+    company: "SOS Electrical LTD",
+    result: "<60s first response"
   }
 ];
 
@@ -239,16 +239,29 @@ export default function CaseStudies() {
 
                         {/* Image */}
                         <div className="relative">
-                          <div className="aspect-[4/3] rounded-2xl overflow-hidden">
+                          <div className="aspect-[4/3] rounded-2xl overflow-hidden relative">
                             <img
                               src={study.image}
-                              alt={`${study.title} case study visualization`}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                              alt={('alt' in study && (study as any).alt) ? (study as any).alt : `${study.title} case study visualization`}
+                              className="w-full h-full object-cover grayscale-[30%] group-hover:scale-105 transition-transform duration-700"
                               loading="lazy"
                             />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                           </div>
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl" />
                         </div>
+                        {('externalUrl' in study && (study as any).externalUrl) && (
+                          <div className="mt-6">
+                            <a
+                              href={(study as any).externalUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center text-white/90 hover:text-white transition-colors text-sm font-medium"
+                            >
+                              Visit website
+                              <ArrowRight className="w-4 h-4 ml-2" />
+                            </a>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>

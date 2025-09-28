@@ -176,7 +176,7 @@ export default function Sectors() {
             "priceRange": "£££",
             "currenciesAccepted": "GBP",
             "serviceProvided": ["Web Design","AI Automation","App Development","Full-Stack Development"],
-            "sameAs": ["https://ifucantfindit.com"]
+            "sameAs": []
           })}
         </script>
       </Helmet>

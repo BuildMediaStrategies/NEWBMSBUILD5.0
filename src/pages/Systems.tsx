@@ -21,6 +21,19 @@ import {
   ExternalLink
 } from 'lucide-react';
 
+const IMG: Record<string,string> = {
+  "Lead Capture Systems": "https://github.com/BuildMediaStrategies/BUILDMEDIASTRATEGIESASSETS/blob/cea35a1b9d5c89eade5587ad1097cd62732ff067/ChatGPT%20Image%20Sep%2027%2C%202025%2C%2001_49_10%20AM.png?raw=1",
+  "AI Lead Generation": "https://github.com/BuildMediaStrategies/BUILDMEDIASTRATEGIESASSETS/blob/cea35a1b9d5c89eade5587ad1097cd62732ff067/ChatGPT%20Image%20Sep%2027%2C%202025%2C%2001_49_07%20AM.png?raw=1",
+  "FORGE": "https://github.com/BuildMediaStrategies/BUILDMEDIASTRATEGIESASSETS/blob/cea35a1b9d5c89eade5587ad1097cd62732ff067/ChatGPT%20Image%20Sep%2027%2C%202025%2C%2001_49_05%20AM.png?raw=1",
+  "Customer Support Systems": "https://github.com/BuildMediaStrategies/BUILDMEDIASTRATEGIESASSETS/blob/cea35a1b9d5c89eade5587ad1097cd62732ff067/ChatGPT%20Image%20Sep%2027%2C%202025%2C%2001_48_59%20AM.png?raw=1",
+  "Project Management Systems": "https://github.com/BuildMediaStrategies/BUILDMEDIASTRATEGIESASSETS/blob/cea35a1b9d5c89eade5587ad1097cd62732ff067/ChatGPT%20Image%20Sep%2027%2C%202025%2C%2001_49_01%20AM.png?raw=1",
+  "Web Design": "https://github.com/BuildMediaStrategies/BUILDMEDIASTRATEGIESASSETS/blob/c03bca18704b8ba2c96dc17827c81231416639f4/Logo%20Design%20for%20Web%20Development.png?raw=1",
+  "AI Sales Systems": "https://github.com/BuildMediaStrategies/BUILDMEDIASTRATEGIESASSETS/blob/cea35a1b9d5c89eade5587ad1097cd62732ff067/ChatGPT%20Image%20Sep%2027%2C%202025%2C%2001_48_54%20AM.png?raw=1",
+  "Call Automation": "https://github.com/BuildMediaStrategies/BUILDMEDIASTRATEGIESASSETS/blob/cea35a1b9d5c89eade5587ad1097cd62732ff067/ChatGPT%20Image%20Sep%2027%2C%202025%2C%2001_48_49%20AM.png?raw=1",
+  "Social Media Automation": "https://github.com/BuildMediaStrategies/BUILDMEDIASTRATEGIESASSETS/blob/cea35a1b9d5c89eade5587ad1097cd62732ff067/ChatGPT%20Image%20Sep%2027%2C%202025%2C%2001_48_57%20AM.png?raw=1",
+  "Recruitment Systems": "https://github.com/BuildMediaStrategies/BUILDMEDIASTRATEGIESASSETS/blob/cea35a1b9d5c89eade5587ad1097cd62732ff067/ChatGPT%20Image%20Sep%2027%2C%202025%2C%2001_49_03%20AM.png?raw=1",
+};
+
 const systems = [
   {
     id: 'lead-gen',
@@ -43,26 +56,26 @@ const systems = [
   },
   {
     id: 'conversion',
-    title: 'Conversion Systems',
-    category: 'Conversion',
+    title: 'Websites & Mobile Apps',
+    category: 'Websites & Apps',
     icon: TrendingUp,
-    tldr: 'Optimize your sales funnel with automated tracking and intelligent conversion improvements.',
+    tldr: 'High-performance websites and mobile apps focused on speed, UX, and measurable outcomes.',
     whatItSolves: [
-      'Sales bottlenecks are invisible until revenue drops',
-      'Manual A/B testing takes months to show meaningful results'
+      'Slow, outdated sites lose enquiries and trust',
+      'Inconsistent mobile experience hurts conversion'
     ],
     whatYouGet: [
-      'Automated funnel analysis and bottleneck detection',
-      'Dynamic messaging optimization based on user behavior',
-      'Real-time conversion rate monitoring',
-      'Intelligent timing adjustments for maximum impact'
+      'Modern, fast website or app with clear UX',
+      'Lead capture and booking flows that convert',
+      'Robust analytics and SEO foundations',
+      'Secure, scalable architecture'
     ],
-    outcomes: ['+25% conversion rate', '+30% revenue per visitor'],
+    outcomes: ['+25% conversion rate', '+40% faster load times'],
     gradient: 'from-gray-600 to-gray-500'
   },
   {
     id: 'call-automation',
-    title: 'Call Automation Systems',
+    title: 'Call Automation',
     category: 'Call Automation',
     icon: Phone,
     tldr: 'Streamline phone communications with intelligent routing and automated follow-ups.',
@@ -100,7 +113,7 @@ const systems = [
   },
   {
     id: 'support',
-    title: 'Support Systems',
+    title: 'Customer Support Systems',
     category: 'Support',
     icon: HeadphonesIcon,
     tldr: 'Handle customer inquiries instantly while routing complex issues with full context.',
@@ -198,7 +211,7 @@ const systems = [
 const filterCategories = [
   'All',
   'Lead Gen',
-  'Conversion', 
+  'Websites & Apps', 
   'Call Automation',
   'AI Sales',
   'Support',
@@ -286,7 +299,7 @@ export default function Systems() {
             "priceRange": "£££",
             "currenciesAccepted": "GBP",
             "serviceProvided": ["Web Design","AI Automation","App Development","Full-Stack Development"],
-            "sameAs": ["https://ifucantfindit.com"]
+            "sameAs": []
           })}
         </script>
       </Helmet>
@@ -317,173 +330,174 @@ export default function Systems() {
         </div>
       </section>
 
-      {/* Filter Chips */}
+      {/* Featured: FORGE (Top of page, under H1) */}
       <section className="pb-8">
         <div className="max-w-7xl mx-auto section-pad-resp">
-          <div className="flex flex-wrap gap-3 justify-center">
-            {filterCategories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveFilter(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  activeFilter === category
-                    ? 'bg-white text-black'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative rounded-3xl border border-white/10 p-6 sm:p-8 lg:p-12 overflow-hidden"
+          >
+            {/* Glow layers */}
+            <motion.div
+              aria-hidden
+              className="pointer-events-none absolute -inset-1 rounded-[2rem]"
+              initial={{ boxShadow: '0 0 0 rgba(255,255,255,0)' }}
+              animate={{ boxShadow: [
+                '0 0 0 rgba(255,255,255,0)',
+                '0 0 80px rgba(255,255,255,0.08)',
+                '0 0 0 rgba(255,255,255,0)'
+              ] }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-white/[0.06] via-transparent to-transparent" />
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="order-2 md:order-1 space-y-4">
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-white/10 border border-white/20 text-white/90">New System</span>
+                <h2 className="h2-resp heading-safe">FORGE — Scaffolding Project Management</h2>
+                <p className="p-resp text-gray-300">The ultimate system for scaffolding firms. Built for speed, clarity, and control across jobs and teams.</p>
+                <ul className="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
+                  <li className="flex items-start space-x-2"><span className="w-1.5 h-1.5 bg-gray-500 rounded-full mt-2" /><span>Tracking tools and materials</span></li>
+                  <li className="flex items-start space-x-2"><span className="w-1.5 h-1.5 bg-gray-500 rounded-full mt-2" /><span>Generate drawing designs</span></li>
+                  <li className="flex items-start space-x-2"><span className="w-1.5 h-1.5 bg-gray-500 rounded-full mt-2" /><span>Contact staff, assign gangs</span></li>
+                  <li className="flex items-start space-x-2"><span className="w-1.5 h-1.5 bg-gray-500 rounded-full mt-2" /><span>Automatic daily job lists per staff member</span></li>
+                </ul>
+                <div>
+                  <Link to="/contact">
+                    <button className="mt-4 bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300">Enquire about FORGE</button>
+                  </Link>
+                </div>
+              </div>
+              <div className="order-1 md:order-2">
+                <div className="rounded-2xl bg-[#0B0B0B] ring-1 ring-white/10 aspect-[4/3] flex items-center justify-center overflow-hidden">
+                  <img src={IMG["FORGE"]} alt="FORGE" loading="lazy"
+                       className="max-h-full max-w-full w-full h-full object-contain p-6" />
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      <div className="flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 gap-8">
-        {/* Main Content */}
-        <div className="flex-1">
-          <section ref={ref} className="pb-20">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-              {filteredSystems.map((system, index) => (
-                <motion.div
-                  key={system.id}
-                  id={system.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={inView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 
-                    hover:bg-white/10 hover:border-white/20 transition-all duration-300 flex flex-col h-full"
-                >
-                  <div className={`w-12 h-12 mb-4 rounded-lg bg-gray-700 p-3`}>
-                    <system.icon className="w-full h-full text-white" />
+      {/* Websites & Mobile Apps – Featured Card (animated) */}
+      <section className="pb-16">
+        <div className="max-w-7xl mx-auto section-pad-resp">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative rounded-3xl border border-white/10 p-8 lg:p-12 overflow-hidden"
+          >
+            <motion.div
+              aria-hidden
+              className="pointer-events-none absolute -inset-1 rounded-[2rem]"
+              initial={{ boxShadow: '0 0 0 rgba(255,255,255,0)' }}
+              animate={{ boxShadow: [
+                '0 0 0 rgba(255,255,255,0)',
+                '0 0 80px rgba(255,255,255,0.08)',
+                '0 0 0 rgba(255,255,255,0)'
+              ] }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-white/[0.06] via-transparent to-transparent" />
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="order-2 md:order-1 space-y-6">
+                <h2 className="h2-resp heading-safe">Websites & Mobile Apps</h2>
+                <p className="p-resp text-gray-300">
+                  Build fast, reliable, accessible experiences that convert — designed for UK trades and
+                  services. Conversion-first, mobile-ready, and measurable.
+                </p>
+                <div className="grid sm:grid-cols-3 gap-4">
+                  <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+                    <p className="text-white font-semibold mb-1">Speed</p>
+                    <p className="text-gray-300 text-sm">Core Web Vitals, image optimisation, SSR-ready.</p>
                   </div>
-                  
-                  <h3 className="h3-resp mb-3 text-white">{system.title}</h3>
-                  <p className="p-resp text-gray-300 mb-4 flex-grow">{system.tldr}</p>
-                  
-                  <div className="mt-auto">
-                    <button
-                      onClick={() => setExpandedSystem(expandedSystem === system.id ? null : system.id)}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors text-sm font-medium mb-4"
-                    >
-                      <span>View details</span>
-                      {expandedSystem === system.id ? (
-                        <ChevronUp className="w-4 h-4" />
-                      ) : (
-                        <ChevronDown className="w-4 h-4" />
-                      )}
-                    </button>
+                  <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+                    <p className="text-white font-semibold mb-1">Reliability</p>
+                    <p className="text-gray-300 text-sm">Secure, scalable, uptime-focused builds.</p>
                   </div>
-
-                  {expandedSystem === system.id && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="mt-6 pt-6 border-t border-white/10 space-y-6"
-                    >
-                      {/* What it solves */}
-                      <div>
-                        <h4 className="font-semibold mb-3 text-white">What it solves</h4>
-                        <ul className="space-y-2">
-                          {system.whatItSolves.map((point, idx) => (
-                            <li key={idx} className="text-gray-300 text-sm flex items-start space-x-2">
-                              <div className="w-1.5 h-1.5 bg-gray-500 rounded-full mt-2 flex-shrink-0" />
-                              <span>{point}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* What you get */}
-                      <div>
-                        <h4 className="font-semibold mb-3 text-white">What you get</h4>
-                        <ul className="space-y-2">
-                          {system.whatYouGet.map((item, idx) => (
-                            <li key={idx} className="text-gray-300 text-sm flex items-start space-x-2">
-                              <Check className="w-4 h-4 text-gray-300 mt-0.5 flex-shrink-0" />
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* Expected outcomes */}
-                      <div>
-                        <h4 className="font-semibold mb-3 text-white">Expected outcomes</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {system.outcomes.map((outcome, idx) => (
-                            <span
-                              key={idx}
-                              className="px-3 py-1 bg-white/10 
-                                border border-white/30 rounded-full text-xs font-medium text-white"
-                            >
-                              {outcome}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* CTA buttons - aligned */}
-                      <div className="flex flex-col space-y-3 pt-2">
-                        <Link to="/contact" className="flex-1">
-                          <button className="w-full bg-white text-black 
-                            px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 
-                            transition-all duration-300 flex items-center justify-center space-x-2">
-                            <Calendar className="w-4 h-4" />
-                            <span>Book Free Audit</span>
-                          </button>
-                        </Link>
-                      </div>
-                    </motion.div>
-                  )}
-
-                  {/* Learn More button - always visible */}
-                  {expandedSystem !== system.id && (
-                    <div className="mt-auto pt-4 flex flex-col space-y-3">
-                      <Link to="/contact">
-                        <button className="w-full bg-white text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-all duration-300 flex items-center justify-center space-x-2">
-                          <Calendar className="w-4 h-4" />
-                          <span>Book Free Audit</span>
-                        </button>
-                      </Link>
-                      <Link to="/case-studies">
-                        <button className="w-full border border-white/30 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-300 text-center">
-                          See Examples
-                        </button>
-                      </Link>
-                    </div>
-                  )}
-                </motion.div>
-              ))}
+                  <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+                    <p className="text-white font-semibold mb-1">Conversion</p>
+                    <p className="text-gray-300 text-sm">Booking flows, quote tools, clear CTAs.</p>
+                  </div>
+                </div>
+                <div>
+                  <Link to="/contact">
+                    <button className="mt-4 bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300">Enquire</button>
+                  </Link>
+                </div>
+              </div>
+              <div className="order-1 md:order-2">
+                <div className="rounded-2xl bg-[#0B0B0B] ring-1 ring-white/10 aspect-[4/3] flex items-center justify-center overflow-hidden">
+                  <img src={IMG["Web Design"]} alt="Web Design" loading="lazy"
+                       className="max-h-full max-w-full w-full h-full object-contain p-6" />
+                </div>
+              </div>
             </div>
-          </section>
+          </motion.div>
         </div>
+      </section>
 
-        {/* Table of Contents - Desktop */}
-        <div className="hidden lg:block w-64 sticky top-24 h-fit">
-          <div className="bg-gray-900 backdrop-blur-sm border border-gray-600 rounded-xl p-4">
-            <h4 className="font-semibold mb-4 text-white">Systems</h4>
-            <nav className="space-y-2">
-              {systems.map((system) => (
-                <a
-                  key={system.id}
-                  href={`#${system.id}`}
-                  className={`block text-sm transition-colors ${
-                    activeSection === system.id
-                      ? 'text-white font-medium'
-                      : 'text-gray-300 hover:text-white'
-                  }`}
-                >
-                  {system.title}
-                </a>
-              ))}
-            </nav>
-          </div>
+      {/* Removed filter chips for unified card layout */}
+
+      {/* Removed old grid and TOC for unified large-card layout */}
+
+      
+
+      {/* All Other Systems – Animated Large Cards */}
+      <section className="pb-16">
+        <div className="max-w-7xl mx-auto section-pad-resp space-y-12">
+          {systems.filter(s => s.id !== 'conversion').map((sys, idx) => (
+            <motion.div
+              key={sys.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ duration: 0.6, delay: idx * 0.05 }}
+              className="relative rounded-3xl border border-white/10 p-8 lg:p-12 overflow-hidden"
+            >
+              <motion.div
+                aria-hidden
+                className="pointer-events-none absolute -inset-1 rounded-[2rem]"
+                initial={{ boxShadow: '0 0 0 rgba(255,255,255,0)' }}
+                whileInView={{ boxShadow: '0 0 80px rgba(255,255,255,0.06)' }}
+                transition={{ duration: 1.2, ease: 'easeInOut' }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-white/[0.04] via-transparent to-transparent" />
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="order-2 md:order-1 space-y-6">
+                  <h3 className="h2-resp heading-safe">{sys.title}</h3>
+                  <p className="p-resp text-gray-300">{sys.tldr}</p>
+                  <div className="grid sm:grid-cols-3 gap-4">
+                    {(sys.whatYouGet.slice(0,3)).map((feat, fIdx) => (
+                      <div key={fIdx} className="bg-white/5 border border-white/10 rounded-xl p-4">
+                        <p className="text-white font-semibold mb-1">Feature {fIdx + 1}</p>
+                        <p className="text-gray-300 text-sm">{feat}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <div>
+                    <Link to="/contact">
+                      <button className="mt-2 bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300">Enquire</button>
+                    </Link>
+                  </div>
+                </div>
+                <div className="order-1 md:order-2">
+                  <div className="rounded-2xl bg-[#0B0B0B] ring-1 ring-white/10 aspect-[4/3] flex items-center justify-center overflow-hidden">
+                    <img src={IMG[sys.title]} alt={sys.title} loading="lazy"
+                         className="max-h-full max-w-full w-full h-full object-contain p-6" />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
-      </div>
+      </section>
 
-      {/* FAQ Section */}
+      {/* FAQ Section (moved beneath CTA) */}
       <section className="py-20 border-t border-gray-600">
         <div className="max-w-4xl mx-auto section-pad-resp">
           <motion.div
@@ -552,6 +566,8 @@ export default function Systems() {
           </motion.div>
         </div>
       </section>
+
+      
     </div>
     </>
   );

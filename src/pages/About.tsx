@@ -52,7 +52,7 @@ export default function About() {
     <>
       <Helmet>
         <title>About BuildMediaStrategies – Web Design & AI Automation in Dover</title>
-        <meta name="description" content="Remote-first team based in Dover & Kent, collaborating with ifucantfindit.com to deliver design and automation systems." />
+        <meta name="description" content="Remote-first team based in Dover & Kent delivering design and automation systems." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -70,7 +70,7 @@ export default function About() {
             "priceRange": "£££",
             "currenciesAccepted": "GBP",
             "serviceProvided": ["Web Design","AI Automation","App Development","Full-Stack Development"],
-            "sameAs": ["https://ifucantfindit.com"]
+            "sameAs": []
           })}
         </script>
       </Helmet>

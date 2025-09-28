@@ -30,7 +30,7 @@ export default function AppDevelopmentKent() {
             },
             "areaServed": ["Deal","Kent"],
             "serviceProvided": ["Web Design","AI Automation","App Development","Full-Stack Development"],
-            "sameAs": ["https://ifucantfindit.com"]
+            "sameAs": []
           })}
         </script>
       </Helmet>
