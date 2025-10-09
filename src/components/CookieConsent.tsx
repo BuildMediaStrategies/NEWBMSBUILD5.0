@@ -66,19 +66,22 @@ export default function CookieConsent() {
           <div className="flex flex-wrap gap-2">
             <button
               onClick={acceptAll}
-              className="bg-white text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-all duration-300"
+              className="bg-white text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              aria-label="Accept all cookies"
             >
               Accept all
             </button>
             <button
               onClick={rejectNonEssential}
-              className="border border-white/30 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-300"
+              className="border border-white/30 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              aria-label="Reject non-essential cookies"
             >
               Reject non-essential
             </button>
             <button
               onClick={() => setShowPreferences(true)}
-              className="border border-white/20 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center space-x-1"
+              className="border border-white/20 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center space-x-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              aria-label="Cookie preferences"
             >
               <Settings className="w-4 h-4" />
               <span>Preferences</span>
@@ -95,7 +98,8 @@ export default function CookieConsent() {
               <h3 className="text-white font-semibold">Cookie Preferences</h3>
               <button
                 onClick={() => setShowPreferences(false)}
-                className="text-gray-400 hover:text-white"
+                className="text-gray-400 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded"
+                aria-label="Close preferences"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -121,9 +125,9 @@ export default function CookieConsent() {
                     checked={consent.analytics}
                     onChange={(e) => setConsent(prev => ({ ...prev, analytics: e.target.checked }))}
                     className="sr-only peer"
+                    aria-label="Toggle analytics cookies"
                   />
-                  <div className="w-11 h-6 bg-gray-600 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-purple-600"></div>
-                  <div className="w-11 h-6 bg-gray-600 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-400"></div>
+                  <div className="w-11 h-6 bg-gray-600 peer-focus-visible:outline-none peer-focus-visible:ring-2 peer-focus-visible:ring-white peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-gray-900 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-400"></div>
                 </label>
               </div>
               
@@ -138,9 +142,9 @@ export default function CookieConsent() {
                     checked={consent.marketing}
                     onChange={(e) => setConsent(prev => ({ ...prev, marketing: e.target.checked }))}
                     className="sr-only peer"
+                    aria-label="Toggle marketing cookies"
                   />
-                  <div className="w-11 h-6 bg-gray-600 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-purple-600"></div>
-                  <div className="w-11 h-6 bg-gray-600 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-400"></div>
+                  <div className="w-11 h-6 bg-gray-600 peer-focus-visible:outline-none peer-focus-visible:ring-2 peer-focus-visible:ring-white peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-gray-900 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-400"></div>
                 </label>
               </div>
             </div>
@@ -148,7 +152,8 @@ export default function CookieConsent() {
             <div className="flex gap-2 mt-6">
               <button
                 onClick={savePreferences}
-                className="flex-1 bg-white text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-all duration-300"
+                className="flex-1 bg-white text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+                aria-label="Save cookie preferences"
               >
                 Save preferences
               </button>

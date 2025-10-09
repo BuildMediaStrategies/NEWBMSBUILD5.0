@@ -85,7 +85,7 @@ export default function Industries() {
                 hover:bg-white/10 hover:border-white/20 transition-all duration-300 
                 hover:-translate-y-2 hover:shadow-2xl hover:shadow-white/10"
             >
-              <Link to="/sectors" className="block">
+              <Link to="/sectors" className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded-xl">
                 <div className={`w-12 h-12 mb-4 rounded-lg bg-gray-700 p-3 
                   transform group-hover:scale-110 transition-transform duration-300`}>
                   <industry.icon className="w-full h-full text-white" />

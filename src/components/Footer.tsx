@@ -18,9 +18,10 @@ export default function Footer() {
             </div>
           </div>
           <div className="text-center">
-            <a 
-              href="tel:01304123456" 
-              className="inline-flex items-center bg-white text-black px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-all duration-300"
+            <a
+              href="tel:+441304123456"
+              className="inline-flex items-center bg-white text-black px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              aria-label="Call 01304 123456 for free consultation"
             >
               Call Now for Free Consultation
             </a>
@@ -32,15 +33,15 @@ export default function Footer() {
         </p>
         
         <nav aria-label="Legal" className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs opacity-80">
-          <Link to="/about" className="text-gray-400 hover:text-white hover:opacity-100 transition-colors">About</Link>
-          <Link to="/privacy" className="text-gray-400 hover:text-white hover:opacity-100 transition-colors">Privacy</Link>
-          <Link to="/cookies" className="text-gray-400 hover:text-white hover:opacity-100 transition-colors">Cookies</Link>
-          <Link to="/terms" className="text-gray-400 hover:text-white hover:opacity-100 transition-colors">Terms</Link>
-          <Link to="/privacy-requests" className="text-gray-400 hover:text-white hover:opacity-100 transition-colors">Data Requests</Link>
-          <Link to="/subprocessors" className="text-gray-400 hover:text-white hover:opacity-100 transition-colors">Sub-processors</Link>
-          <Link to="/ai-transparency" className="text-gray-400 hover:text-white hover:opacity-100 transition-colors">AI Transparency</Link>
-          <Link to="/ai-compliance" className="text-gray-400 hover:text-white hover:opacity-100 transition-colors">AI Compliance</Link>
-          <Link to="/accessibility" className="text-gray-400 hover:text-white hover:opacity-100 transition-colors">Accessibility</Link>
+          <Link to="/about" className="text-gray-400 hover:text-white hover:opacity-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded">About</Link>
+          <Link to="/privacy" className="text-gray-400 hover:text-white hover:opacity-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded">Privacy</Link>
+          <Link to="/cookies" className="text-gray-400 hover:text-white hover:opacity-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded">Cookies</Link>
+          <Link to="/terms" className="text-gray-400 hover:text-white hover:opacity-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded">Terms</Link>
+          <Link to="/privacy-requests" className="text-gray-400 hover:text-white hover:opacity-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded">Data Requests</Link>
+          <Link to="/subprocessors" className="text-gray-400 hover:text-white hover:opacity-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded">Sub-processors</Link>
+          <Link to="/ai-transparency" className="text-gray-400 hover:text-white hover:opacity-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded">AI Transparency</Link>
+          <Link to="/ai-compliance" className="text-gray-400 hover:text-white hover:opacity-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded">AI Compliance</Link>
+          <Link to="/accessibility" className="text-gray-400 hover:text-white hover:opacity-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded">Accessibility</Link>
         </nav>
       </div>
     </footer>

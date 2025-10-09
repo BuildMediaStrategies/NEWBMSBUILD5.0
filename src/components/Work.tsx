@@ -460,7 +460,7 @@ export default function Work() {
             <Link
               key={system.title}
               to="/systems"
-              className="block"
+              className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-2xl"
             >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}

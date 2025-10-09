@@ -168,8 +168,9 @@ export default function Contact() {
                 whileTap={{ scale: 0.98 }}
                 type="submit"
                 className="w-full bg-white text-black rounded-lg px-8 py-4
-                  flex items-center justify-center space-x-2 hover:bg-gray-200 
-                  transition-all duration-300"
+                  flex items-center justify-center space-x-2 hover:bg-gray-200
+                  transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                aria-label="Submit strategy session request"
               >
                 <span>Start Your Free Strategy Session</span>
                 <Send className="w-5 h-5" />
@@ -177,11 +178,12 @@ export default function Contact() {
               
               <div className="text-center pt-4 border-t border-white/10">
                 <p className="text-gray-400 text-sm mb-2">Prefer a call? Book instantly here</p>
-                <a 
-                  href="https://calendly.com/buildmediastrategies" 
-                  target="_blank" 
+                <a
+                  href="https://calendly.com/buildmediastrategies"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded"
+                  aria-label="Schedule a call via Calendly"
                 >
                   <Phone className="w-4 h-4 mr-2" />
                   Schedule a Call

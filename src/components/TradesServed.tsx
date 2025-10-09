@@ -113,7 +113,7 @@ export default function TradesServed() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {trades.map((trade, index) => (
-            <Link key={trade.title} to={trade.route}>
+            <Link key={trade.title} to={trade.route} className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded-2xl">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -123,16 +123,7 @@ export default function TradesServed() {
                   shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_4px_12px_rgba(0,0,0,0.3),0_2px_4px_rgba(0,0,0,0.2)]
                   hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15),0_8px_24px_rgba(0,0,0,0.4),0_4px_8px_rgba(0,0,0,0.3)]
                   hover:-translate-y-1 transition-all duration-300 ease-out
-                  focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black
                   border border-white/5 hover:border-white/10"
-                role="link"
-                tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    window.location.href = trade.route;
-                  }
-                }}
               >
                 <div className={`w-12 h-12 mb-4 rounded-lg bg-gradient-to-r ${trade.gradient} p-3 
                   transform group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
