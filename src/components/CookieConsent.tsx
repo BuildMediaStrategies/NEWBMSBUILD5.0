@@ -115,7 +115,7 @@ export default function CookieConsent() {
                   <p className="text-white text-sm font-medium">Essential</p>
                   <p className="text-gray-400 text-xs">Required for the site to function</p>
                 </div>
-                <div className="bg-green-600 rounded-full px-2 py-1 text-xs text-white">Always on</div>
+                <div className="bg-white/20 border border-white/30 rounded-full px-2 py-1 text-xs text-white">Always on</div>
               </div>
               
               <div className="flex items-center justify-between">

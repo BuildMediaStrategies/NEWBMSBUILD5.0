@@ -4,21 +4,16 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState, useEffect } from 'react';
 import ResponsiveText from '../components/ResponsiveText';
-import { 
-  Target, 
-  TrendingUp, 
-  Phone, 
-  Bot, 
-  HeadphonesIcon, 
-  Users, 
-  FolderKanban, 
-  Share2, 
-  MousePointer,
-  ChevronDown,
-  ChevronUp,
-  Check,
-  Calendar,
-  ExternalLink
+import {
+  Target,
+  TrendingUp,
+  Phone,
+  Bot,
+  HeadphonesIcon,
+  Users,
+  FolderKanban,
+  Share2,
+  MousePointer
 } from 'lucide-react';
 
 const IMG: Record<string,string> = {
@@ -199,56 +194,13 @@ const systems = [
   }
 ];
 
-const filterCategories = [
-  'All',
-  'Lead Gen',
-  'Websites & Apps', 
-  'Call Automation',
-  'AI Sales',
-  'Support',
-  'Recruitment',
-  'Project Management',
-  'Social Media',
-  'Lead Capture'
-];
-
-const faqs = [
-  {
-    question: 'How much do these automation systems cost?',
-    answer: 'Pricing varies based on your specific needs and scale. Most systems start at $2,000-5,000 for setup plus monthly fees. We offer custom packages and ROI-based pricing for larger implementations.'
-  },
-  {
-    question: 'How long does implementation take?',
-    answer: 'Simple systems can be live in 2-3 weeks. Complex multi-system implementations typically take 6-12 weeks. We provide detailed timelines during our consultation call.'
-  },
-  {
-    question: 'What integrations are supported?',
-    answer: 'We integrate with 200+ popular business tools including CRMs (Salesforce, HubSpot), email platforms (Mailchimp, Klaviyo), calendars, payment processors, and custom APIs.'
-  },
-  {
-    question: 'How do you handle data security and privacy?',
-    answer: 'All systems are built with enterprise-grade security, GDPR compliance, and SOC 2 standards. Your data stays in your existing tools - we never store sensitive customer information.'
-  },
-  {
-    question: 'What support do you provide after launch?',
-    answer: 'Every system includes 90 days of optimization support, ongoing monitoring, and access to our help desk. We also provide training for your team and quarterly performance reviews.'
-  }
-];
-
 export default function Systems() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
   });
 
-  const [activeFilter, setActiveFilter] = useState('All');
-  const [expandedSystem, setExpandedSystem] = useState<string | null>(null);
   const [activeSection, setActiveSection] = useState('');
-  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
-
-  const filteredSystems = activeFilter === 'All' 
-    ? systems 
-    : systems.filter(system => system.category === activeFilter);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -488,80 +440,6 @@ export default function Systems() {
         </div>
       </section>
 
-      {/* FAQ Section (moved beneath CTA) */}
-      <section className="py-20 border-t border-gray-600">
-        <div className="max-w-4xl mx-auto section-pad-resp">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            className="text-center mb-12"
-          >
-            <h2 className="h2-resp mb-4">Common Concerns About Automation</h2>
-            <p className="p-resp text-gray-300">Everything you need to know about our automation systems</p>
-          </motion.div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: index * 0.1 }}
-                className="bg-gray-900 backdrop-blur-sm border border-gray-600 rounded-xl overflow-hidden"
-              >
-                <button
-                  type="button"
-                  onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
-                  aria-expanded={expandedFaq === index}
-                  aria-label={faq.question}
-                >
-                  <span className="font-medium text-white">{faq.question}</span>
-                  {expandedFaq === index ? (
-                    <ChevronUp className="w-5 h-5 text-gray-300" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-gray-300" />
-                  )}
-                </button>
-                {expandedFaq === index && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="px-6 pb-4"
-                  >
-                    <p className="p-resp text-gray-300">{faq.answer}</p>
-                  </motion.div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA Strip */}
-      <section className="py-20 bg-gray-900 border-t border-gray-600">
-        <div className="max-w-4xl mx-auto section-pad-resp text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-          >
-            <h2 className="h2-resp mb-6">Ready to Build a Revenue-Ready Website?</h2>
-            <p className="p-resp text-gray-300 mb-8">Turn your website into a 24/7 client acquisition machine</p>
-            <Link to="/contact">
-              <button type="button" className="bg-white text-black px-8 py-3
-                rounded-lg font-medium hover:bg-gray-200 transition-all duration-300
-                flex items-center space-x-2 mx-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">
-                <Calendar className="w-5 h-5" />
-                <span>Book Free Audit</span>
-              </button>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
-      
     </div>
     </>
   );
