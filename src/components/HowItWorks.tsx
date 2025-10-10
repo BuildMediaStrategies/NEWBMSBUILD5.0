@@ -7,20 +7,17 @@ const steps = [
   {
     icon: Calendar,
     title: 'Book a Free Strategy Call',
-    description: 'We analyze your business and identify the biggest automation opportunities',
-    gradient: 'from-gray-700 to-gray-600'
+    description: 'We analyze your business and identify the biggest automation opportunities'
   },
   {
     icon: Cog,
     title: 'Get Your Custom System Built & Launched',
-    description: 'We design, build, and deploy your automation system in days, not months',
-    gradient: 'from-gray-600 to-gray-500'
+    description: 'We design, build, and deploy your automation system in days, not months'
   },
   {
     icon: TrendingUp,
     title: 'Scale with Ongoing Optimization',
-    description: 'Continuous monitoring and improvements to maximize your ROI',
-    gradient: 'from-gray-500 to-gray-400'
+    description: 'Continuous monitoring and improvements to maximize your ROI'
   }
 ];
 
@@ -52,7 +49,7 @@ export default function HowItWorks() {
           {/* Animated Progress Line */}
           <div className="hidden lg:block absolute top-8 left-0 right-0 h-0.5 bg-gray-700">
             <motion.div
-              className="h-full bg-gradient-to-r from-gray-600 to-gray-400"
+              className="h-full bg-white/30"
               initial={{ width: 0 }}
               animate={inView ? { width: '100%' } : {}}
               transition={{ duration: 2, delay: 0.5 }}

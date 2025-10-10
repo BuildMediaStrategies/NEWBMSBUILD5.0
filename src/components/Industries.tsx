@@ -15,38 +15,32 @@ const industries = [
   {
     icon: Hammer,
     title: 'Construction',
-    description: 'Capture and qualify project leads, auto-quote, and schedule site visits',
-    gradient: 'from-gray-800 to-gray-700'
+    description: 'Capture and qualify project leads, auto-quote, and schedule site visits'
   },
   {
     icon: ShoppingCart,
     title: 'Retail & E-commerce',
-    description: 'Recover carts, personalize offers, and automate customer chat',
-    gradient: 'from-gray-700 to-gray-600'
+    description: 'Recover carts, personalize offers, and automate customer chat'
   },
   {
     icon: Heart,
     title: 'Healthcare & Clinics',
-    description: 'Route enquiries, manage bookings, send reminders and follow-ups',
-    gradient: 'from-gray-600 to-gray-500'
+    description: 'Route enquiries, manage bookings, send reminders and follow-ups'
   },
   {
     icon: Coffee,
     title: 'Hospitality & Leisure',
-    description: 'Handle bookings, waitlists, and post-visit reviews on autopilot',
-    gradient: 'from-gray-500 to-gray-400'
+    description: 'Handle bookings, waitlists, and post-visit reviews on autopilot'
   },
   {
     icon: Briefcase,
     title: 'Professional Services',
-    description: 'Automate intake, proposals, and client updates',
-    gradient: 'from-gray-700 to-gray-600'
+    description: 'Automate intake, proposals, and client updates'
   },
   {
     icon: GraduationCap,
     title: 'Education & Training',
-    description: 'Enroll leads, schedule sessions, and send course reminders',
-    gradient: 'from-gray-600 to-gray-500'
+    description: 'Enroll leads, schedule sessions, and send course reminders'
   }
 ];
 

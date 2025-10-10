@@ -33,7 +33,6 @@ const sectors = [
       'Intelligent scheduling system coordinates site visits with availability'
     ],
     outcomes: ['+40% qualified leads', '-12 hrs admin/week', '+25% quote accuracy'],
-    gradient: 'from-gray-700 to-gray-600'
   },
   {
     id: 'retail',
@@ -50,7 +49,6 @@ const sectors = [
       'Dynamic offer personalization based on browsing and purchase history'
     ],
     outcomes: ['+35% cart recovery', '+50% chat resolution', '+20% repeat sales'],
-    gradient: 'from-gray-600 to-gray-500'
   },
   {
     id: 'healthcare',
@@ -67,7 +65,6 @@ const sectors = [
       'Follow-up care sequences that improve treatment compliance'
     ],
     outcomes: ['+60% enquiry resolution', '-30% missed appointments', '+45% follow-up compliance'],
-    gradient: 'from-gray-500 to-gray-400'
   },
   {
     id: 'hospitality',
@@ -84,7 +81,6 @@ const sectors = [
       'Guest preference tracking for personalized future experiences'
     ],
     outcomes: ['+50% booking efficiency', '+80% review collection', '+25% repeat bookings'],
-    gradient: 'from-gray-600 to-gray-500'
   },
   {
     id: 'professional',
@@ -101,7 +97,6 @@ const sectors = [
       'Regular client update sequences that maintain engagement and transparency'
     ],
     outcomes: ['+45% intake efficiency', '-20 hrs proposal time', '+35% client satisfaction'],
-    gradient: 'from-gray-500 to-gray-400'
   },
   {
     id: 'education',
@@ -118,7 +113,6 @@ const sectors = [
       'Personalized reminder sequences that improve attendance and engagement'
     ],
     outcomes: ['+55% enrollment completion', '+40% attendance rates', '-15 hrs admin/week'],
-    gradient: 'from-gray-400 to-gray-300'
   }
 ];
 
@@ -219,7 +213,7 @@ export default function Sectors() {
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 
                   hover:bg-white/10 hover:border-white/20 transition-all duration-300"
               >
-                <div className={`w-12 h-12 mb-4 rounded-lg bg-gradient-to-r ${sector.gradient} p-3`}>
+                <div className="w-12 h-12 mb-4 rounded-lg bg-gray-700 p-3">
                   <sector.icon className="w-full h-full text-white" />
                 </div>
                 
@@ -313,7 +307,7 @@ export default function Sectors() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.5 }}
-            className="mt-16 bg-gradient-to-r from-gray-800 to-gray-700 rounded-2xl p-8 text-center border border-white/10"
+            className="mt-16 bg-gray-800 rounded-2xl p-8 text-center border border-white/10"
           >
             <h3 className="h3-resp mb-4">See Your Industry's Growth Potential?</h3>
             <p className="p-resp text-gray-300 mb-6">Let's identify and capture the opportunities specific to your business</p>
@@ -382,7 +376,7 @@ export default function Sectors() {
       </section>
 
       {/* Final CTA Strip */}
-      <section className="py-12 bg-gradient-to-r from-purple-600/10 to-pink-600/10 border-t border-white/10">
+      <section className="py-12 bg-white/5 border-t border-white/10">
         <div className="max-w-4xl mx-auto section-pad-resp text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

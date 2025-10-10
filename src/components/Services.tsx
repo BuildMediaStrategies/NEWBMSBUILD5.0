@@ -7,26 +7,22 @@ const values = [
   {
     icon: Target,
     title: 'Mission-Driven',
-    description: 'We believe in creating digital solutions that drive real business results and meaningful impact.',
-    gradient: 'from-gray-800 to-gray-700'
+    description: 'We believe in creating digital solutions that drive real business results and meaningful impact.'
   },
   {
     icon: Users,
     title: 'Client-Focused',
-    description: 'Your success is our success. We work as an extension of your team to achieve your goals.',
-    gradient: 'from-gray-700 to-gray-600'
+    description: 'Your success is our success. We work as an extension of your team to achieve your goals.'
   },
   {
     icon: Lightbulb,
     title: 'Innovation First',
-    description: 'We stay ahead of the curve, leveraging cutting-edge technology to solve complex challenges.',
-    gradient: 'from-gray-600 to-gray-500'
+    description: 'We stay ahead of the curve, leveraging cutting-edge technology to solve complex challenges.'
   },
   {
     icon: Award,
     title: 'Excellence Always',
-    description: 'Quality is non-negotiable. We deliver exceptional work that exceeds expectations.',
-    gradient: 'from-gray-500 to-gray-400'
+    description: 'Quality is non-negotiable. We deliver exceptional work that exceeds expectations.'
   }
 ];
 

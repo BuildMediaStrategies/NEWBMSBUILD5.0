@@ -77,7 +77,7 @@ export default function FullStackKent() {
                   transition={{ delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"
                 >
-                  <service.icon className="w-12 h-12 text-purple-400 mb-4" />
+                  <service.icon className="w-12 h-12 text-white mb-4" />
                   <h3 className="h3-resp mb-2">{service.title}</h3>
                   <p className="p-resp text-gray-400">{service.desc}</p>
                 </motion.div>
@@ -92,21 +92,21 @@ export default function FullStackKent() {
             <h2 className="h2-resp mb-12 text-center">Our Services in Kent</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <Link to="/web-design-kent" className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">
-                <h3 className="h3-resp mb-4 group-hover:text-purple-400 transition-colors">Web Design Kent</h3>
+                <h3 className="h3-resp mb-4 group-hover:text-white transition-colors">Web Design Kent</h3>
                 <p className="p-resp text-gray-400 mb-4">Modern, responsive websites for Kent businesses</p>
-                <ArrowRight className="w-5 h-5 text-purple-400 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
               </Link>
               
               <Link to="/app-development-kent" className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">
-                <h3 className="h3-resp mb-4 group-hover:text-purple-400 transition-colors">App Development Kent</h3>
+                <h3 className="h3-resp mb-4 group-hover:text-white transition-colors">App Development Kent</h3>
                 <p className="p-resp text-gray-400 mb-4">Mobile and web applications for Kent businesses</p>
-                <ArrowRight className="w-5 h-5 text-purple-400 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
               </Link>
               
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
                 <h3 className="h3-resp mb-4">Also serving clients in Dover</h3>
                 <p className="p-resp text-gray-400 mb-4">
-                  <Link to="/web-design-dover" className="text-purple-400 hover:text-purple-300 transition-colors">
+                  <Link to="/web-design-dover" className="text-white hover:text-gray-300 transition-colors">
                     See our Dover Web Design page
                   </Link>
                 </p>
@@ -124,7 +124,7 @@ export default function FullStackKent() {
               <motion.button type="button"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center space-x-2 mx-auto"
+                className="bg-black text-white border-2 border-white px-8 py-4 rounded-lg font-medium hover:bg-white hover:text-black transition-all duration-300 flex items-center space-x-2 mx-auto"
               >
                 <span>Get Started Today</span>
                 <ArrowRight className="w-5 h-5" />

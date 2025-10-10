@@ -44,22 +44,6 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-black">
-        {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-800/20 via-black to-gray-700/10" />
-        
-        {/* Animated gradient overlay */}
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-gray-800/10 via-transparent to-gray-700/10"
-          animate={{
-            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-          style={{ backgroundSize: '200% 200%' }}
-        />
         
         {/* Floating AI/Automation Icons */}
         {floatingIcons.map(({ Icon, delay, x, y }, index) => (
@@ -194,7 +178,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={scrollToContact}
-              className="group bg-white text-black px-8 py-4 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 flex items-center space-x-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              className="group bg-black text-white border-2 border-white px-8 py-4 rounded-lg font-medium hover:bg-white hover:text-black transition-all duration-300 flex items-center space-x-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
               aria-label="Book your free strategy call"
             >
               <Phone className="w-5 h-5" />

@@ -52,7 +52,6 @@ const systems = [
       'Real-time lead quality analytics dashboard'
     ],
     outcomes: ['+40% lead quality', '-15 hrs/week manual work'],
-    gradient: 'from-gray-700 to-gray-600'
   },
   {
     id: 'conversion',
@@ -71,7 +70,6 @@ const systems = [
       'Secure, scalable architecture'
     ],
     outcomes: ['+25% conversion rate', '+40% faster load times'],
-    gradient: 'from-gray-600 to-gray-500'
   },
   {
     id: 'call-automation',
@@ -90,7 +88,6 @@ const systems = [
       'Follow-up reminder system with personalized messaging'
     ],
     outcomes: ['+50% call connection rate', '-8 hrs/week admin'],
-    gradient: 'from-gray-500 to-gray-400'
   },
   {
     id: 'ai-sales',
@@ -109,7 +106,6 @@ const systems = [
       'Sales performance analytics and coaching insights'
     ],
     outcomes: ['+35% response rate', '+20% deal velocity'],
-    gradient: 'from-gray-600 to-gray-500'
   },
   {
     id: 'support',
@@ -128,7 +124,6 @@ const systems = [
       'Knowledge base that learns from every interaction'
     ],
     outcomes: ['+60% faster response', '+40% satisfaction'],
-    gradient: 'from-gray-500 to-gray-400'
   },
   {
     id: 'recruitment',
@@ -147,7 +142,6 @@ const systems = [
       'Hiring pipeline analytics and bottleneck identification'
     ],
     outcomes: ['-50% time to hire', '+30% candidate quality'],
-    gradient: 'from-gray-400 to-gray-300'
   },
   {
     id: 'project-management',
@@ -166,7 +160,6 @@ const systems = [
       'Project performance analytics and predictive insights'
     ],
     outcomes: ['+25% on-time delivery', '-12 hrs/week reporting'],
-    gradient: 'from-gray-600 to-gray-500'
   },
   {
     id: 'social-media',
@@ -185,7 +178,6 @@ const systems = [
       'Social media performance analytics and growth insights'
     ],
     outcomes: ['+80% posting consistency', '+45% engagement'],
-    gradient: 'from-gray-500 to-gray-400'
   },
   {
     id: 'lead-capture',
@@ -204,7 +196,6 @@ const systems = [
       'Lead capture analytics with conversion optimization insights'
     ],
     outcomes: ['+55% form conversion', '+30% lead volume'],
-    gradient: 'from-gray-400 to-gray-300'
   }
 ];
 

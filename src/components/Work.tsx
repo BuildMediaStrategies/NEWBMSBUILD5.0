@@ -325,7 +325,7 @@ const AnimatedBackground = ({ type, color }: { type: string; color: string }) =>
     case 'funnel':
       return (
         <div className={`absolute inset-0 bg-gray-600 opacity-80`}>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-white/30 
+          <div className="absolute inset-0 bg-white/20
             clip-path-polygon-[20%_20%,80%_20%,70%_80%,30%_80%]" />
           {[...Array(8)].map((_, i) => (
             <motion.div

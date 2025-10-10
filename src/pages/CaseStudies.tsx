@@ -22,7 +22,6 @@ const caseStudies = [
     ],
     testimonial: "Professional, fast, and focused on outcomes - exactly what we needed.",
     author: "Project Team",
-    gradient: 'from-gray-700 to-gray-600',
     image: 'https://github.com/BuildMediaStrategies/BMSAIASSETS/blob/2d7930b51ff8071f72d1937570b26405c6adc4b7/2a26a5f0-5b74-47b0-8c42-8e20a3982577.png?raw=true',
     alt: 'Hero section of CureCancer @ UCL website.',
     externalUrl: 'https://curecancer-ucl.org/'
@@ -42,7 +41,6 @@ const caseStudies = [
     ],
     testimonial: "The AI system handles our quotes. We focus on the work.",
     author: "Mike Thompson",
-    gradient: 'from-gray-700 to-gray-600',
     image: 'https://github.com/BuildMediaStrategies/BMSAIASSETS/blob/2d7930b51ff8071f72d1937570b26405c6adc4b7/62cc0135-156f-410f-84a8-b9c744fbd0f2.png?raw=true',
     alt: 'Hero section of SOS Electrical LTD website.',
     externalUrl: 'https://soselectricalltd.co.uk/'
@@ -62,7 +60,6 @@ const caseStudies = [
     ],
     testimonial: "We’re getting quality leads every day now.",
     author: "Sarah Little",
-    gradient: 'from-gray-700 to-gray-600',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80',
     alt: 'Hero section of Little & Co website.',
     externalUrl: undefined
@@ -122,7 +119,7 @@ export default function CaseStudies() {
               animate={{ opacity: 1, y: 0 }}
               className="mb-6"
             >
-              <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-full text-sm font-medium text-blue-300 mb-6">
+              <span className="inline-block px-4 py-2 bg-white/10 border border-white/30 rounded-full text-sm font-medium text-white mb-6">
                 Success Stories
               </span>
             </motion.div>
@@ -182,7 +179,7 @@ export default function CaseStudies() {
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   className="group"
                 >
-                  <div className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${study.gradient} p-1`}>
+                  <div className="relative overflow-hidden rounded-3xl bg-white/10 border border-white/20 p-1">
                     <div className="bg-black rounded-3xl p-8 lg:p-12">
                       <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Content */}
@@ -247,7 +244,7 @@ export default function CaseStudies() {
                               loading="lazy"
                               decoding="async"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                            <div className="absolute inset-0 bg-black/20" />
                           </div>
                         </div>
                         {('externalUrl' in study && (study as any).externalUrl) && (
@@ -305,7 +302,7 @@ export default function CaseStudies() {
                     {testimonials[currentTestimonial].company}
                   </p>
                 </div>
-                <div className="inline-block px-4 py-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-full text-sm font-medium text-blue-300">
+                <div className="inline-block px-4 py-2 bg-white/10 border border-white/30 rounded-full text-sm font-medium text-white">
                   {testimonials[currentTestimonial].result}
                 </div>
               </motion.div>
@@ -338,7 +335,7 @@ export default function CaseStudies() {
                     onClick={() => setCurrentTestimonial(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black ${
                       index === currentTestimonial
-                        ? 'bg-gradient-to-r from-blue-600 to-purple-600'
+                        ? 'bg-white'
                         : 'bg-gray-600 hover:bg-gray-500'
                     }`}
                     aria-label={`Go to testimonial ${index + 1}`}
@@ -355,7 +352,7 @@ export default function CaseStudies() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/20 rounded-3xl p-12"
+              className="bg-white/5 border border-white/20 rounded-3xl p-12"
             >
               <h2 className="h2-resp mb-6">Ready to Join These Success Stories?</h2>
               <p className="p-resp text-gray-300 mb-8 max-w-2xl mx-auto">

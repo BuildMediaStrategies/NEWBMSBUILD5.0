@@ -10,25 +10,21 @@ const timelineSteps = [
     icon: Users,
     title: 'Discover',
     description: 'We analyze your business to identify revenue leaks and automation opportunities',
-    gradient: 'from-gray-700 to-gray-600'
   },
   {
     icon: Lightbulb,
     title: 'Design',
     description: 'Custom automation systems tailored to your specific workflows and goals',
-    gradient: 'from-gray-600 to-gray-500'
   },
   {
     icon: Rocket,
     title: 'Automate',
     description: 'Implementation and integration with your existing tools and processes',
-    gradient: 'from-gray-500 to-gray-400'
   },
   {
     icon: ArrowRight,
     title: 'Launch',
     description: 'Go live with ongoing support, monitoring, and optimization',
-    gradient: 'from-gray-400 to-gray-300'
   }
 ];
 

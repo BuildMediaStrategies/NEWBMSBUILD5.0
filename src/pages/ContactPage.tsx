@@ -103,7 +103,7 @@ export default function ContactPage() {
               
               <div className="space-y-6 mb-12">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-white/10 border border-white/20 rounded-lg flex items-center justify-center">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -113,7 +113,7 @@ export default function ContactPage() {
                 </div>
                 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-teal-600 to-green-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-white/10 border border-white/20 rounded-lg flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -258,7 +258,7 @@ export default function ContactPage() {
                     href="https://calendly.com/buildmediastrategies" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
+                    className="inline-flex items-center text-white hover:text-gray-300 transition-colors text-sm font-medium"
                   >
                     <Calendar className="w-4 h-4 mr-2" />
                     Schedule a Call
