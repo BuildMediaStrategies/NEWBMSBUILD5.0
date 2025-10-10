@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Send, Phone, Mail } from 'lucide-react';
+import { useState, useRef } from 'react';
 import ResponsiveText from '../components/ResponsiveText';
 
 export default function Contact() {
@@ -8,6 +9,35 @@ export default function Contact() {
     triggerOnce: true,
     threshold: 0.1
   });
+
+  /*
+   * BOT PROTECTION CONFIG
+   * - honeypotField: Change field name to update honeypot (current: 'website')
+   * - minSubmitTime: Minimum seconds before form can be submitted (current: 2)
+   */
+  const [honeypot, setHoneypot] = useState('');
+  const formLoadTime = useRef<number>(Date.now());
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // Bot check: honeypot field should be empty
+    if (honeypot !== '') {
+      console.log('Bot detected: honeypot filled');
+      return; // Silently reject
+    }
+
+    // Bot check: minimum time (2 seconds)
+    const timeElapsed = (Date.now() - formLoadTime.current) / 1000;
+    if (timeElapsed < 2) {
+      console.log('Bot detected: submitted too quickly');
+      return; // Silently reject
+    }
+
+    // Form is valid - proceed with submission
+    console.log('Form submitted successfully');
+    // Add your form submission logic here
+  };
 
   return (
     <section ref={ref} id="contact" className="py-32 bg-black text-white">
@@ -81,7 +111,7 @@ export default function Contact() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">Name *</label>
@@ -134,6 +164,18 @@ export default function Contact() {
                 </div>
               </div>
               
+              {/* Honeypot field - hidden from users, visible to bots */}
+              <input
+                type="text"
+                name="website"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px' }}
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+              />
+
               <div>
                 <label htmlFor="goal" className="block text-sm font-medium text-gray-400 mb-2">Choose your goal</label>
                 <select
