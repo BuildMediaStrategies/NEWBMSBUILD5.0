@@ -356,7 +356,7 @@ export default function Systems() {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="order-2 md:order-1 space-y-4">
                 <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-white/10 border border-white/20 text-white/90">New System</span>
-                <h2 className="h2-resp heading-safe">FORGE — Scaffolding Project Management</h2>
+                <h2 className="h2-resp heading-safe">FORGE - Scaffolding Project Management</h2>
                 <p className="p-resp text-gray-300">The ultimate system for scaffolding firms. Built for speed, clarity, and control across jobs and teams.</p>
                 <ul className="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
                   <li className="flex items-start space-x-2"><span className="w-1.5 h-1.5 bg-gray-500 rounded-full mt-2" /><span>Tracking tools and materials</span></li>
@@ -372,7 +372,7 @@ export default function Systems() {
               </div>
               <div className="order-1 md:order-2">
                 <div className="rounded-2xl bg-[#0B0B0B] ring-1 ring-white/10 aspect-[4/3] flex items-center justify-center overflow-hidden">
-                  <img src={IMG["FORGE"]} alt="FORGE" loading="lazy"
+                  <img src={IMG["FORGE"]} alt="FORGE" loading="lazy" decoding="async"
                        className="max-h-full max-w-full w-full h-full object-contain p-6" />
                 </div>
               </div>
@@ -407,7 +407,7 @@ export default function Systems() {
               <div className="order-2 md:order-1 space-y-6">
                 <h2 className="h2-resp heading-safe">Websites & Mobile Apps</h2>
                 <p className="p-resp text-gray-300">
-                  Build fast, reliable, accessible experiences that convert — designed for UK trades and
+                  Build fast, reliable, accessible experiences that convert - designed for UK trades and
                   services. Conversion-first, mobile-ready, and measurable.
                 </p>
                 <div className="grid sm:grid-cols-3 gap-4">
@@ -432,7 +432,7 @@ export default function Systems() {
               </div>
               <div className="order-1 md:order-2">
                 <div className="rounded-2xl bg-[#0B0B0B] ring-1 ring-white/10 aspect-[4/3] flex items-center justify-center overflow-hidden">
-                  <img src={IMG["Web Design"]} alt="Web Design" loading="lazy"
+                  <img src={IMG["Web Design"]} alt="Web Design" loading="lazy" decoding="async"
                        className="max-h-full max-w-full w-full h-full object-contain p-6" />
                 </div>
               </div>
@@ -487,7 +487,7 @@ export default function Systems() {
                 </div>
                 <div className="order-1 md:order-2">
                   <div className="rounded-2xl bg-[#0B0B0B] ring-1 ring-white/10 aspect-[4/3] flex items-center justify-center overflow-hidden">
-                    <img src={IMG[sys.title]} alt={sys.title} loading="lazy"
+                    <img src={IMG[sys.title]} alt={sys.title} loading="lazy" decoding="async"
                          className="max-h-full max-w-full w-full h-full object-contain p-6" />
                   </div>
                 </div>

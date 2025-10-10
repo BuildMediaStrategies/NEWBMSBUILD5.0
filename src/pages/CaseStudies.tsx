@@ -20,7 +20,7 @@ const caseStudies = [
       { metric: 'Accessibility', value: 'Enhanced', icon: Users },
       { metric: 'Performance', value: 'Optimised', icon: Zap }
     ],
-    testimonial: "Professional, fast, and focused on outcomes — exactly what we needed.",
+    testimonial: "Professional, fast, and focused on outcomes - exactly what we needed.",
     author: "Project Team",
     gradient: 'from-gray-700 to-gray-600',
     image: 'https://github.com/BuildMediaStrategies/BMSAIASSETS/blob/2d7930b51ff8071f72d1937570b26405c6adc4b7/2a26a5f0-5b74-47b0-8c42-8e20a3982577.png?raw=true',
@@ -232,7 +232,7 @@ export default function CaseStudies() {
                               "{study.testimonial}"
                             </blockquote>
                             <cite className="text-gray-300 font-semibold">
-                              — {study.author}
+                              - {study.author}
                             </cite>
                           </div>
                         </div>
@@ -245,6 +245,7 @@ export default function CaseStudies() {
                               alt={('alt' in study && (study as any).alt) ? (study as any).alt : `${study.title} case study visualization`}
                               className="w-full h-full object-cover grayscale-[30%] group-hover:scale-105 transition-transform duration-700"
                               loading="lazy"
+                              decoding="async"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                           </div>

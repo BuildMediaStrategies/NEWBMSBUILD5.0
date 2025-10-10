@@ -113,7 +113,7 @@ export default function HowItWorks() {
         >
           <h3 className="h3-resp mb-4">Flexible Monthly Plans</h3>
           <p className="p-resp text-gray-400">
-            Flexible monthly plans for every business size — no upfront cost, no risk.
+            Flexible monthly plans for every business size. No upfront cost, no risk.
           </p>
         </motion.div>
       </div>
