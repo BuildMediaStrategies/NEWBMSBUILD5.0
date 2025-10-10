@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
-import ProofOutcomes from '../components/ProofOutcomes';
 import WhoWeWorkWith from '../components/WhoWeWorkWith';
 import SystemsOverview from '../components/SystemsOverview';
 import ProcessScrolly from '../components/ProcessScrolly';
@@ -35,7 +34,6 @@ export default function Home() {
       </Helmet>
       <main>
         <Hero />
-        <ProofOutcomes />
         <WhoWeWorkWith />
         <SystemsOverview />
         <ProcessScrolly />
