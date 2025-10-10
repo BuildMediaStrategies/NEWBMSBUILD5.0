@@ -227,8 +227,11 @@ export default function Sectors() {
                 <p className="p-resp text-gray-400 mb-4">{sector.benefit}</p>
                 
                 <button
+                  type="button"
                   onClick={() => setExpandedSector(expandedSector === sector.id ? null : sector.id)}
-                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors text-sm font-medium"
+                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded"
+                  aria-expanded={expandedSector === sector.id}
+                  aria-label={`Learn more about ${sector.title}`}
                 >
                   <span>Learn more</span>
                   {expandedSector === sector.id ? (
@@ -291,9 +294,9 @@ export default function Sectors() {
                     {/* CTA buttons */}
                     <div className="flex space-x-3 pt-2">
                       <Link to="/contact" className="flex-1">
-                        <button className="w-full bg-white text-black 
-                          px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 
-                          transition-all duration-300 flex items-center justify-center space-x-2">
+                        <button type="button" className="w-full bg-white text-black
+                          px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200
+                          transition-all duration-300 flex items-center justify-center space-x-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">
                           <Calendar className="w-4 h-4" />
                           <span>Book Your Free Website & Systems Audit</span>
                         </button>
@@ -315,9 +318,9 @@ export default function Sectors() {
             <h3 className="h3-resp mb-4">See Your Industry's Growth Potential?</h3>
             <p className="p-resp text-gray-300 mb-6">Let's identify and capture the opportunities specific to your business</p>
             <Link to="/contact">
-              <button className="bg-white text-black px-8 py-3 
-                rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 
-                flex items-center space-x-2 mx-auto">
+              <button type="button" className="bg-white text-black px-8 py-3
+                rounded-lg font-medium hover:bg-gray-200 transition-all duration-300
+                flex items-center space-x-2 mx-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">
                 <Calendar className="w-5 h-5" />
                 <span>Book Your Free Website & Systems Audit</span>
               </button>
@@ -348,8 +351,11 @@ export default function Sectors() {
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden"
               >
                 <button
+                  type="button"
                   onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                  aria-expanded={expandedFaq === index}
+                  aria-label={faq.question}
                 >
                   <span className="font-medium text-white">{faq.question}</span>
                   {expandedFaq === index ? (
@@ -385,9 +391,9 @@ export default function Sectors() {
             <h3 className="h3-resp mb-4">Don't See Your Industry?</h3>
             <p className="p-resp text-gray-400 mb-6">Every business has growth potential. Let's find yours and capture it.</p>
             <Link to="/contact">
-              <button className="bg-white text-black px-8 py-3 
-                rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 
-                flex items-center space-x-2 mx-auto">
+              <button type="button" className="bg-white text-black px-8 py-3
+                rounded-lg font-medium hover:bg-gray-200 transition-all duration-300
+                flex items-center space-x-2 mx-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">
                 <Calendar className="w-5 h-5" />
                 <span>Book Your Free Website & Systems Audit</span>
               </button>

@@ -198,7 +198,7 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <Link to="/contact">
-                <motion.button
+                <motion.button type="button"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="bg-white text-black px-8 py-4 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 flex items-center space-x-2 mx-auto"

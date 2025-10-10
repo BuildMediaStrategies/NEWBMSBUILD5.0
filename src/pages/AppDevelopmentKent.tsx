@@ -91,13 +91,13 @@ export default function AppDevelopmentKent() {
           <div className="max-w-7xl mx-auto section-pad-resp">
             <h2 className="h2-resp mb-12 text-center">Our Services in Kent</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <Link to="/web-design-kent" className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+              <Link to="/web-design-kent" className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">
                 <h3 className="h3-resp mb-4 group-hover:text-white transition-colors">Web Design Kent</h3>
                 <p className="p-resp text-gray-400 mb-4">Modern, responsive websites for Kent businesses</p>
                 <ArrowRight className="w-5 h-5 text-gray-300 group-hover:translate-x-1 transition-transform" />
               </Link>
               
-              <Link to="/full-stack-development-kent" className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+              <Link to="/full-stack-development-kent" className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">
                 <h3 className="h3-resp mb-4 group-hover:text-white transition-colors">Full-Stack Development Kent</h3>
                 <p className="p-resp text-gray-400 mb-4">Complete development solutions for Kent companies</p>
                 <ArrowRight className="w-5 h-5 text-gray-300 group-hover:translate-x-1 transition-transform" />
@@ -121,7 +121,7 @@ export default function AppDevelopmentKent() {
             <h2 className="h2-resp mb-6">Ready to Build Your App?</h2>
             <p className="p-resp text-gray-400 mb-8">Let's create amazing applications for your Kent business</p>
             <Link to="/contact">
-              <motion.button
+              <motion.button type="button"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-black px-8 py-4 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 flex items-center space-x-2 mx-auto"

@@ -65,6 +65,7 @@ export default function CookieConsent() {
           </div>
           <div className="flex flex-wrap gap-2">
             <button
+              type="button"
               onClick={acceptAll}
               className="bg-white text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
               aria-label="Accept all cookies"
@@ -72,6 +73,7 @@ export default function CookieConsent() {
               Accept all
             </button>
             <button
+              type="button"
               onClick={rejectNonEssential}
               className="border border-white/30 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
               aria-label="Reject non-essential cookies"
@@ -79,6 +81,7 @@ export default function CookieConsent() {
               Reject non-essential
             </button>
             <button
+              type="button"
               onClick={() => setShowPreferences(true)}
               className="border border-white/20 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center space-x-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
               aria-label="Cookie preferences"
@@ -97,6 +100,7 @@ export default function CookieConsent() {
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-white font-semibold">Cookie Preferences</h3>
               <button
+                type="button"
                 onClick={() => setShowPreferences(false)}
                 className="text-gray-400 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded"
                 aria-label="Close preferences"
@@ -151,6 +155,7 @@ export default function CookieConsent() {
             
             <div className="flex gap-2 mt-6">
               <button
+                type="button"
                 onClick={savePreferences}
                 className="flex-1 bg-white text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
                 aria-label="Save cookie preferences"

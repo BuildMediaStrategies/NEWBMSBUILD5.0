@@ -97,9 +97,10 @@ export default function Navbar() {
           >
             <Link to="/contact">
               <motion.button
+                type="button"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-black px-6 py-2 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300"
+                className="bg-white text-black px-6 py-2 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
               >
                 Free Strategy Session
               </motion.button>
@@ -108,6 +109,7 @@ export default function Navbar() {
 
           <div className="md:hidden">
             <button
+              type="button"
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-400 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded"
               aria-label={isOpen ? "Close menu" : "Open menu"}
@@ -151,7 +153,7 @@ export default function Navbar() {
               {/* CTA Button - Mobile */}
               <div className="pt-4 border-t border-gray-600">
                 <Link to="/contact" onClick={() => setIsOpen(false)}>
-                  <button className="w-full bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300">
+                  <button type="button" className="w-full bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">
                     Free Strategy Session
                   </button>
                 </Link>

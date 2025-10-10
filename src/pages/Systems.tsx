@@ -366,7 +366,7 @@ export default function Systems() {
                 </ul>
                 <div>
                   <Link to="/contact">
-                    <button className="mt-4 bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300">Enquire about FORGE</button>
+                    <button type="button" className="mt-4 bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">Enquire about FORGE</button>
                   </Link>
                 </div>
               </div>
@@ -426,7 +426,7 @@ export default function Systems() {
                 </div>
                 <div>
                   <Link to="/contact">
-                    <button className="mt-4 bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300">Enquire</button>
+                    <button type="button" className="mt-4 bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">Enquire</button>
                   </Link>
                 </div>
               </div>
@@ -481,7 +481,7 @@ export default function Systems() {
                   </div>
                   <div>
                     <Link to="/contact">
-                      <button className="mt-2 bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300">Enquire</button>
+                      <button type="button" className="mt-2 bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">Enquire</button>
                     </Link>
                   </div>
                 </div>
@@ -519,8 +519,11 @@ export default function Systems() {
                 className="bg-gray-900 backdrop-blur-sm border border-gray-600 rounded-xl overflow-hidden"
               >
                 <button
+                  type="button"
                   onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-800 transition-colors"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+                  aria-expanded={expandedFaq === index}
+                  aria-label={faq.question}
                 >
                   <span className="font-medium text-white">{faq.question}</span>
                   {expandedFaq === index ? (
@@ -556,9 +559,9 @@ export default function Systems() {
             <h2 className="h2-resp mb-6">Ready to Build a Revenue-Ready Website?</h2>
             <p className="p-resp text-gray-300 mb-8">Turn your website into a 24/7 client acquisition machine</p>
             <Link to="/contact">
-              <button className="bg-white text-black px-8 py-3 
-                rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 
-                flex items-center space-x-2 mx-auto">
+              <button type="button" className="bg-white text-black px-8 py-3
+                rounded-lg font-medium hover:bg-gray-200 transition-all duration-300
+                flex items-center space-x-2 mx-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">
                 <Calendar className="w-5 h-5" />
                 <span>Book Free Audit</span>
               </button>

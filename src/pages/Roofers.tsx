@@ -86,7 +86,7 @@ export default function Roofers() {
                 Get early access and help shape the features you need most.
               </p>
               <Link to="/contact">
-                <motion.button
+                <motion.button type="button"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center space-x-2 mx-auto"

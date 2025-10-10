@@ -245,8 +245,8 @@ export default function ContactPage() {
                   whileTap={{ scale: 0.98 }}
                   type="submit"
                   className="w-full bg-white text-black rounded-lg px-8 py-4
-                    flex items-center justify-center space-x-2 hover:bg-gray-200 
-                    transition-all duration-300"
+                    flex items-center justify-center space-x-2 hover:bg-gray-200
+                    transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                 >
                   <span>Book Your Free Website & Systems Audit</span>
                   <Send className="w-5 h-5" />
