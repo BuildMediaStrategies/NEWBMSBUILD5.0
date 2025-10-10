@@ -1,4 +1,5 @@
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '../components/SEOHead';
+import LocalBusinessSchema from '../components/LocalBusinessSchema';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Send, Mail, MapPin, Calendar } from 'lucide-react';
@@ -42,30 +43,12 @@ export default function ContactPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Contact BuildMediaStrategies – Dover & Kent Web Design Experts</title>
-        <meta name="description" content="Get in touch with BuildMediaStrategies for Web Design, AI Automation, App Development, and Full-Stack systems in Dover and Kent." />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "BuildMediaStrategies",
-            "url": "https://buildmediastrategies.com",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Deal",
-              "addressRegion": "Kent",
-              "addressCountry": "GB"
-            },
-            "areaServed": ["GB", "United Kingdom", "England", "Kent", "Deal"],
-            "telephone": "+44-1304-123456",
-            "priceRange": "£££",
-            "currenciesAccepted": "GBP",
-            "serviceProvided": ["Web Design","AI Automation","App Development","Full-Stack Development"],
-            "sameAs": []
-          })}
-        </script>
-      </Helmet>
+      <SEOHead
+        title="Contact | AI Automation Agency Dover, Deal & Kent"
+        description="Contact BuildMediaStrategies AI Automation agency. Serving Dover, Deal, Canterbury & Kent with AI systems, lead generation & automation solutions."
+        canonical="/contact"
+      />
+      <LocalBusinessSchema />
       <div className="bg-black text-white min-h-screen pt-20">
       <section ref={ref} className="py-32">
         <div className="max-w-7xl mx-auto section-pad-resp">

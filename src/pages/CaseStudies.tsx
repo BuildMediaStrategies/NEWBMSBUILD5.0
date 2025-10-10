@@ -1,4 +1,5 @@
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '../components/SEOHead';
+import LocalBusinessSchema from '../components/LocalBusinessSchema';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
@@ -106,10 +107,12 @@ export default function CaseStudies() {
 
   return (
     <>
-      <Helmet>
-        <title>Case Studies – BuildMediaStrategies</title>
-        <meta name="description" content="Case studies showcasing our web design, AI automation, and development work for Dover and Kent businesses." />
-      </Helmet>
+      <SEOHead
+        title="Case Studies | AI Automation Success Kent & Dover"
+        description="AI Automation & web design success stories from Kent & Dover. Real results from automation projects across Canterbury, Deal & Kent businesses."
+        canonical="/case-studies"
+      />
+      <LocalBusinessSchema />
       <div className="bg-black text-white min-h-screen pt-20">
         {/* Hero Section */}
         <section className="py-20 lg:py-32">

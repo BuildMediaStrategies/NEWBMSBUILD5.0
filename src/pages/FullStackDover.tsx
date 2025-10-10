@@ -1,4 +1,5 @@
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '../components/SEOHead';
+import LocalBusinessSchema from '../components/LocalBusinessSchema';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
@@ -13,27 +14,12 @@ export default function FullStackDover() {
 
   return (
     <>
-      <Helmet>
-        <title>Full-Stack Development Dover – Complete Solutions | BuildMediaStrategies</title>
-        <meta name="description" content="Full-stack development services in Dover. BuildMediaStrategies creates complete web applications for Dover businesses." />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "BuildMediaStrategies",
-            "url": "https://buildmediastrategies.com",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Deal",
-              "addressRegion": "Kent",
-              "addressCountry": "UK"
-            },
-            "areaServed": ["Deal","Kent"],
-            "serviceProvided": ["Web Design","AI Automation","App Development","Full-Stack Development"],
-            "sameAs": []
-          })}
-        </script>
-      </Helmet>
+      <SEOHead
+        title="Full-Stack Development Dover | Web Apps Kent Agency"
+        description="Full-Stack Development in Dover & Kent. Complete web applications for Dover businesses. Custom development solutions across Kent & Canterbury."
+        canonical="/full-stack-development-dover"
+      />
+      <LocalBusinessSchema />
       <div className="bg-black text-white min-h-screen pt-20">
         {/* Hero Section */}
         <section ref={ref} className="py-32">

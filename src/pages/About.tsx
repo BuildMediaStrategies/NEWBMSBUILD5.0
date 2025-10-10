@@ -1,4 +1,5 @@
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '../components/SEOHead';
+import LocalBusinessSchema from '../components/LocalBusinessSchema';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
@@ -46,30 +47,12 @@ export default function About() {
 
   return (
     <>
-      <Helmet>
-        <title>About BuildMediaStrategies – Web Design & AI Automation in Dover</title>
-        <meta name="description" content="Remote-first team based in Dover & Kent delivering design and automation systems." />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "BuildMediaStrategies",
-            "url": "https://buildmediastrategies.com",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Deal",
-              "addressRegion": "Kent",
-              "addressCountry": "GB"
-            },
-            "areaServed": ["GB", "United Kingdom", "England", "Kent", "Deal"],
-            "telephone": "+44-1304-123456",
-            "priceRange": "£££",
-            "currenciesAccepted": "GBP",
-            "serviceProvided": ["Web Design","AI Automation","App Development","Full-Stack Development"],
-            "sameAs": []
-          })}
-        </script>
-      </Helmet>
+      <SEOHead
+        title="About Us | AI Automation Agency Dover, Deal & Kent"
+        description="AI Automation agency in Deal, Kent. Remote-first team delivering intelligent automation systems for Dover, Canterbury & Kent businesses."
+        canonical="/about"
+      />
+      <LocalBusinessSchema />
       <div className="bg-black text-white min-h-screen pt-20">
       {/* Hero Section */}
       <section ref={heroRef} className="py-32">

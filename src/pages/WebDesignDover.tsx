@@ -1,4 +1,5 @@
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '../components/SEOHead';
+import LocalBusinessSchema from '../components/LocalBusinessSchema';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
@@ -13,27 +14,12 @@ export default function WebDesignDover() {
 
   return (
     <>
-      <Helmet>
-        <title>Web Design Dover – Modern Websites | BuildMediaStrategies</title>
-        <meta name="description" content="Professional web design services in Dover. BuildMediaStrategies creates modern, responsive websites for Dover businesses." />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "BuildMediaStrategies",
-            "url": "https://buildmediastrategies.com",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Deal",
-              "addressRegion": "Kent",
-              "addressCountry": "UK"
-            },
-            "areaServed": ["Deal","Kent"],
-            "serviceProvided": ["Web Design","AI Automation","App Development","Full-Stack Development"],
-            "sameAs": []
-          })}
-        </script>
-      </Helmet>
+      <SEOHead
+        title="Web Design Dover | Modern Websites Kent & Canterbury"
+        description="Web Design in Dover, Kent & Canterbury. Modern, responsive websites for local businesses. Professional design agency serving Dover & Kent."
+        canonical="/web-design-dover"
+      />
+      <LocalBusinessSchema />
       <div className="bg-black text-white min-h-screen pt-20">
         {/* Hero Section */}
         <section ref={ref} className="py-32">

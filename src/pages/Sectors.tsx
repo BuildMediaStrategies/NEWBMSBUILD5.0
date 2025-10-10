@@ -1,4 +1,5 @@
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '../components/SEOHead';
+import LocalBusinessSchema from '../components/LocalBusinessSchema';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
@@ -150,30 +151,12 @@ export default function Sectors() {
 
   return (
     <>
-      <Helmet>
-        <title>Sectors – Web Design & AI Automation Solutions Dover & Kent</title>
-        <meta name="description" content="See how BuildMediaStrategies supports multiple sectors in Dover & Kent with modern web design, AI automation, and development services." />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "BuildMediaStrategies",
-            "url": "https://buildmediastrategies.com",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Deal",
-              "addressRegion": "Kent",
-              "addressCountry": "GB"
-            },
-            "areaServed": ["GB", "United Kingdom", "England", "Kent", "Deal"],
-            "telephone": "+44-1304-123456",
-            "priceRange": "£££",
-            "currenciesAccepted": "GBP",
-            "serviceProvided": ["Web Design","AI Automation","App Development","Full-Stack Development"],
-            "sameAs": []
-          })}
-        </script>
-      </Helmet>
+      <SEOHead
+        title="Industries | AI Automation for Kent, Dover & Canterbury"
+        description="AI Automation for all industries in Kent, Dover & Canterbury. Automation solutions for construction, retail, professional services by automation agency."
+        canonical="/sectors"
+      />
+      <LocalBusinessSchema />
       <div className="bg-black text-white min-h-screen pt-20">
       {/* Hero Section */}
       <section className="py-20">
