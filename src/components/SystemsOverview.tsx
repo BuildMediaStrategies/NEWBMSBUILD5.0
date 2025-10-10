@@ -1,17 +1,38 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Link } from 'react-router-dom';
-import { ChevronRight } from 'lucide-react';
+import { Target, Phone, TrendingUp, DollarSign, CheckSquare, MessageSquare } from 'lucide-react';
 
 const systems = [
-  { title: 'Lead Qualification', benefit: 'Sort enquiries by quality before you respond' },
-  { title: 'Automated Quoting', benefit: 'Generate quotes instantly for common jobs' },
-  { title: 'Emergency Response', benefit: 'Handle urgent callouts even at midnight' },
-  { title: 'Appointment Scheduling', benefit: 'Book site visits without phone tag' },
-  { title: 'Follow-Up Sequences', benefit: 'Convert more leads with timed reminders' },
-  { title: 'Customer Chat', benefit: 'Answer common questions while you work' },
-  { title: 'Payment Collection', benefit: 'Send invoices and chase payments automatically' },
-  { title: 'Review Requests', benefit: 'Build reputation with automated feedback' }
+  {
+    title: 'AI Lead Generation',
+    benefit: 'More qualified jobs from every enquiry.',
+    icon: Target
+  },
+  {
+    title: 'Call Automation Systems',
+    benefit: 'Answer missed calls and book jobs automatically.',
+    icon: Phone
+  },
+  {
+    title: 'Conversion Systems',
+    benefit: 'Recover quotes and turn warm leads into bookings.',
+    icon: TrendingUp
+  },
+  {
+    title: 'Sales Systems',
+    benefit: 'Follow ups sent and deals moved on time.',
+    icon: DollarSign
+  },
+  {
+    title: 'Project Management Systems',
+    benefit: 'Jobs and tasks updated in one place.',
+    icon: CheckSquare
+  },
+  {
+    title: 'Support Systems',
+    benefit: '24/7 replies with smooth human handoff.',
+    icon: MessageSquare
+  }
 ];
 
 export default function SystemsOverview() {
@@ -20,6 +41,13 @@ export default function SystemsOverview() {
     threshold: 0.1
   });
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section ref={ref} className="py-32 bg-black text-white border-t border-white/10">
       <div className="max-w-7xl mx-auto section-pad-resp">
@@ -27,55 +55,44 @@ export default function SystemsOverview() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Systems We Build</h2>
-          <p className="text-lg text-gray-400">Each system designed to save time and close more jobs</p>
         </motion.div>
 
-        <div className="space-y-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {systems.map((system, index) => (
             <motion.div
               key={system.title}
-              initial={{ opacity: 0, x: -20 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-black border border-white/20 rounded-lg p-8 flex flex-col"
             >
-              <Link
-                to="/systems"
-                className="group flex items-center justify-between py-8 border-b border-white/10 hover:border-white/30 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded"
+              <system.icon
+                className="w-12 h-12 text-white mb-6"
+                strokeWidth={1.5}
+                aria-hidden="true"
+              />
+
+              <h3 className="text-2xl font-bold mb-4">
+                {system.title}
+              </h3>
+
+              <p className="text-lg text-gray-300 mb-8 flex-grow">
+                {system.benefit}
+              </p>
+
+              <button
+                type="button"
+                onClick={scrollToContact}
+                className="w-full bg-black text-white border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-black transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
               >
-                <div className="flex-1">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-2 group-hover:text-white transition-colors">
-                    {system.title}
-                  </h3>
-                </div>
-                <div className="flex items-center gap-6">
-                  <p className="hidden md:block text-base text-gray-400 group-hover:text-gray-300 transition-colors max-w-md text-right">
-                    {system.benefit}
-                  </p>
-                  <ChevronRight className="w-6 h-6 text-gray-400 group-hover:text-white group-hover:translate-x-1 transition-all flex-shrink-0" />
-                </div>
-              </Link>
+                Get this system
+              </button>
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-center mt-16"
-        >
-          <Link to="/systems">
-            <button
-              type="button"
-              className="bg-black text-white border-2 border-white px-8 py-4 rounded-lg font-medium hover:bg-white hover:text-black transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-            >
-              View All Systems
-            </button>
-          </Link>
-        </motion.div>
       </div>
     </section>
   );
