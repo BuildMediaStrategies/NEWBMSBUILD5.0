@@ -23,7 +23,7 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className="fixed w-full z-50 bg-black/90 backdrop-blur-lg border-b border-gray-600"
+      className="fixed w-full z-50 bg-black/90 backdrop-blur-lg border-b border-white/10"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -132,7 +132,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden bg-black/95 backdrop-blur-lg border-t border-gray-600"
+            className="md:hidden bg-black/95 backdrop-blur-lg border-t border-white/10"
           >
             <div className="px-4 py-6 space-y-4">
               {navItems.map((item) => (
@@ -151,7 +151,7 @@ export default function Navbar() {
               ))}
               
               {/* CTA Button - Mobile */}
-              <div className="pt-4 border-t border-gray-600">
+              <div className="pt-4 border-t border-white/10">
                 <Link to="/contact" onClick={() => setIsOpen(false)}>
                   <button type="button" className="w-full bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">
                     Free Strategy Session
@@ -164,7 +164,7 @@ export default function Navbar() {
       )}
       
       {/* UK Trust Signal - Mobile */}
-      <div className="lg:hidden bg-gray-800 text-center py-1">
+      <div className="lg:hidden bg-black text-center py-1">
         <span className="text-xs text-gray-400">UK-based • Nationwide coverage</span>
       </div>
     </motion.nav>

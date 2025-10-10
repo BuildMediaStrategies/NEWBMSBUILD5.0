@@ -139,7 +139,7 @@ export default function About() {
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ duration: 0.3 }}
-                  className={`w-16 h-16 mx-auto mb-6 rounded-xl bg-gray-700 p-4`}
+                  className={`w-16 h-16 mx-auto mb-6 rounded-xl bg-white/10 p-4`}
                 >
                   <step.icon className="w-full h-full text-white" />
                 </motion.div>
@@ -173,7 +173,7 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section ref={ctaRef} className="py-32 bg-gray-800 border-t border-gray-600">
+      <section ref={ctaRef} className="py-32 bg-black border-t border-white/10">
         <div className="max-w-4xl mx-auto section-pad-resp text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

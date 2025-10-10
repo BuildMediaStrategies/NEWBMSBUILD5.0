@@ -51,7 +51,7 @@ export default function Industries() {
   });
 
   return (
-    <section ref={ref} id="industries" className="py-32 bg-gray-900 text-white">
+    <section ref={ref} id="industries" className="py-32 bg-black text-white">
       <div className="max-w-7xl mx-auto section-pad-resp">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -80,7 +80,7 @@ export default function Industries() {
                 hover:-translate-y-2 hover:shadow-2xl hover:shadow-white/10"
             >
               <Link to="/sectors" className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded-xl">
-                <div className={`w-12 h-12 mb-4 rounded-lg bg-gray-700 p-3 
+                <div className={`w-12 h-12 mb-4 rounded-lg bg-white/10 p-3 
                   transform group-hover:scale-110 transition-transform duration-300`}>
                   <industry.icon className="w-full h-full text-white" />
                 </div>

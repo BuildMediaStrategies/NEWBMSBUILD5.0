@@ -28,7 +28,7 @@ export default function HowItWorks() {
   });
 
   return (
-    <section ref={ref} id="how-it-works" className="py-32 bg-gray-900 text-white">
+    <section ref={ref} id="how-it-works" className="py-32 bg-black text-white">
       <div className="max-w-7xl mx-auto section-pad-resp">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ export default function HowItWorks() {
 
         <div className="relative">
           {/* Animated Progress Line */}
-          <div className="hidden lg:block absolute top-8 left-0 right-0 h-0.5 bg-gray-700">
+          <div className="hidden lg:block absolute top-8 left-0 right-0 h-0.5 bg-white/10">
             <motion.div
               className="h-full bg-white/30"
               initial={{ width: 0 }}
@@ -70,7 +70,7 @@ export default function HowItWorks() {
                   initial={{ scale: 0 }}
                   animate={inView ? { scale: 1 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.2 + 0.3 }}
-                  className="w-16 h-16 mx-auto mb-6 rounded-full bg-gray-700 flex items-center justify-center relative z-10"
+                  className="w-16 h-16 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center relative z-10"
                 >
                   <span className="text-white text-xl font-bold">{index + 1}</span>
                 </motion.div>

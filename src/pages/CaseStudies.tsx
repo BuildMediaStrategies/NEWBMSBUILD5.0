@@ -270,7 +270,7 @@ export default function CaseStudies() {
         </section>
 
         {/* Testimonial Slider */}
-        <section className="py-20 bg-gray-900/50 border-y border-white/10">
+        <section className="py-20 bg-black/50 border-y border-white/10">
           <div className="max-w-4xl mx-auto section-pad-resp">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

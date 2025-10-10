@@ -96,7 +96,7 @@ const AnimatedBackground = ({ type, color }: { type: string; color: string }) =>
   switch (type) {
     case 'nodes':
       return (
-        <div className={`absolute inset-0 bg-gray-800 opacity-80`}>
+        <div className={`absolute inset-0 bg-black opacity-80`}>
           {[...Array(8)].map((_, i) => (
             <motion.div
               key={i}
@@ -133,7 +133,7 @@ const AnimatedBackground = ({ type, color }: { type: string; color: string }) =>
 
     case 'grid':
       return (
-        <div className={`absolute inset-0 bg-gray-700 opacity-80`}>
+        <div className={`absolute inset-0 bg-white/10 opacity-80`}>
           {[...Array(12)].map((_, i) => (
             <motion.div
               key={i}
@@ -220,7 +220,7 @@ const AnimatedBackground = ({ type, color }: { type: string; color: string }) =>
 
     case 'typing':
       return (
-        <div className={`absolute inset-0 bg-gray-700 opacity-80`}>
+        <div className={`absolute inset-0 bg-white/10 opacity-80`}>
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex space-x-2">
             {[...Array(3)].map((_, i) => (
               <motion.div
@@ -351,7 +351,7 @@ const AnimatedBackground = ({ type, color }: { type: string; color: string }) =>
       );
 
     default:
-      return <div className={`absolute inset-0 bg-gray-700 opacity-80`} />;
+      return <div className={`absolute inset-0 bg-white/10 opacity-80`} />;
   }
 };
 

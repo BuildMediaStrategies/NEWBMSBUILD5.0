@@ -96,7 +96,7 @@ export default function CookieConsent() {
       {/* Preferences Modal */}
       {showPreferences && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-gray-900 rounded-xl p-6 max-w-md w-full border border-white/10">
+          <div className="bg-black rounded-xl p-6 max-w-md w-full border border-white/10">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-white font-semibold">Cookie Preferences</h3>
               <button

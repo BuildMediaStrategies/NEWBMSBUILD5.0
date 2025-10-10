@@ -154,7 +154,7 @@ export default function Services() {
               transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
               className="group text-center"
             >
-              <div className={`w-16 h-16 mx-auto mb-6 rounded-xl bg-gray-700 p-4 
+              <div className={`w-16 h-16 mx-auto mb-6 rounded-xl bg-white/10 p-4 
                 transform group-hover:scale-110 transition-transform duration-300`}>
                 <value.icon className="w-full h-full text-white" />
               </div>

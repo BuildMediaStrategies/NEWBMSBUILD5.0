@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="relative w-full bg-black border-t border-gray-600 py-12">
+    <footer className="relative w-full bg-black border-t border-white/10 py-12">
       <div className="max-w-7xl mx-auto section-pad-resp text-center">
         {/* UK Contact Information */}
         <div className="mb-8 space-y-4">

@@ -213,7 +213,7 @@ export default function Sectors() {
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 
                   hover:bg-white/10 hover:border-white/20 transition-all duration-300"
               >
-                <div className="w-12 h-12 mb-4 rounded-lg bg-gray-700 p-3">
+                <div className="w-12 h-12 mb-4 rounded-lg bg-white/10 p-3">
                   <sector.icon className="w-full h-full text-white" />
                 </div>
                 
@@ -307,7 +307,7 @@ export default function Sectors() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.5 }}
-            className="mt-16 bg-gray-800 rounded-2xl p-8 text-center border border-white/10"
+            className="mt-16 bg-black rounded-2xl p-8 text-center border border-white/10"
           >
             <h3 className="h3-resp mb-4">See Your Industry's Growth Potential?</h3>
             <p className="p-resp text-gray-300 mb-6">Let's identify and capture the opportunities specific to your business</p>

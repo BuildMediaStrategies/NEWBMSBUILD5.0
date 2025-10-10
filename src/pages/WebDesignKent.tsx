@@ -87,7 +87,7 @@ export default function WebDesignKent() {
         </section>
 
         {/* Our Services in Kent Section */}
-        <section className="py-20 bg-gray-900">
+        <section className="py-20 bg-black">
           <div className="max-w-7xl mx-auto section-pad-resp">
             <h2 className="h2-resp mb-12 text-center">Our Services in Kent</h2>
             <div className="grid md:grid-cols-3 gap-8">
