@@ -1,25 +1,16 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
-import { Zap, Building, Shield, Hammer, Wrench, HardHat } from 'lucide-react';
-import { useEffect, useRef } from 'react';
+import { Phone, Mail, MessageSquare, Calendar, CheckCircle } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
-const featuredTrades = [
-  { icon: Zap, label: 'Electricians', route: '/sectors/electricians' },
-  { icon: Building, label: 'Scaffolding', route: '/sectors/scaffolders' },
-  { icon: Shield, label: 'Security & CCTV', route: '/sectors/security-cctv' },
-  { icon: Hammer, label: 'Builders', route: '/sectors/builders' },
-  { icon: HardHat, label: 'Roofers', route: '/sectors/roofers' },
-  { icon: Wrench, label: 'Plumbers', route: '/sectors/plumbers' }
-];
-
-const scrollingIcons = [
-  { icon: Zap, label: 'Electricians' },
-  { icon: Building, label: 'Scaffolding' },
-  { icon: Shield, label: 'Security' },
-  { icon: Hammer, label: 'Builders' },
-  { icon: HardHat, label: 'Roofers' },
-  { icon: Wrench, label: 'Plumbers' }
+const tradeLabels = [
+  'Electricians',
+  'Scaffolding',
+  'Security & CCTV',
+  'Builders',
+  'Roofers',
+  'Plumbers'
 ];
 
 export default function TradesServed() {
@@ -28,56 +19,45 @@ export default function TradesServed() {
     threshold: 0.1
   });
 
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const [progress, setProgress] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    const scrollContainer = scrollRef.current;
-    if (!scrollContainer) return;
-
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReducedMotion) return;
 
-    let animationId: number;
-    let position = 0;
-    const speed = 0.3;
-
-    const animate = () => {
-      position -= speed;
-      if (scrollContainer) {
-        const firstChild = scrollContainer.firstElementChild;
-        if (firstChild && Math.abs(position) >= firstChild.clientWidth) {
-          position = 0;
-          scrollContainer.appendChild(firstChild);
-        }
-        scrollContainer.style.transform = `translateX(${position}px)`;
-      }
-      animationId = requestAnimationFrame(animate);
-    };
-
-    // Start animation only on mobile
-    const mediaQuery = window.matchMedia('(max-width: 767px)');
-    if (mediaQuery.matches) {
-      animationId = requestAnimationFrame(animate);
+    if (prefersReducedMotion) {
+      setIsPaused(true);
+      setProgress(100);
+      return;
     }
 
-    const handleResize = () => {
-      if (window.matchMedia('(max-width: 767px)').matches && !prefersReducedMotion) {
-        animationId = requestAnimationFrame(animate);
+    if (!inView) return;
+
+    const duration = 4000;
+    const startTime = Date.now();
+
+    const animate = () => {
+      const elapsed = Date.now() - startTime;
+      const newProgress = Math.min((elapsed / duration) * 100, 100);
+
+      setProgress(newProgress);
+
+      if (newProgress < 100) {
+        requestAnimationFrame(animate);
       } else {
-        cancelAnimationFrame(animationId);
-        if (scrollContainer) {
-          scrollContainer.style.transform = 'translateX(0)';
-        }
+        setTimeout(() => {
+          setProgress(0);
+          requestAnimationFrame(animate);
+        }, 1500);
       }
     };
 
-    window.addEventListener('resize', handleResize);
+    const animationId = requestAnimationFrame(animate);
 
     return () => {
       cancelAnimationFrame(animationId);
-      window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [inView]);
 
   return (
     <section ref={ref} className="py-32 bg-black text-white">
@@ -94,130 +74,143 @@ export default function TradesServed() {
               We build automation systems for UK construction and trade businesses.
               From handling emergency callouts to managing project quotes, our systems work around the clock so you can focus on the job.
             </p>
-            <Link to="/sectors">
+            <Link to="/contact">
               <motion.button
                 type="button"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-black px-8 py-4 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
               >
-                View All Sectors
+                Get Started
               </motion.button>
             </Link>
+
+            {/* Trade labels as non-interactive pills */}
+            <div className="flex flex-wrap gap-3 mt-8">
+              {tradeLabels.map((label, index) => (
+                <motion.div
+                  key={label}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={inView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ duration: 0.3, delay: 0.4 + index * 0.05 }}
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm font-medium text-white"
+                >
+                  <span>{label}</span>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
 
-          {/* Right Column */}
+          {/* Right Column - Workflow Animation */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-6"
+            className="relative"
           >
-            {/* Visual Collage */}
-            <div className="relative aspect-[4/3] bg-black border-2 border-white/20 rounded-2xl overflow-hidden">
+            <div className="relative aspect-[4/3] bg-black border-2 border-white/20 rounded-2xl overflow-hidden p-8 flex items-center justify-center">
               <svg
-                viewBox="0 0 800 600"
+                viewBox="0 0 600 400"
                 className="w-full h-full"
                 xmlns="http://www.w3.org/2000/svg"
-                aria-label="Construction trades illustration"
+                aria-label="Automated workflow illustration"
               >
-                {/* Background grid pattern */}
+                {/* Background subtle grid */}
                 <defs>
-                  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" strokeWidth="1"/>
+                  <pattern id="workflow-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+                    <circle cx="1" cy="1" r="1" fill="rgba(255,255,255,0.05)" />
                   </pattern>
+
+                  {/* Gradient for flow line */}
+                  <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="rgba(255,255,255,0)" />
+                    <stop offset="50%" stopColor="rgba(255,255,255,0.8)" />
+                    <stop offset="100%" stopColor="rgba(255,255,255,0)" />
+                  </linearGradient>
                 </defs>
-                <rect width="800" height="600" fill="url(#grid)" />
 
-                {/* Scaffolding structure */}
-                <g stroke="white" strokeWidth="3" fill="none" opacity="0.4">
-                  <line x1="100" y1="150" x2="100" y2="500" />
-                  <line x1="200" y1="150" x2="200" y2="500" />
-                  <line x1="300" y1="150" x2="300" y2="500" />
-                  <line x1="100" y1="200" x2="300" y2="200" />
-                  <line x1="100" y1="300" x2="300" y2="300" />
-                  <line x1="100" y1="400" x2="300" y2="400" />
-                  <line x1="100" y1="150" x2="300" y2="150" />
+                <rect width="600" height="400" fill="url(#workflow-grid)" />
+
+                {/* Main flow path - thin white line */}
+                <path
+                  d="M 80 200 L 150 200 L 150 120 L 240 120 L 240 200 L 360 200 L 360 280 L 520 280"
+                  stroke="rgba(255,255,255,0.3)"
+                  strokeWidth="2"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+
+                {/* Animated flow line traveling along path */}
+                {!isPaused && (
+                  <path
+                    d="M 80 200 L 150 200 L 150 120 L 240 120 L 240 200 L 360 200 L 360 280 L 520 280"
+                    stroke="url(#flowGradient)"
+                    strokeWidth="3"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeDasharray="100"
+                    strokeDashoffset={100 - progress}
+                    style={{
+                      transition: 'none'
+                    }}
+                  />
+                )}
+
+                {/* Icons along the workflow */}
+                {/* Phone - Start */}
+                <g transform="translate(80, 200)">
+                  <circle cx="0" cy="0" r="24" fill="black" stroke="white" strokeWidth="2" opacity={progress >= 0 ? "1" : "0.4"} />
+                  <g transform="translate(-8, -8)" stroke="white" strokeWidth="2" fill="none">
+                    <path d="M3 5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <path d="M9 10h.01" />
+                  </g>
                 </g>
 
-                {/* Hard hat silhouette */}
-                <g fill="white" opacity="0.6">
-                  <ellipse cx="550" cy="220" rx="80" ry="70" />
-                  <rect x="470" y="220" width="160" height="20" rx="3" />
-                  <rect x="520" y="180" width="60" height="40" rx="5" />
+                {/* Email */}
+                <g transform="translate(150, 120)">
+                  <circle cx="0" cy="0" r="24" fill="black" stroke="white" strokeWidth="2" opacity={progress >= 25 ? "1" : "0.4"} />
+                  <g transform="translate(-8, -8)" stroke="white" strokeWidth="2" fill="none">
+                    <rect x="2" y="4" width="12" height="10" rx="2" />
+                    <path d="m2 6 6 4 6-4" />
+                  </g>
                 </g>
 
-                {/* Tool silhouettes */}
-                <g fill="white" opacity="0.5">
-                  {/* Hammer */}
-                  <rect x="450" y="400" width="15" height="100" rx="3" transform="rotate(-30 457 450)" />
-                  <rect x="430" y="380" width="50" height="30" rx="3" transform="rotate(-30 455 395)" />
-
-                  {/* Wrench */}
-                  <circle cx="600" cy="450" r="20" fill="none" stroke="white" strokeWidth="8" />
-                  <rect x="595" y="430" width="10" height="80" rx="2" />
+                {/* Chat */}
+                <g transform="translate(240, 200)">
+                  <circle cx="0" cy="0" r="24" fill="black" stroke="white" strokeWidth="2" opacity={progress >= 50 ? "1" : "0.4"} />
+                  <g transform="translate(-8, -8)" stroke="white" strokeWidth="2" fill="none">
+                    <path d="M3 7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-5l-3 3v-3H5a2 2 0 0 1-2-2z" />
+                  </g>
                 </g>
 
-                {/* Building outline */}
-                <g stroke="white" strokeWidth="2" fill="none" opacity="0.3">
-                  <rect x="500" y="320" width="200" height="180" />
-                  <line x1="550" y1="320" x2="550" y2="500" />
-                  <line x1="650" y1="320" x2="650" y2="500" />
-                  <line x1="500" y1="380" x2="700" y2="380" />
-                  <line x1="500" y1="440" x2="700" y2="440" />
+                {/* Calendar */}
+                <g transform="translate(360, 280)">
+                  <circle cx="0" cy="0" r="24" fill="black" stroke="white" strokeWidth="2" opacity={progress >= 75 ? "1" : "0.4"} />
+                  <g transform="translate(-8, -8)" stroke="white" strokeWidth="2" fill="none">
+                    <rect x="3" y="4" width="10" height="10" rx="2" />
+                    <path d="M3 8h10" />
+                    <path d="M6 2v4" />
+                    <path d="M10 2v4" />
+                  </g>
                 </g>
 
-                {/* Safety barrier */}
-                <g stroke="white" strokeWidth="3" opacity="0.4">
-                  <line x1="150" y1="520" x2="650" y2="520" />
-                  <line x1="200" y1="490" x2="220" y2="520" />
-                  <line x1="300" y1="490" x2="320" y2="520" />
-                  <line x1="400" y1="490" x2="420" y2="520" />
-                  <line x1="500" y1="490" x2="520" y2="520" />
-                  <line x1="600" y1="490" x2="620" y2="520" />
+                {/* Checkmark - End */}
+                <g transform="translate(520, 280)">
+                  <circle cx="0" cy="0" r="24" fill="black" stroke="white" strokeWidth="2" opacity={progress >= 90 ? "1" : "0.4"} />
+                  <g transform="translate(-8, -8)" stroke="white" strokeWidth="2.5" fill="none">
+                    <path d="M4 8l3 3 5-6" strokeLinecap="round" strokeLinejoin="round" />
+                  </g>
                 </g>
 
-                {/* Lightning bolt for electrical */}
-                <g fill="white" opacity="0.7">
-                  <polygon points="200,80 180,130 210,130 190,180 230,130 200,130" />
-                </g>
+                {/* Labels */}
+                <text x="80" y="245" textAnchor="middle" fill="white" fontSize="11" opacity="0.7">Enquiry</text>
+                <text x="150" y="95" textAnchor="middle" fill="white" fontSize="11" opacity="0.7">Capture</text>
+                <text x="240" y="245" textAnchor="middle" fill="white" fontSize="11" opacity="0.7">Qualify</text>
+                <text x="360" y="325" textAnchor="middle" fill="white" fontSize="11" opacity="0.7">Schedule</text>
+                <text x="520" y="325" textAnchor="middle" fill="white" fontSize="11" opacity="0.7">Complete</text>
               </svg>
-            </div>
-
-            {/* Scrolling icon strip (mobile only) */}
-            <div className="md:hidden overflow-hidden bg-white/5 border border-white/10 rounded-lg py-3">
-              <div
-                ref={scrollRef}
-                className="flex gap-8 whitespace-nowrap"
-                style={{ willChange: 'transform' }}
-              >
-                {[...scrollingIcons, ...scrollingIcons, ...scrollingIcons].map((item, index) => (
-                  <div key={index} className="inline-flex items-center gap-2 px-4">
-                    <item.icon className="w-5 h-5 text-white/60" strokeWidth={2} />
-                    <span className="text-sm text-white/60 font-medium">{item.label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Trade labels as pills */}
-            <div className="flex flex-wrap gap-3">
-              {featuredTrades.map((trade, index) => (
-                <motion.div
-                  key={trade.label}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={inView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.3, delay: 0.4 + index * 0.05 }}
-                >
-                  <Link
-                    to={trade.route}
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm font-medium text-white hover:bg-white/20 hover:border-white/30 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-                  >
-                    <trade.icon className="w-4 h-4" strokeWidth={2} />
-                    <span>{trade.label}</span>
-                  </Link>
-                </motion.div>
-              ))}
             </div>
           </motion.div>
         </div>

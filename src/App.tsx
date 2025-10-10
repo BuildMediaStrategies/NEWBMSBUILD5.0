@@ -22,18 +22,6 @@ import Subprocessors from './pages/subprocessors';
 import AiTransparency from './pages/ai-transparency';
 import AiCompliance from './pages/ai-compliance';
 import Accessibility from './pages/accessibility';
-import Electricians from './pages/Electricians';
-import Scaffolders from './pages/Scaffolders';
-import SecurityCCTV from './pages/SecurityCCTV';
-import GeneralContractors from './pages/GeneralContractors';
-import Plumbers from './pages/Plumbers';
-import Builders from './pages/Builders';
-import Roofers from './pages/Roofers';
-import Landscapers from './pages/Landscapers';
-import HVACEngineers from './pages/HVACEngineers';
-import PropertyMaintenance from './pages/PropertyMaintenance';
-import PaintersDecorators from './pages/PaintersDecorators';
-import WasteManagement from './pages/WasteManagement';
 import Footer from './components/Footer';
 import CookieConsent from './components/CookieConsent';
 
@@ -64,18 +52,6 @@ function App() {
           <Route path="/ai-transparency" element={<AiTransparency />} />
           <Route path="/ai-compliance" element={<AiCompliance />} />
           <Route path="/accessibility" element={<Accessibility />} />
-          <Route path="/sectors/electricians" element={<Electricians />} />
-          <Route path="/sectors/scaffolders" element={<Scaffolders />} />
-          <Route path="/sectors/security-cctv" element={<SecurityCCTV />} />
-          <Route path="/sectors/general-contractors" element={<GeneralContractors />} />
-          <Route path="/sectors/plumbers" element={<Plumbers />} />
-          <Route path="/sectors/builders" element={<Builders />} />
-          <Route path="/sectors/roofers" element={<Roofers />} />
-          <Route path="/sectors/landscapers" element={<Landscapers />} />
-          <Route path="/sectors/hvac-engineers" element={<HVACEngineers />} />
-          <Route path="/sectors/property-maintenance" element={<PropertyMaintenance />} />
-          <Route path="/sectors/painters-decorators" element={<PaintersDecorators />} />
-          <Route path="/sectors/waste-management" element={<WasteManagement />} />
         </Routes>
         <Footer />
         <CookieConsent />
